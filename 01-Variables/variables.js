@@ -50,3 +50,15 @@ Ek variable me apna favorite color store karke print karo.*/
 
 let color = "Black";
 console.log(color);
+
+
+
+
+
+/*Q6. Store Two Numbers 
+Question: 
+Do alag variables me do numbers store karo aur dono print karo.*/
+
+let firstnum = 10;
+let secondnum = 20;
+console.log(firstnum,secondnum);
