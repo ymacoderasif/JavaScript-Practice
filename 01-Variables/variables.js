@@ -2,7 +2,9 @@
 Question: 
 Ek variable banao aur usme apna naam store karke print karo. */
 
-// let Name = "Mohd Asif";
+let Name = "Mohd Asif";
+console.log(Name);
+
 
 
 
@@ -13,7 +15,9 @@ Ek variable banao aur usme apna naam store karke print karo. */
 Question: 
 Ek variable me apni age store karke print karo.*/
 
-// let age = 24;
+let age = 24;
+console.log(age);
+
 
 
 
@@ -22,8 +26,8 @@ Ek variable me apni age store karke print karo.*/
 Question: 
 Ek variable me apne city ka naam store karke print karo.*/
 
-// let city = "Noida";
-// console.log(city);
+let city = "Noida";
+console.log(city);
 
 
 
@@ -35,3 +39,14 @@ Ek variable me mobile number store karke print karo.*/
 
 let number = 8376845742;
 console.log(number);
+
+
+
+
+
+/*Q5. Store Favorite Color 
+Question: 
+Ek variable me apna favorite color store karke print karo.*/
+
+let color = "Black";
+console.log(color);
