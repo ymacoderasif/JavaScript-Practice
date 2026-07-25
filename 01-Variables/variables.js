@@ -273,3 +273,22 @@ let text = "Data";
 let num = 25;
 let value = true;
 console.log(text,num,value);
+
+
+
+
+
+/*
+============================================================================
+Q20. Personal Information 
+Alag variables me apna naam, age, city, email aur profession store 
+karo aur sab print karo. 
+============================================================================
+*/
+
+let personName = "Mohd Asif";
+let personAge = 24;
+let personCity = "Noida";
+let personEmail = "mohdasif@gmail.com";
+let profession = "Coding";
+console.log(personName,personAge,personCity,personEmail,profession);
