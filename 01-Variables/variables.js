@@ -6,3 +6,26 @@ Ek variable banao aur usme apna naam store karke print karo. */
 
 
 
+
+
+
+/*Q2. Store Your Age 
+Question: 
+Ek variable me apni age store karke print karo.*/
+
+// let age = 24;
+
+
+
+
+/*Q3. Store City Name 
+Question: 
+Ek variable me apne city ka naam store karke print karo.*/
+
+// let city = "Noida";
+// console.log(city);
+
+
+
+
+
