@@ -96,3 +96,20 @@ Ek variable me true ya false store karke print karo.
 
 let booleanval = true;
 console.log(booleanval);
+
+
+
+
+
+/*
+====================================================================
+Q8. Change Variable Value 
+Question: 
+Ek variable me pehle 10 store karo, phir uski value 20 kar do aur 
+print karo.
+====================================================================
+*/
+
+var val1 = 10;
+val1 = 20;
+console.log(val1);
