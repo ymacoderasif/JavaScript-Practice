@@ -11,10 +11,6 @@ console.log(Name);
 
 
 
-
-
-
-
 /*
 =====================================================
 Q2. Store Your Age 
@@ -28,9 +24,8 @@ console.log(age);
 
 
 
-
-
-/*=========================================================
+/*
+=========================================================
 Q3. Store City Name 
 Question: 
 Ek variable me apne city ka naam store karke print karo.
@@ -42,9 +37,8 @@ console.log(city);
 
 
 
-
-
-/*=====================================================
+/*
+=====================================================
 Q4. Store Mobile Number 
 Question: 
 Ek variable me mobile number store karke print karo.
@@ -56,9 +50,8 @@ console.log(number);
 
 
 
-
-
-/*=============================================================
+/*
+=============================================================
 Q5. Store Favorite Color 
 Question: 
 Ek variable me apna favorite color store karke print karo.
@@ -70,23 +63,22 @@ console.log(color);
 
 
 
-
-
-/*===============================================================
+/*
+===============================================================
 Q6. Store Two Numbers 
 Question: 
 Do alag variables me do numbers store karo aur dono print karo.
 =================================================================
 */
 
-let firstnum = 10;
-let secondnum = 20;
-console.log(firstnum,secondnum);
+let firstNum = 10;
+let secondNum = 20;
+console.log(firstNum,secondNum);
 
 
 
-
-/*=================================================== 
+/*
+=================================================== 
 Q7. Store Boolean Value 
 Question: 
 Ek variable me true ya false store karke print karo.
@@ -94,8 +86,8 @@ Ek variable me true ya false store karke print karo.
 */
 
 
-let booleanval = true;
-console.log(booleanval);
+let booleanVal = true;
+console.log(booleanVal);
 
 
 
@@ -138,6 +130,31 @@ print karo.
 ================================================================
 */
 
-let firstname = "Mohd";
-let lastname = "Asif";
-console.log(firstname,lastname);
+let firstName = "Mohd";
+let lastName = "Asif";
+console.log(firstName,lastName);
+
+
+/*
+=========================================================
+Q11. Store School Name 
+Ek variable me school ka naam store karke print karo.
+=========================================================
+*/
+
+let schoolName = "New sainik public school";
+console.log(schoolName);
+
+
+
+
+/*
+=============================================================
+Q12. Store College Name 
+Ek variable me college ka naam store karke print karo.
+=============================================================
+*/
+
+
+let collageName = "SDGI global University";
+console.log(collageName);
