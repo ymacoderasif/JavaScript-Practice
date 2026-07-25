@@ -220,3 +220,24 @@ let mycity = "Noida";
 let country = "India";
 let hobby = "Books";
 console.log(myname,myage,mycity,country,hobby);
+
+
+
+
+
+/*
+==============================================================
+Q17. Swap Two Variables 
+Do variables me values store karo aur unki values aapas me 
+change karo. 
+==============================================================
+*/
+
+let swapFirst = 10;
+let swapSecond = 20;
+let temp = swapFirst;
+
+swapFirst = swapSecond;
+swapSecond = temp;
+console.log(swapFirst,swapSecond);
+
