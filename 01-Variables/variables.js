@@ -126,3 +126,18 @@ Ek constant me PI ki value store karke print karo.
 
 const PI = 3.14;
 console.log(PI);
+
+
+
+/*
+================================================================
+Q10. Store Full Name 
+Question: 
+First Name aur Last Name alag variables me store karo aur dono 
+print karo.
+================================================================
+*/
+
+let firstname = "Mohd";
+let lastname = "Asif";
+console.log(firstname,lastname);
