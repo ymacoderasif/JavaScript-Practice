@@ -236,8 +236,23 @@ change karo.
 let swapFirst = 10;
 let swapSecond = 20;
 let temp = swapFirst;
-
 swapFirst = swapSecond;
 swapSecond = temp;
 console.log(swapFirst,swapSecond);
 
+
+
+
+
+/*
+=======================================================================
+Q18. Copy Variable Value 
+Ek variable ki value doosre variable me copy karo aur dono print 
+karo. 
+=======================================================================
+*/
+
+let copyFirst = 10;
+let copySecond = 20;
+copySecond = copyFirst;
+console.log(copyFirst,copySecond);
