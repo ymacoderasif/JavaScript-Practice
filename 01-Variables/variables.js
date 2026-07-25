@@ -29,3 +29,9 @@ Ek variable me apne city ka naam store karke print karo.*/
 
 
 
+/*Q4. Store Mobile Number 
+Question: 
+Ek variable me mobile number store karke print karo.*/
+
+let number = 8376845742;
+console.log(number);
