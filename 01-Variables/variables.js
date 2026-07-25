@@ -110,6 +110,19 @@ print karo.
 ====================================================================
 */
 
-var val1 = 10;
+let val1 = 10;
 val1 = 20;
 console.log(val1);
+
+
+
+/*
+====================================================
+Q9. Constant Value 
+Question: 
+Ek constant me PI ki value store karke print karo.
+====================================================
+*/
+
+const PI = 3.14;
+console.log(PI);
