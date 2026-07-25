@@ -155,7 +155,6 @@ Ek variable me college ka naam store karke print karo.
 =============================================================
 */
 
-
 let collageName = "SDGI global University";
 console.log(collageName);
 
@@ -172,3 +171,19 @@ Ek variable me favorite food store karke print karo.
 
 let favoriteFood = "Biryani";
 console.log(favoriteFood);
+
+
+
+
+
+
+
+/*
+======================================================
+Q14. Store Email 
+Ek variable me email address store karke print karo.
+======================================================
+*/
+
+let email = "mohdasif@gmail.com";
+console.log(email);
