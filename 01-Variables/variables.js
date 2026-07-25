@@ -187,3 +187,18 @@ Ek variable me email address store karke print karo.
 
 let email = "mohdasif@gmail.com";
 console.log(email);
+
+
+
+
+
+
+/*
+=========================================================
+Q15. Store Country Name 
+Ek variable me country ka naam store karke print karo.
+=========================================================
+*/
+
+let countryName = "India";
+console.log(countryName);
