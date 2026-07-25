@@ -202,3 +202,21 @@ Ek variable me country ka naam store karke print karo.
 
 let countryName = "India";
 console.log(countryName);
+
+
+
+
+/*
+===================================================================
+Q16. Create Five Variables 
+Naam, age, city, country aur hobby alag variables me store karke 
+print karo. 
+===================================================================
+*/
+
+let myname = "Mohd Asif";
+let myage = 24;
+let mycity = "Noida";
+let country = "India";
+let hobby = "Books";
+console.log(myname,myage,mycity,country,hobby);
