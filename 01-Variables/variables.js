@@ -256,3 +256,20 @@ let copyFirst = 10;
 let copySecond = 20;
 copySecond = copyFirst;
 console.log(copyFirst,copySecond);
+
+
+
+
+
+/*
+==================================================================
+Q19.Store Different Data Types 
+Ek-ek variable me String, Number aur Boolean store karke print 
+karo.
+==================================================================
+*/
+
+let text = "Data";
+let num = 25;
+let value = true;
+console.log(text,num,value);
