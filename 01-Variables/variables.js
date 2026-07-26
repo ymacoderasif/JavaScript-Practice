@@ -509,3 +509,48 @@ let science = 65;
 let sst = 43;
 let math = 75;
 console.log(english,hindi,science,sst,math);
+
+
+
+
+/*
+===================================================================
+Q32. User Profile 
+Question: 
+Username, Email, Password (dummy value) aur Age variables me 
+store karke print karo.
+===================================================================
+*/
+
+let userName = "ymacoder";
+let userEmail = "mohdasif@gmail.com";
+const userPassword = "ymacoder@123";
+let userAge = 24;
+console.log(userName,userEmail,userPassword,userAge);
+
+
+
+
+
+
+/*
+==========================================================================
+Q33. Dream Car 
+Question: 
+Dream Car ka naam, color aur price variables me store karke print 
+karo.
+==========================================================================
+*/
+
+let dreamCar = "BMW";
+let dreamCarColor = "Black";
+let dreamcarPrice = "1 Cr";
+console.log(dreamCar,dreamCarColor,dreamcarPrice);
+
+
+
+
+
+
+/*
+
