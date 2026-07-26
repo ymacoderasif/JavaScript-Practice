@@ -409,3 +409,20 @@ Ek variable me YouTuber ka naam aur doosre me uske subscribers
 let youtuberName = "ymacoder";
 let youtuberSubscribers = 25;
 console.log(youtuberName,youtuberSubscribers);
+
+
+
+
+
+
+/*
+=====================================================================
+Q27. Laptop Details 
+Question: 
+Brand, RAM aur Storage variables me store karke print karo.
+=====================================================================
+*/
+
+let laptopBrand = "Asus";
+let laptopRam = 16;
+console.log(laptopBrand.laptopRam);
