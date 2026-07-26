@@ -553,4 +553,16 @@ console.log(dreamCar,dreamCarColor,dreamcarPrice);
 
 
 /*
+=======================================================================
+Q34. Social Media Profile 
+Question: 
+Instagram Username, Followers aur Following variables me store 
+karke print karo. 
+=======================================================================
+*/
 
+let instagramUser = "ymacoder";
+let instagramFollowers = 115;
+let instagramFollowing = 10;
+console.log(instagramUser,instagramFollowers,instagramFollowing);
+ 
