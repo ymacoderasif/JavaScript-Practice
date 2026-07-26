@@ -328,6 +328,26 @@ karke print karo.
 */
 
 let companyName = "Cogent e service Pvt Ltd";
-let companyLocation = "Noida secter 64";
+let companyLocation = "Noida sector 64";
 let companyEmployees = 756;
 console.log(companyName,companyLocation,companyEmployees);
+
+
+
+
+
+
+
+/*
+=====================================================================
+Q23. Movie Information 
+Question: 
+Movie ka naam, release year aur rating variables me store karke 
+print karo.
+=====================================================================
+*/
+
+let movieName = "Veer Zaara";
+let releaseYear = 2004;
+let movieRating = 7.8;
+console.log(movieName,releaseYear,movieRating);
