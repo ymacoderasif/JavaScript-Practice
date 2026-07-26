@@ -485,3 +485,27 @@ let gameName = "PUBG";
 let gameGenre = 20;
 let gameRelease = 2014;
 console.log(gameName,gameGenre,gameRelease);
+
+
+
+
+
+
+
+
+
+
+/*
+===================================================================
+Q31. Store Marks 
+Question: 
+5 subjects ke marks alag variables me store karke print karo.
+===================================================================
+*/
+
+let english = 45;
+let hindi = 50;
+let science = 65;
+let sst = 43;
+let math = 75;
+console.log(english,hindi,science,sst,math);
