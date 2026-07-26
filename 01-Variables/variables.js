@@ -375,10 +375,6 @@ console.log(bikeName,bikeModel,bikePrice);
 
 
 
-
-
-
-
 /*
 ====================================================================
 Q25. Book Details 
@@ -388,7 +384,10 @@ karo.
 ====================================================================
 */
 
-
+let bookName = "Atomic Habits";
+let bookAuthor = "James clear";
+let bookPrice = 150;
+console.log(bookName,bookAuthor,bookPrice);
 
 
 
