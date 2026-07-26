@@ -446,3 +446,23 @@ let mobileBrand = "Redmi";
 let mobileModel = "Redmi note 11";
 let mobilePrice = 15000;
 console.log(mobileBrand,mobileModel,mobilePrice);
+
+
+
+
+
+
+
+/*
+======================================================================
+Q29. Product Information 
+Question: 
+Product Name, Quantity aur Price variables me store karke print 
+karo.
+======================================================================
+*/
+
+let productName = "Headphone";
+let productQuantity = 2;
+let productPrice = 1000;
+console.log(productName,productQuantity,productPrice);
