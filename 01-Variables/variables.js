@@ -656,5 +656,28 @@ print karo.
 ======================================================================
 */
 
-let playerName = "Dhoni";
-let Team = "India";
+let playerName = "Virat Kohli";
+let playerTeam = "India";
+let jerseyNumber = 18;
+console.log(playerName, playerTeam, jerseyNumber);
+
+
+
+
+
+
+/*
+=============================================================================
+Q40. Portfolio Introduction 
+Question: 
+Apna naam, role, skills aur experience (dummy value bhi chalega) 
+variables me store karke ek professional introduction print karo. 
+=============================================================================
+*/
+
+let portfolioName = "Mohd Asif";
+let portfolioRole = "Frontend Developer";
+let portfolioSkills = "HTML, CSS, JavaScript";
+let portfolioExperience = "Fresher";
+
+console.log(`Hi,I'm ${portfolioName}. I'm a ${portfolioRole}. My skills are ${portfolioSkills} and I have ${portfolioExperience} experience.`);
