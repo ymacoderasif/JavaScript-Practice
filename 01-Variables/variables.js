@@ -425,4 +425,24 @@ Brand, RAM aur Storage variables me store karke print karo.
 
 let laptopBrand = "Asus";
 let laptopRam = 16;
-console.log(laptopBrand.laptopRam);
+console.log(laptopBrand,laptopRam);
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q28. Mobile Details 
+Question: 
+Brand, Model aur Price variables me store karke print karo.
+====================================================================
+*/
+
+let mobileBrand = "Redmi";
+let mobileModel = "Redmi note 11";
+let mobilePrice = 15000;
+console.log(mobileBrand,mobileModel,mobilePrice);
