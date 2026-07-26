@@ -621,3 +621,20 @@ let employeeName = "Mohd Asif";
 let employeeSalery = 20000;
 let employeeDepartment = "web technology";
 console.log(employeeName,employeeSalery,employeeDepartment);
+
+
+
+
+
+
+
+/*
+====================================================================
+Q38. Online Course 
+Question: 
+Course Name, Duration aur Fees variables me store karke print 
+karo.
+====================================================================
+*/
+
+let courseName = "Bca"
