@@ -603,3 +603,21 @@ let foodQuantity = "1kg";
 let foodPrice = 250;
 console.log(foodName,foodQuantity,foodPrice);
 
+
+
+
+
+
+/*
+========================================================================
+Q37. Employee Details 
+Question: 
+Employee Name, Salary aur Department variables me store karke 
+print karo.
+=========================================================================
+*/
+
+let employeeName = "Mohd Asif";
+let employeeSalery = 20000;
+let employeeDepartment = "web technology";
+console.log(employeeName,employeeSalery,employeeDepartment);
