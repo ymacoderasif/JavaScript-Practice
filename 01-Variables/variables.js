@@ -679,5 +679,4 @@ let portfolioName = "Mohd Asif";
 let portfolioRole = "Frontend Developer";
 let portfolioSkills = "HTML, CSS, JavaScript";
 let portfolioExperience = "Fresher";
-
 console.log(`Hi,I'm ${portfolioName}. I'm a ${portfolioRole}. My skills are ${portfolioSkills} and I have ${portfolioExperience} experience.`);
