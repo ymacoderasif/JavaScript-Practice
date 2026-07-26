@@ -566,3 +566,20 @@ let instagramFollowers = 115;
 let instagramFollowing = 10;
 console.log(instagramUser,instagramFollowers,instagramFollowing);
  
+
+
+
+
+/*
+======================================================================
+Q35. Travel Plan 
+Question: 
+Destination, Budget aur Number of Days variables me store karke 
+print karo. 
+======================================================================
+*/
+
+let Destination = "Ladakh";
+let Budget = 50000;
+let numberofDay = 30;
+console.log(Destination,Budget,numberofDay);
