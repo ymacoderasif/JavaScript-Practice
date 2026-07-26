@@ -312,3 +312,22 @@ let studentName = "Mohd Asif";
 let studentAge = 24;
 let studentCourse = "Bca";
 console.log(studentName,studentAge,studentCourse);
+
+
+
+
+
+
+/*
+==============================================================
+Q22. Company Details 
+Question: 
+Company Name, Location aur Employees ko variables me store 
+karke print karo.
+==============================================================
+*/
+
+let companyName = "Cogent e service Pvt Ltd";
+let companyLocation = "Noida secter 64";
+let companyEmployees = 756;
+console.log(companyName,companyLocation,companyEmployees);
