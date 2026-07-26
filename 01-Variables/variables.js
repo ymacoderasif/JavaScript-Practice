@@ -405,3 +405,7 @@ Ek variable me YouTuber ka naam aur doosre me uske subscribers
 (assume value) store karke print karo.
 =========================================================================
 */
+
+let youtuberName = "ymacoder";
+let youtuberSubscribers = 25;
+console.log(youtuberName,youtuberSubscribers);
