@@ -637,4 +637,24 @@ karo.
 ====================================================================
 */
 
-let courseName = "Bca"
+let courseName = "Bca";
+let CourseDuration = 3;
+let courseFees = 85000;
+console.log(courseName,CourseDuration,courseFees);
+
+
+
+
+
+
+/*
+======================================================================
+Q39. Cricket Player 
+Question: 
+Player Name, Team aur Jersey Number variables me store karke 
+print karo.
+======================================================================
+*/
+
+let playerName = "Dhoni";
+let Team = "India";
