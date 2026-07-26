@@ -292,3 +292,23 @@ let personCity = "Noida";
 let personEmail = "mohdasif@gmail.com";
 let profession = "Coding";
 console.log(personName,personAge,personCity,personEmail,profession);
+
+
+
+
+
+
+
+/*
+=====================================================================
+Q21. Student Details 
+Question: 
+Ek student ka naam, age aur course alag variables me store karo 
+aur ek hi line me print karo.
+=====================================================================
+*/
+
+let studentName = "Mohd Asif";
+let studentAge = 24;
+let studentCourse = "Bca";
+console.log(studentName,studentAge,studentCourse);
