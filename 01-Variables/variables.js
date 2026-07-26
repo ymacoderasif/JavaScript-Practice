@@ -466,3 +466,22 @@ let productName = "Headphone";
 let productQuantity = 2;
 let productPrice = 1000;
 console.log(productName,productQuantity,productPrice);
+
+
+
+
+
+
+/*
+========================================================================
+Q30. Game Information 
+Question: 
+Game ka naam, genre aur release year variables me store karke 
+print karo. 
+========================================================================
+*/
+
+let gameName = "PUBG";
+let gameGenre = 20;
+let gameRelease = 2014;
+console.log(gameName,gameGenre,gameRelease);
