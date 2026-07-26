@@ -583,3 +583,23 @@ let Destination = "Ladakh";
 let Budget = 50000;
 let numberofDay = 30;
 console.log(Destination,Budget,numberofDay);
+
+
+
+
+
+
+/*
+===========================================================================
+Q36. Restaurant Order 
+Question: 
+Food Name, Quantity aur Total Price variables me store karke print 
+karo. 
+===========================================================================
+*/
+
+let foodName = "Biryani";
+let foodQuantity = "1kg";
+let foodPrice = 250;
+console.log(foodName,foodQuantity,foodPrice);
+
