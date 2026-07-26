@@ -351,3 +351,58 @@ let movieName = "Veer Zaara";
 let releaseYear = 2004;
 let movieRating = 7.8;
 console.log(movieName,releaseYear,movieRating);
+
+
+
+
+
+
+/*
+=======================================================================
+Q24. Bike Information 
+Question: 
+Bike ka naam, model aur price variables me store karke print karo.
+=======================================================================
+*/
+
+let bikeName = "Honda sp125";
+let bikeModel = 2026;
+let bikePrice = 100000;
+console.log(bikeName,bikeModel,bikePrice);
+
+
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q25. Book Details 
+Question: 
+Book ka naam, author aur price variables me store karke print 
+karo.
+====================================================================
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q26. Favorite YouTuber 
+Question: 
+Ek variable me YouTuber ka naam aur doosre me uske subscribers 
+(assume value) store karke print karo.
+=========================================================================
+*/
