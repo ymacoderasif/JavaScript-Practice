@@ -17,7 +17,6 @@ successful honi chahiye.
 bhi dikhana hai. 
 =========================================================================
 */
-
 let userName = prompt("Enter a Name:");
 let userAge = Number(prompt("Enter Your Age:"));
 let userBudget = Number(prompt("Enter a ticket Budget :"));
@@ -28,6 +27,7 @@ if(userAge >= 18 && userBudget >= ticketPrice){
 }else{
     console.log(`Dear ${userName} Your Booking is rejected.`);
 }
+
 
 
 
@@ -49,7 +49,6 @@ Ek ATM System banao.
 hai.  
 =========================================================================
 */
-
 let accountHolder = "Mohd Asif";
 let accountBalance = 50000;
 let withdrawAmount = Number(prompt("Enter a Withdrawal Amount:"));
@@ -82,7 +81,6 @@ Ek Student Result System banao.
 • Student ka naam aur result bhi dikhana hai.  
 =============================================================
 */
-
 let studentName = "Rahul";
 let studentTotalMarks = 65;
 let passingMarks = 33;
@@ -91,6 +89,7 @@ if(studentTotalMarks >= passingMarks){
 }else{
     console.log(`Dear ${studentName}, You Have Failed. Marks: ${studentTotalMarks}`);   
 }
+
 
 
 
@@ -133,3 +132,25 @@ console.log(`Shopping Name: ${shoppingAmount}`);
 console.log(`Discount: ${discount}`);
 console.log(`Discount Amount: ${discountAmount}`);
 console.log(`Final Amount: ${finalAmount}`);
+
+
+
+
+
+
+
+
+/*
+======================================================================
+Q5. Electricity Bill System 
+Question 
+Ek Electricity Bill System banao. 
+• Customer ka naam store karo.  
+• Total Units store karo.  
+• Per Unit Price store karo.  
+• Bill Amount calculate karo.  
+• Agar customer kisi special category me aata hai to bill me 
+chhoot do.  
+• Final Bill Amount dikhana hai. 
+======================================================================
+*/
