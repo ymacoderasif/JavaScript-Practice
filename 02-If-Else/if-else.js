@@ -154,3 +154,25 @@ chhoot do.
 • Final Bill Amount dikhana hai. 
 ======================================================================
 */
+let consumerName = "Mohd Asif";
+let unitsConsumed = 520;
+let unitRate = 8;
+let totalBill = unitsConsumed * unitRate;
+let discountAmount = 0;
+let payableBill = 0;
+let discountRate = 0;
+if(unitsConsumed >= 300){
+    discountRate = 10;
+}
+discountAmount = (totalBill * discountRate) / 100;
+payableBill = totalBill - discountAmount;
+
+console.log(`Consumer Name: ${consumerName}`);
+console.log(`Unit Consumed: ${unitsConsumed}`);
+console.log(`Unit Rate: ${unitRate}`);
+console.log(`Total Bill: ${totalBill}`);
+console.log(`Discount Rate: ${discountRate}%`);
+console.log(`Discount Amount: ${discountAmount}`);
+console.log(`Payable Bill: ${payableBill}`);
+
+
