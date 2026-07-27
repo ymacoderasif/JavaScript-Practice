@@ -112,3 +112,24 @@ calculate karo.
 • Customer ka naam, discount aur final amount dikhana hai. 
 ===================================================================
 */
+let customerName = "Mohd Asif";
+let shoppingAmount = 7500;
+let discount = 0;
+let discountAmount = 0;
+let finalAmount = 0;
+if(shoppingAmount >= 5000){
+    discount = 20;
+}else if(shoppingAmount >= 3000){
+    discount = 10;
+}else if(shoppingAmount >= 1000){
+    discount = 5;
+}else{
+    discount = 0;
+}
+discountAmount = (shoppingAmount * discount) / 100;
+finalAmount = shoppingAmount - discountAmount;
+console.log(`Customer Name: ${customerName}`);
+console.log(`Shopping Name: ${shoppingAmount}`);
+console.log(`Discount: ${discount}`);
+console.log(`Discount Amount: ${discountAmount}`);
+console.log(`Final Amount: ${finalAmount}`);
