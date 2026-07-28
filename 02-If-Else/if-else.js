@@ -526,3 +526,37 @@ console.log(`Per KM Fare: ${farePerKm}Rs`);
 console.log(`Trip Fare: ${tripFare}`);
 console.log(`Fare Discount: ${fareDiscount}`);
 console.log(`Final Cab Fare: ${finalCabFare}`);
+
+
+
+
+
+
+
+/*
+============================================================================
+Q16. Online Course Purchase 
+Question 
+Ek Online Course Purchase System banao. 
+• Student ka naam store karo.  
+• Course Fee store karo.  
+• Scholarship status store karo.  
+• Agar student ko scholarship milti hai to final fee update karo.  
+• Final payment details dikhani hain.  
+============================================================================
+*/
+let studentFullName = "Mohd Asif";
+let courseFee = 3000;
+let hasScholarship = true;
+let scholarshipDiscount = 0;
+let finalPayment = 0;
+if(hasScholarship === true){
+    scholarshipDiscount = 40;
+}
+scholarshipDiscount = (courseFee * scholarshipDiscount) / 100;
+finalPayment = courseFee - scholarshipDiscount;
+console.log(`Student Name: ${studentFullName}`);
+console.log(`Course Fee: ${courseFee}`);
+console.log(`Scholarship Status: ${hasScholarship}`);
+console.log(`Scholarship Discount: ${scholarshipDiscount}`);
+console.log(`Final Payment: ${finalPayment}`);
