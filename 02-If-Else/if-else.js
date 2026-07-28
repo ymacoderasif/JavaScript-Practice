@@ -307,3 +307,39 @@ console.log(`Customer Name: ${mobileUser}`);
 console.log(`Recharge Amount: ${rechargeAmount}`);
 console.log(`Bonus Benefit: ${bonusBenefit}`);
 console.log(`Final Recharge: ${finalRecharge}`);    
+
+
+
+
+
+
+
+
+/*
+=======================================================================
+Q10. Hospital Registration 
+          Question 
+Ek Hospital Registration System banao. 
+• Patient ka naam store karo.  
+• Age store karo.  
+• Registration Fee store karo.  
+• Agar patient kisi special category me aata hai to fee me 
+chhoot do.  
+• Final registration details dikhana hai. 
+=======================================================================
+*/
+let patientName = "Mohd Asif";
+let patientAge = 62;
+let registrationFee = 5000;
+let discountAmount = 0;
+let finalFee = 0;
+if(patientAge >= 60){
+    discountAmount = 50;
+}
+discountAmount = (registrationFee * discountAmount) / 100;
+finalFee = registrationFee - discountAmount;
+console.log(`Patient Name: ${patientName}`);
+console.log(`Patient Age: ${patientAge}`);
+console.log(`Registration Fee: ${registrationFee}`);
+console.log(`Discount Amount: ${discountAmount}`);
+console.log(`Final Amount: ${finalFee}`);
