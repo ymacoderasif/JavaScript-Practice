@@ -379,3 +379,42 @@ console.log(`Passenger Age: ${passengerAge}`);
 console.log(`Ticket Price: ${ticketPrice}`);
 console.log(`Discount Amount: ${ticketDiscount}`);
 console.log(`Payable Amount: ${finalTicketAmount}`);
+
+
+
+
+
+
+
+
+/*
+==============================================================================
+Q12. Hotel Room Booking 
+Question 
+Ek Hotel Booking System banao. 
+• Customer ka naam store karo.  
+• Room ka rent store karo.  
+• Total nights store karo.  
+• Agar customer kisi offer ke liye qualify karta hai to final bill 
+me chhoot do.  
+• Final bill aur booking details dikhani hain. 
+===============================================================================
+*/
+let hotelGuest = "Mohd Asif";
+let roomRent = 3500;
+let stayNights = 6;
+let totalBill = 0;
+let bookingDiscount = 0;
+let hotelBill = 0;
+if(stayNights >= 5){
+    bookingDiscount = 20;
+}
+totalBill = roomRent * stayNights;
+bookingDiscount = (totalBill * bookingDiscount) / 100;
+hotelBill = totalBill - bookingDiscount;
+console.log(`Hotel Guest: ${hotelGuest}`);
+console.log(`Room Rent: ${roomRent}`);
+console.log(`Stay Nights: ${stayNights}`);
+console.log(`Total Bill: ${totalBill}`);
+console.log(`Booking Discount: ${bookingDiscount}`);
+console.log(`Hotel Bill: ${hotelBill}`);
