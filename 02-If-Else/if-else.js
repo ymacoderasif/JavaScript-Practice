@@ -166,7 +166,6 @@ if(unitsConsumed >= 300){
 }
 discountAmount = (totalBill * discountRate) / 100;
 payableBill = totalBill - discountAmount;
-
 console.log(`Consumer Name: ${consumerName}`);
 console.log(`Unit Consumed: ${unitsConsumed}`);
 console.log(`Unit Rate: ${unitRate}`);
@@ -176,3 +175,36 @@ console.log(`Discount Amount: ${discountAmount}`);
 console.log(`Payable Bill: ${payableBill}`);
 
 
+
+
+
+
+
+
+/*
+=========================================================================
+ Q6. Bank Account Verification 
+Question 
+Ek Bank Verification System banao. 
+• Customer ka naam store karo.  
+• Account Status store karo.  
+• Minimum Balance store karo.  
+• Current Balance store karo.  
+• Agar account active hai aur balance rule follow ho raha hai to 
+account valid maana jayega.  
+• Warna proper message dikhana hai.  
+=========================================================================
+*/
+let holderName = "Mohd Asif";
+let accountStatus = false;
+let minimumBalance = 1000;
+let currentBalance = 500;
+if(accountStatus === true  && currentBalance >= minimumBalance){
+    console.log(`Dear ${holderName}, Account valid.`);
+}else if(accountStatus === false){
+    console.log(`Dear ${holderName}, Account Invalid.`);
+    console.log(`Reason: Account is Inactive.`);
+}else{
+    console.log(`Dear ${holderName}, Account Invalid.`);
+    console.log(`Reason: Insufficient Balance`);
+}
