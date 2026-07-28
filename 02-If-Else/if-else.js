@@ -735,3 +735,41 @@ console.log(`Customer Name: ${billingCustomer}`);
 console.log(`Shopping Amount: ${purchaseTotal}`);
 console.log(`Discount: ${discountValue}`);
 console.log(`Final Payable Amount: ${payableAmount}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q22.ATM Minimum Balance 
+Question 
+Ek ATM System banao. 
+• Customer ka naam store karo.  
+• Account Balance store karo.  
+• Withdraw Amount store karo.  
+• Transaction tabhi allow hogi jab withdrawal ke baad account 
+me ₹1000 ya usse zyada balance bache.  
+• Warna transaction reject kar do.  
+• Final balance ya error message dikhana hai.  
+==========================================================================
+*/
+let bankCustomer = "Mohd Asif";
+let currentAmount = 6000;
+let cashRequest = Number(prompt("Enter your Amount for Withdraw:"));
+let remainingBalance = currentAmount;
+let transactionStatus = "";
+if((currentAmount - cashRequest) >= 1000){
+    remainingBalance = currentAmount - cashRequest;
+    transactionStatus = "Approved";
+}else{
+    transactionStatus = "Rejected";
+}
+console.log(`Customer Name: ${bankCustomer}`);
+console.log(`Account Balance: ${currentAmount}`);
+console.log(`Withdraw Amount: ${cashRequest}`);
+console.log(`Remaining Balance: ${remainingBalance}`);
+console.log(`Transaction Status: ${transactionStatus}`);
