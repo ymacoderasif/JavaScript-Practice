@@ -630,3 +630,41 @@ console.log(`Customer Name: ${electricityUser}`);
 console.log(`Recharge Amount: ${rechargeValue}`);
 console.log(`Cashback Amount: ${cashbackReward}`);
 console.log(`Final Payable Amount: ${finalPayableAmount}`);
+
+
+
+
+
+
+
+
+/*
+===============================================================================
+Q19. Bike Rental System 
+Question 
+Ek Bike Rental System banao. 
+• Customer ka naam store karo.  
+• Total rental hours store karo.  
+• Per hour charge store karo.  
+• Agar customer kisi offer ke liye qualify karta hai to final bill 
+update karo.  
+• Final rental details dikhani hain. 
+===============================================================================
+*/
+let riderName = "Mohd Asif";
+let rentalHours = 6;
+let hourlyCharge = 100;
+let totalRent = rentalHours * hourlyCharge;
+let rentalDiscount = 0;
+let finalRentalBill = 0;
+if(rentalHours >= 10){
+    rentalDiscount = 20;
+}
+rentalDiscount = (totalRent * rentalDiscount) / 100;
+finalRentalBill = totalRent - rentalDiscount;
+console.log(`Customer Name: ${riderName}`);
+console.log(`Rental Hours: ${rentalHours}`);
+console.log(`Per Hour Charge: ${hourlyCharge}Rs/Hour`);
+console.log(`Total Rent: ${totalRent}`);
+console.log(`Rental Discount: ${rentalDiscount}`);
+console.log(`Final Rental Bill: ${finalRentalBill}`);
