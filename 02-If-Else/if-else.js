@@ -21,10 +21,10 @@ let userName = prompt("Enter a Name:");
 let userAge = Number(prompt("Enter Your Age:"));
 let userBudget = Number(prompt("Enter a ticket Budget :"));
 let ticketPrice = 350;
-if(userAge >= 18 && userBudget >= ticketPrice){
+if (userAge >= 18 && userBudget >= ticketPrice) {
     console.log(`Dear ${userName}, Your Booking is Successful.`);
     console.log(`Ticket Price: ${ticketPrice}`);
-}else{
+} else {
     console.log(`Dear ${userName} Your Booking is rejected.`);
 }
 
@@ -53,10 +53,10 @@ let accountHolder = "Mohd Asif";
 let accountBalance = 50000;
 let withdrawAmount = Number(prompt("Enter a Withdrawal Amount:"));
 let updatedBalance = accountBalance - withdrawAmount;
-if(accountBalance >= withdrawAmount){
+if (accountBalance >= withdrawAmount) {
     console.log(`Dear ${accountHolder}, Your Transaction is Successful`);
     console.log(`Updated Balance: ₹${updatedBalance}`);
-}else{
+} else {
     console.log("❌ Transaction Failed");
     console.log("Reason: Insufficient Balance");
 }
@@ -84,10 +84,10 @@ Ek Student Result System banao.
 let studentName = "Rahul";
 let studentTotalMarks = 65;
 let passingMarks = 33;
-if(studentTotalMarks >= passingMarks){
+if (studentTotalMarks >= passingMarks) {
     console.log(`Congratulations ${studentName}! You Have Passed. Marks: ${studentTotalMarks}`);
-}else{
-    console.log(`Dear ${studentName}, You Have Failed. Marks: ${studentTotalMarks}`);   
+} else {
+    console.log(`Dear ${studentName}, You Have Failed. Marks: ${studentTotalMarks}`);
 }
 
 
@@ -116,13 +116,13 @@ let shoppingAmount = 7500;
 let discount = 0;
 let discountAmount = 0;
 let finalAmount = 0;
-if(shoppingAmount >= 5000){
+if (shoppingAmount >= 5000) {
     discount = 20;
-}else if(shoppingAmount >= 3000){
+} else if (shoppingAmount >= 3000) {
     discount = 10;
-}else if(shoppingAmount >= 1000){
+} else if (shoppingAmount >= 1000) {
     discount = 5;
-}else{
+} else {
     discount = 0;
 }
 discountAmount = (shoppingAmount * discount) / 100;
@@ -161,7 +161,7 @@ let totalBill = unitsConsumed * unitRate;
 let discountAmount = 0;
 let payableBill = 0;
 let discountRate = 0;
-if(unitsConsumed >= 300){
+if (unitsConsumed >= 300) {
     discountRate = 10;
 }
 discountAmount = (totalBill * discountRate) / 100;
@@ -199,12 +199,12 @@ let holderName = "Mohd Asif";
 let accountStatus = false;
 let minimumBalance = 1000;
 let currentBalance = 500;
-if(accountStatus === true  && currentBalance >= minimumBalance){
+if (accountStatus === true && currentBalance >= minimumBalance) {
     console.log(`Dear ${holderName}, Account valid.`);
-}else if(accountStatus === false){
+} else if (accountStatus === false) {
     console.log(`Dear ${holderName}, Account Invalid.`);
     console.log(`Reason: Account is Inactive.`);
-}else{
+} else {
     console.log(`Dear ${holderName}, Account Invalid.`);
     console.log(`Reason: Insufficient Balance`);
 }
@@ -233,9 +233,9 @@ let applicantName = "Mohd Asif";
 let applicantAge = 20;
 let identityVerified = true;
 let licenceStatus = "";
-if(applicantAge >= 18 && identityVerified){
+if (applicantAge >= 18 && identityVerified) {
     licenceStatus = "Approved";
-}else{
+} else {
     licenceStatus = "Rejected";
 }
 console.log(`Applicant Name: ${applicantName}`);
@@ -265,9 +265,9 @@ let customerFullName = "Mohd Asif";
 let orderAmount = 550;
 let deliveryCharge = 0;
 let finalBill = 0;
-if(orderAmount >= 500){
+if (orderAmount >= 500) {
     deliveryCharge = 0;
-}else{
+} else {
     deliveryCharge = 50;
 }
 finalBill = orderAmount + deliveryCharge;
@@ -299,14 +299,14 @@ let mobileUser = "Mohd Asif";
 let rechargeAmount = 650;
 let bonusBenefit = 0;
 let finalRecharge = 0;
-if(rechargeAmount >= 500){
+if (rechargeAmount >= 500) {
     bonusBenefit = 100;
 }
 finalRecharge = rechargeAmount + bonusBenefit;
 console.log(`Customer Name: ${mobileUser}`);
 console.log(`Recharge Amount: ${rechargeAmount}`);
 console.log(`Bonus Benefit: ${bonusBenefit}`);
-console.log(`Final Recharge: ${finalRecharge}`);    
+console.log(`Final Recharge: ${finalRecharge}`);
 
 
 
@@ -333,7 +333,7 @@ let patientAge = 62;
 let registrationFee = 5000;
 let discountAmount = 0;
 let finalFee = 0;
-if(patientAge >= 60){
+if (patientAge >= 60) {
     discountAmount = 50;
 }
 discountAmount = (registrationFee * discountAmount) / 100;
@@ -369,7 +369,7 @@ let passengerAge = 65;
 let ticketPrice = 1500;
 let ticketDiscount = 0;
 let finalTicketAmount = 0;
-if(passengerAge >= 60){
+if (passengerAge >= 60) {
     ticketDiscount = 30;
 }
 ticketDiscount = (ticketPrice * ticketDiscount) / 100;
@@ -406,7 +406,7 @@ let stayNights = 6;
 let totalBill = 0;
 let bookingDiscount = 0;
 let hotelBill = 0;
-if(stayNights >= 5){
+if (stayNights >= 5) {
     bookingDiscount = 20;
 }
 totalBill = roomRent * stayNights;
@@ -444,7 +444,7 @@ let membershipFee = 6500;
 let isStudent = true;
 let studentDiscount = 0;
 let finalMembershipFee = 0;
-if(isStudent === true){
+if (isStudent === true) {
     studentDiscount = 50;
 }
 studentDiscount = (membershipFee * studentDiscount) / 100;
@@ -479,7 +479,7 @@ let employeeName = "Mohd Asif";
 let basicSalary = 29000;
 let performanceBonus = 0;
 let finalSalary = 0;
-if(basicSalary >= 30000){
+if (basicSalary >= 30000) {
     performanceBonus = 20;
 }
 performanceBonus = (basicSalary * performanceBonus) / 100;
@@ -515,7 +515,7 @@ let farePerKm = 8;
 let tripFare = travelDistance * farePerKm;
 let fareDiscount = 0;
 let finalCabFare = 0;
-if(travelDistance >= 20){
+if (travelDistance >= 20) {
     fareDiscount = 15;
 }
 fareDiscount = (tripFare * fareDiscount) / 100;
@@ -550,7 +550,7 @@ let courseFee = 3000;
 let hasScholarship = true;
 let scholarshipDiscount = 0;
 let finalPayment = 0;
-if(hasScholarship === true){
+if (hasScholarship === true) {
     scholarshipDiscount = 40;
 }
 scholarshipDiscount = (courseFee * scholarshipDiscount) / 100;
@@ -586,7 +586,7 @@ let membershipCost = 8000;
 let membershipDuration = 22;
 let offerDiscount = 0;
 let finalMembershipCost = 0;
-if(membershipDuration >= 12){
+if (membershipDuration >= 12) {
     offerDiscount = 25;
 }
 offerDiscount = (membershipCost * offerDiscount) / 100;
@@ -621,7 +621,7 @@ let electricityUser = "Mohd Asif";
 let rechargeValue = 1350;
 let cashbackReward = 0;
 let finalPayableAmount = 0;
-if(rechargeValue >= 1000){
+if (rechargeValue >= 1000) {
     cashbackReward = 10;
 }
 cashbackReward = (rechargeValue * cashbackReward) / 100;
@@ -657,7 +657,7 @@ let hourlyCharge = 100;
 let totalRent = rentalHours * hourlyCharge;
 let rentalDiscount = 0;
 let finalRentalBill = 0;
-if(rentalHours >= 10){
+if (rentalHours >= 10) {
     rentalDiscount = 20;
 }
 rentalDiscount = (totalRent * rentalDiscount) / 100;
@@ -693,7 +693,7 @@ let festivalCustomer = "Mohd Asif";
 let purchaseAmount = 15000;
 let giftVoucher = 0;
 let finalPurchaseAmount = 0;
-if(purchaseAmount >= 5000){
+if (purchaseAmount >= 5000) {
     giftVoucher = 500;
 }
 finalPurchaseAmount = purchaseAmount + giftVoucher;
@@ -726,7 +726,7 @@ let billingCustomer = "Mohd Asif";
 let purchaseTotal = 6000;
 let discountValue = 0;
 let payableAmount = 0;
-if(purchaseTotal >= 5000){
+if (purchaseTotal >= 5000) {
     discountValue = 20;
 }
 discountValue = (purchaseTotal * discountValue) / 100;
@@ -762,10 +762,10 @@ let currentAmount = 6000;
 let cashRequest = Number(prompt("Enter your Amount for Withdraw:"));
 let remainingBalance = currentAmount;
 let transactionStatus = "";
-if((currentAmount - cashRequest) >= 1000){
+if ((currentAmount - cashRequest) >= 1000) {
     remainingBalance = currentAmount - cashRequest;
     transactionStatus = "Approved";
-}else{
+} else {
     transactionStatus = "Rejected";
 }
 console.log(`Customer Name: ${bankCustomer}`);
@@ -797,7 +797,7 @@ let staffMember = "Mohd Asif";
 let monthlySalary = 55000;
 let bonusAmount = 0;
 let updatedSalary = 0;
-if(monthlySalary >= 50000){
+if (monthlySalary >= 50000) {
     bonusAmount = 10;
 }
 bonusAmount = (monthlySalary * bonusAmount) / 100;
@@ -830,7 +830,7 @@ let mobileSubscriber = "Mohd Asif";
 let rechargeCost = 299;
 let cashbackValue = 0;
 let totalRechargeValue = 0;
-if(rechargeCost >= 399){
+if (rechargeCost >= 399) {
     cashbackValue = 50;
 }
 totalRechargeValue = rechargeCost + cashbackValue;
@@ -865,7 +865,7 @@ let pricePerUnit = 8;
 let electricityBill = electricityUnits * pricePerUnit;
 let surchargeAmount = 0;
 let finalBillAmount = 0;
-if(electricityUnits > 300){
+if (electricityUnits > 300) {
     surchargeAmount = 8;
 }
 surchargeAmount = (electricityBill * surchargeAmount) / 100;
@@ -876,3 +876,42 @@ console.log(`Per Unit Price: ₹${pricePerUnit}`);
 console.log(`Electricity Bill: ${electricityBill}`);
 console.log(`Surcharge: ${surchargeAmount}`);
 console.log(`Final Bill: ${finalBillAmount}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================================
+Q.26 Water Tank Filling System
+Question
+Ek Water Tank Filling System banao.
+• Tank Capacity (Liters) store karo.
+• Current Water (Liters) store karo.
+• Per Liter Water Cost store karo.
+• Agar tank 80% ya usse zyada bhar gaya hai to ₹300 Maintenance Charge add karo.
+Warna koi maintenance charge nahi.
+• Final water filling cost dikhani hai.
+===========================================================================================
+*/
+let tankCapacity = 1000;
+let currentWater = 850;
+let perLiterCost = 5;
+let waterNeeded = tankCapacity - currentWater;
+let waterFillingCost = waterNeeded * perLiterCost;
+let maintenanceCharge = 0;
+let finalWaterCost = 0
+if(currentWater >= ((tankCapacity * 80) / 100 ) ){
+    maintenanceCharge = 300;
+}
+finalWaterCost = waterFillingCost + maintenanceCharge;
+console.log(`Tank Capacity: ${tankCapacity}Liters`);
+console.log(`Current Water: ${currentWater}Liters`);
+console.log(`Per Liter Cost: ₹${perLiterCost}`);
+console.log(`Water Needed: ${waterNeeded}Liters`);
+console.log(`Water Filling Cost: ₹${waterFillingCost}`);
+console.log(`Maintenance Charge: ₹${maintenanceCharge}`);
+console.log(`Final Water Cost: ₹${finalWaterCost}`);
