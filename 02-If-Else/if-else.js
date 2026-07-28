@@ -343,3 +343,39 @@ console.log(`Patient Age: ${patientAge}`);
 console.log(`Registration Fee: ${registrationFee}`);
 console.log(`Discount Amount: ${discountAmount}`);
 console.log(`Final Amount: ${finalFee}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q11. Flight Ticket Booking 
+Question 
+Ek Flight Ticket Booking System banao. 
+• Passenger ka naam store karo.  
+• Passenger ki age store karo.  
+• Ticket ka base price store karo.  
+• Agar passenger kisi special category me aata hai to ticket 
+price me chhoot do.  
+• Final ticket amount aur booking details dikhani hain. 
+===========================================================================
+*/
+let passengerName = "Mohd Asif";
+let passengerAge = 65;
+let ticketPrice = 1500;
+let ticketDiscount = 0;
+let finalTicketAmount = 0;
+if(passengerAge >= 60){
+    ticketDiscount = 30;
+}
+ticketDiscount = (ticketPrice * ticketDiscount) / 100;
+finalTicketAmount = ticketPrice - ticketDiscount;
+console.log(`Passenger Name: ${passengerName}`);
+console.log(`Passenger Age: ${passengerAge}`);
+console.log(`Ticket Price: ${ticketPrice}`);
+console.log(`Discount Amount: ${ticketDiscount}`);
+console.log(`Payable Amount: ${finalTicketAmount}`);
