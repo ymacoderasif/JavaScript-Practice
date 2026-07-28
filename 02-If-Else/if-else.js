@@ -560,3 +560,39 @@ console.log(`Course Fee: ${courseFee}`);
 console.log(`Scholarship Status: ${hasScholarship}`);
 console.log(`Scholarship Discount: ${scholarshipDiscount}`);
 console.log(`Final Payment: ${finalPayment}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q17. Gym Membership 
+Question 
+Ek Gym Membership System banao. 
+• Member ka naam store karo.  
+• Membership Fee store karo.  
+• Membership Duration store karo.  
+• Agar member kisi special offer ke liye qualify karta hai to 
+final fee update karo.  
+• Final membership details dikhani hain. 
+==============================================================================
+*/
+let gymMember = "Mohd Asif";
+let membershipCost = 8000;
+let membershipDuration = 22;
+let offerDiscount = 0;
+let finalMembershipCost = 0;
+if(membershipDuration >= 12){
+    offerDiscount = 25;
+}
+offerDiscount = (membershipCost * offerDiscount) / 100;
+finalMembershipCost = membershipCost - offerDiscount;
+console.log(`Gym Member: ${gymMember}`);
+console.log(`Membership Fee: ${membershipCost}`);
+console.log(`Membership Duration: ${membershipDuration}months`);
+console.log(`Offer Discount: ${offerDiscount}`);
+console.log(`Final Membership Cost: ${finalMembershipCost}`);
