@@ -488,3 +488,41 @@ console.log(`Employee Name: ${employeeName}`);
 console.log(`Basic Salary: ${basicSalary}`);
 console.log(`Performance Bonus: ${performanceBonus}`);
 console.log(`Final Salary: ${finalSalary}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q15. Cab Fare System 
+Question 
+Ek Cab Booking System banao. 
+• Customer ka naam store karo.  
+• Total distance store karo.  
+• Per kilometer fare store karo.  
+• Agar customer kisi offer ke liye qualify karta hai to final fare 
+update karo.  
+• Final fare aur booking details dikhani hain.  
+==============================================================================
+*/
+let cabCustomer = "Mohd Asif";
+let travelDistance = 25;
+let farePerKm = 8;
+let tripFare = travelDistance * farePerKm;
+let fareDiscount = 0;
+let finalCabFare = 0;
+if(travelDistance >= 20){
+    fareDiscount = 15;
+}
+fareDiscount = (tripFare * fareDiscount) / 100;
+finalCabFare = tripFare - fareDiscount;
+console.log(`Customer Name: ${cabCustomer}`);
+console.log(`Distance: ${travelDistance}Km`);
+console.log(`Per KM Fare: ${farePerKm}Rs`);
+console.log(`Trip Fare: ${tripFare}`);
+console.log(`Fare Discount: ${fareDiscount}`);
+console.log(`Final Cab Fare: ${finalCabFare}`);
