@@ -275,3 +275,35 @@ console.log(`Customer Name: ${customerFullName}`);
 console.log(`Order Amount: ${orderAmount}`);
 console.log(`Delivery Charges: ${deliveryCharge}`);
 console.log(`Final Amount: ${finalBill}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q9. Mobile Recharge System 
+Question 
+Ek Mobile Recharge System banao. 
+• Customer ka naam store karo.  
+• Recharge Amount store karo.  
+• Bonus Benefit store karo.  
+• Agar recharge kisi offer ke liye eligible hai to bonus add karo.  
+• Final recharge details dikhana hai.  
+===========================================================================
+*/
+let mobileUser = "Mohd Asif";
+let rechargeAmount = 650;
+let bonusBenefit = 0;
+let finalRecharge = 0;
+if(rechargeAmount >= 500){
+    bonusBenefit = 100;
+}
+finalRecharge = rechargeAmount + bonusBenefit;
+console.log(`Customer Name: ${mobileUser}`);
+console.log(`Recharge Amount: ${rechargeAmount}`);
+console.log(`Bonus Benefit: ${bonusBenefit}`);
+console.log(`Final Recharge: ${finalRecharge}`);    
