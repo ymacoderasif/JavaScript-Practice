@@ -1024,3 +1024,40 @@ console.log(`Membership Duration: ${planMonths}`);
 console.log(`Membership Total Amount: ${totalmemberShip}`);
 console.log(`Free Membership Value: ${freeMembershipValue}`);
 console.log(`Total Membership Cost: ${totalMembershipFee}`);
+
+
+
+
+
+
+
+
+/*
+==============================================================================
+Q30. Food Delivery 
+Question 
+Ek Food Delivery System banao. 
+• Customer ka naam store karo.  
+• Order Amount store karo.  
+• Delivery Charge store karo.  
+• Agar order amount ₹799 ya usse zyada hai to delivery charge 
+hata do.  
+• Warna normal delivery charge rakho.  
+• Final bill dikhana hai.  
+===============================================================================
+*/
+let buyerName = "Mohd Asif";
+let cartValue = 1550;
+let shippingFee = 80;
+let invoiceAmount = 0;
+let payableBill = 0;
+if(cartValue >= 799){
+    shippingFee = 0;
+}
+invoiceAmount = cartValue + shippingFee;
+payableBill = invoiceAmount;
+console.log(`Buyer Name: ${buyerName}`);
+console.log(`Cart Value: ₹${cartValue}`);
+console.log(`Shipping Fee: ₹${shippingFee}`);
+console.log(`Invoice Amount: ₹${invoiceAmount}`);
+console.log(`Payable Bill: ₹${payableBill}`);
