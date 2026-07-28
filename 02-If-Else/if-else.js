@@ -208,3 +208,35 @@ if(accountStatus === true  && currentBalance >= minimumBalance){
     console.log(`Dear ${holderName}, Account Invalid.`);
     console.log(`Reason: Insufficient Balance`);
 }
+
+
+
+
+
+
+
+
+/*
+============================================================================
+ Q7. Driving Licence Eligibility 
+Question 
+Ek Driving Licence System banao. 
+• Applicant ka naam store karo.  
+• Age store karo.  
+• Identity Verification Status store karo.  
+• Agar applicant licence ke liye eligible hai to approval dikhana 
+hai.  
+• Warna rejection dikhana hai.  
+============================================================================
+*/
+let applicantName = "Mohd Asif";
+let applicantAge = 20;
+let identityVerified = true;
+let licenceStatus = "";
+if(applicantAge >= 18 && identityVerified){
+    licenceStatus = "Approved";
+}else{
+    licenceStatus = "Rejected";
+}
+console.log(`Applicant Name: ${applicantName}`);
+console.log(`Licence Status: ${licenceStatus}`);
