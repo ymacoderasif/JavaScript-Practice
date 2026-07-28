@@ -915,3 +915,40 @@ console.log(`Water Needed: ${waterNeeded}Liters`);
 console.log(`Water Filling Cost: ₹${waterFillingCost}`);
 console.log(`Maintenance Charge: ₹${maintenanceCharge}`);
 console.log(`Final Water Cost: ₹${finalWaterCost}`);
+
+
+
+
+
+
+
+
+/*
+================================================================================
+Q27. Hotel Booking 
+Question 
+Ek Hotel Booking System banao. 
+• Customer ka naam store karo.  
+• Total Nights store karo.  
+• Per Night Rent store karo.  
+• Agar booking 5 ya usse zyada nights ki hai to 1 night free kar 
+do.  
+• Final bill dikhana hai. 
+================================================================================
+*/
+let guestName = "Mohd Asif";
+let stayDays = 6;
+let nightCharge = 500;
+let bookingAmount = stayDays * nightCharge;
+let complimentaryNightAmount = 0;
+let payableAmount = 0;
+if(stayDays >= 5){
+    complimentaryNightAmount = nightCharge;
+}
+payableAmount = bookingAmount - complimentaryNightAmount;
+console.log(`Guest Name: ${guestName}`);
+console.log(`Stay Days: ${stayDays}`);
+console.log(`Night Charge: ${nightCharge}`);
+console.log(`Booking Amount: ${bookingAmount}`);
+console.log(`Complimentary Night Amount: ${complimentaryNightAmount}`);
+console.log(`Payable Amount: ${payableAmount}`);
