@@ -701,3 +701,37 @@ console.log(`Customer Name: ${festivalCustomer}`);
 console.log(`Shopping Amount: ${purchaseAmount}`);
 console.log(`Gift Voucher: ₹${giftVoucher}`);
 console.log(`Final Purchase Amount: ${finalPurchaseAmount}`);
+
+
+
+
+
+
+
+
+/*
+================================================================================
+Q21. Shopping Discount System 
+Question 
+Ek Shopping Billing System banao. 
+• Customer ka naam store karo.  
+• Shopping Amount store karo.  
+• Agar shopping amount ₹5000 ya usse zyada hai to 20% 
+discount do.  
+• Warna koi discount mat do.  
+• Final payable amount aur customer ki details dikhani hain. 
+=================================================================================
+*/
+let billingCustomer = "Mohd Asif";
+let purchaseTotal = 6000;
+let discountValue = 0;
+let payableAmount = 0;
+if(purchaseTotal >= 5000){
+    discountValue = 20;
+}
+discountValue = (purchaseTotal * discountValue) / 100;
+payableAmount = purchaseTotal - discountValue;
+console.log(`Customer Name: ${billingCustomer}`);
+console.log(`Shopping Amount: ${purchaseTotal}`);
+console.log(`Discount: ${discountValue}`);
+console.log(`Final Payable Amount: ${payableAmount}`);
