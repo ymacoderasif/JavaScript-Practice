@@ -987,3 +987,40 @@ console.log(`Course Price: ${coursePrice}`);
 console.log(`Exam Score: ${examScore}`);
 console.log(`Scholarship Amount: ${scholarshipAmount}`);
 console.log(`Payable Fee: ${payableFee}`);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q29. Gym Membership 
+Question 
+Ek Gym Membership System banao. 
+• Member ka naam store karo.  
+• Membership Fee store karo.  
+• Agar member 12 months ki membership leta hai to 2 months 
+free do.  
+• Warna normal membership rakho.  
+• Final membership details dikhani hain. 
+=========================================================================
+*/
+let memberFullName = "Mohd Asif";
+let monthlyCharge = 1000;
+let planMonths = 12;
+let freeMembershipValue = 0;
+let totalmemberShip = monthlyCharge * planMonths;
+let totalMembershipFee = 0;
+if(planMonths === 12){
+    freeMembershipValue = monthlyCharge * 2;
+}
+totalMembershipFee = totalmemberShip - freeMembershipValue;
+console.log(`Member Full Name: ${memberFullName}`);
+console.log(`Membership Cost: ${monthlyCharge}`);
+console.log(`Membership Duration: ${planMonths}`);
+console.log(`Membership Total Amount: ${totalmemberShip}`);
+console.log(`Free Membership Value: ${freeMembershipValue}`);
+console.log(`Total Membership Cost: ${totalMembershipFee}`);
