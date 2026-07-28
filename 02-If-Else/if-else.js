@@ -418,3 +418,39 @@ console.log(`Stay Nights: ${stayNights}`);
 console.log(`Total Bill: ${totalBill}`);
 console.log(`Booking Discount: ${bookingDiscount}`);
 console.log(`Hotel Bill: ${hotelBill}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q13. Library Membership 
+Question 
+Ek Library Membership System banao. 
+• Member ka naam store karo.  
+• Membership Fee store karo.  
+• Student status store karo.  
+• Agar member ko fee me chhoot milti hai to final fee update 
+karo.  
+• Final membership details dikhani hain.
+==========================================================================
+*/
+let memberName = "Mohd Asif";
+let membershipFee = 6500;
+let isStudent = true;
+let studentDiscount = 0;
+let finalMembershipFee = 0;
+if(isStudent === true){
+    studentDiscount = 50;
+}
+studentDiscount = (membershipFee * studentDiscount) / 100;
+finalMembershipFee = membershipFee - studentDiscount;
+console.log(`Member Name: ${memberName}`);
+console.log(`Membership Fee: ${membershipFee}`);
+console.log(`Student Status: ${isStudent}`);
+console.log(`Student Discount: ${studentDiscount}`);
+console.log(`Final Membership Fee: ${finalMembershipFee}`);
