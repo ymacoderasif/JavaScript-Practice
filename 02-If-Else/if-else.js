@@ -773,3 +773,36 @@ console.log(`Account Balance: ${currentAmount}`);
 console.log(`Withdraw Amount: ${cashRequest}`);
 console.log(`Remaining Balance: ${remainingBalance}`);
 console.log(`Transaction Status: ${transactionStatus}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q23. Employee Bonus 
+Question 
+Ek Employee Salary System banao. 
+• Employee ka naam store karo.  
+• Basic Salary store karo.  
+• Agar salary ₹50,000 ya usse zyada hai to 10% bonus add karo.  
+• Warna bonus mat do.  
+• Final salary dikhani hai. 
+==========================================================================
+*/
+let staffMember = "Mohd Asif";
+let monthlySalary = 55000;
+let bonusAmount = 0;
+let updatedSalary = 0;
+if(monthlySalary >= 50000){
+    bonusAmount = 10;
+}
+bonusAmount = (monthlySalary * bonusAmount) / 100;
+updatedSalary = monthlySalary + bonusAmount;
+console.log(`Employee Name: ${staffMember}`);
+console.log(`Basic Salary: ${monthlySalary}`);
+console.log(`Bonus Amount: ${bonusAmount}`);
+console.log(`Final Salary: ${updatedSalary}`);
