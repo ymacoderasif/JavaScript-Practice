@@ -240,3 +240,38 @@ if(applicantAge >= 18 && identityVerified){
 }
 console.log(`Applicant Name: ${applicantName}`);
 console.log(`Licence Status: ${licenceStatus}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q8. Food Delivery Offer 
+Question 
+Ek Food Delivery App banao. 
+• Customer ka naam store karo.  
+• Order Amount store karo.  
+• Delivery Charge store karo.  
+• Agar customer offer ke liye eligible hai to delivery charge 
+update karo.  
+• Final bill dikhana hai. 
+=============================================================================
+*/
+let customerFullName = "Mohd Asif";
+let orderAmount = 550;
+let deliveryCharge = 0;
+let finalBill = 0;
+if(orderAmount >= 500){
+    deliveryCharge = 0;
+}else{
+    deliveryCharge = 50;
+}
+finalBill = orderAmount + deliveryCharge;
+console.log(`Customer Name: ${customerFullName}`);
+console.log(`Order Amount: ${orderAmount}`);
+console.log(`Delivery Charges: ${deliveryCharge}`);
+console.log(`Final Amount: ${finalBill}`);
