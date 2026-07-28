@@ -952,3 +952,38 @@ console.log(`Night Charge: ${nightCharge}`);
 console.log(`Booking Amount: ${bookingAmount}`);
 console.log(`Complimentary Night Amount: ${complimentaryNightAmount}`);
 console.log(`Payable Amount: ${payableAmount}`);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q28. Online Course 
+Question 
+Ek Online Course System banao. 
+• Student ka naam store karo.  
+• Course Fee store karo.  
+• Agar student ke marks 90 ya usse zyada hain to 30% 
+scholarship do.  
+• Warna normal fee dikhani hai.  
+• Final payment details dikhani hain.  
+========================================================================
+*/
+let learnerName = "Mohd Asif";
+let coursePrice = 5000;
+let examScore = 91;
+let scholarshipAmount = 0;
+let payableFee = 0;
+if (examScore >= 90) {
+    scholarshipAmount = (coursePrice * 30) / 100;
+}
+payableFee = coursePrice - scholarshipAmount;
+console.log(`Learner Name: ${learnerName}`);
+console.log(`Course Price: ${coursePrice}`);
+console.log(`Exam Score: ${examScore}`);
+console.log(`Scholarship Amount: ${scholarshipAmount}`);
+console.log(`Payable Fee: ${payableFee}`);
