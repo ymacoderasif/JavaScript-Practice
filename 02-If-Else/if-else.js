@@ -454,3 +454,37 @@ console.log(`Membership Fee: ${membershipFee}`);
 console.log(`Student Status: ${isStudent}`);
 console.log(`Student Discount: ${studentDiscount}`);
 console.log(`Final Membership Fee: ${finalMembershipFee}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q14. Employee Salary System 
+Question 
+Ek Employee Salary System banao. 
+• Employee ka naam store karo.  
+• Basic Salary store karo.  
+• Bonus Amount store karo.  
+• Agar employee bonus ke liye qualify karta hai to final salary 
+update karo.  
+• Final salary aur employee details dikhani hain. 
+=============================================================================
+*/
+let employeeName = "Mohd Asif";
+let basicSalary = 29000;
+let performanceBonus = 0;
+let finalSalary = 0;
+if(basicSalary >= 30000){
+    performanceBonus = 20;
+}
+performanceBonus = (basicSalary * performanceBonus) / 100;
+finalSalary = basicSalary + performanceBonus;
+console.log(`Employee Name: ${employeeName}`);
+console.log(`Basic Salary: ${basicSalary}`);
+console.log(`Performance Bonus: ${performanceBonus}`);
+console.log(`Final Salary: ${finalSalary}`);
