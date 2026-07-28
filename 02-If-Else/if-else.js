@@ -596,3 +596,37 @@ console.log(`Membership Fee: ${membershipCost}`);
 console.log(`Membership Duration: ${membershipDuration}months`);
 console.log(`Offer Discount: ${offerDiscount}`);
 console.log(`Final Membership Cost: ${finalMembershipCost}`);
+
+
+
+
+
+
+
+
+/*
+=======================================================================
+Q18. Electricity Recharge 
+Question 
+Ek Electricity Recharge System banao. 
+• Customer ka naam store karo.  
+• Recharge Amount store karo.  
+• Cashback Amount store karo.  
+• Agar customer cashback ke liye qualify karta hai to final 
+payable amount update karo.  
+• Recharge details dikhani hain. 
+========================================================================
+*/
+let electricityUser = "Mohd Asif";
+let rechargeValue = 1350;
+let cashbackReward = 0;
+let finalPayableAmount = 0;
+if(rechargeValue >= 1000){
+    cashbackReward = 10;
+}
+cashbackReward = (rechargeValue * cashbackReward) / 100;
+finalPayableAmount = rechargeValue + cashbackReward;
+console.log(`Customer Name: ${electricityUser}`);
+console.log(`Recharge Amount: ${rechargeValue}`);
+console.log(`Cashback Amount: ${cashbackReward}`);
+console.log(`Final Payable Amount: ${finalPayableAmount}`);
