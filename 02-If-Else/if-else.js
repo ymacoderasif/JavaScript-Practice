@@ -668,3 +668,36 @@ console.log(`Per Hour Charge: ${hourlyCharge}Rs/Hour`);
 console.log(`Total Rent: ${totalRent}`);
 console.log(`Rental Discount: ${rentalDiscount}`);
 console.log(`Final Rental Bill: ${finalRentalBill}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q20. Festival Gift Voucher 
+Question 
+Ek Festival Offer System banao. 
+• Customer ka naam store karo.  
+• Shopping Amount store karo.  
+• Gift Voucher Amount store karo.  
+• Agar customer gift voucher ke liye qualify karta hai to final 
+payable amount update karo.  
+• Customer ki purchase details dikhani hain.
+=============================================================================
+*/
+let festivalCustomer = "Mohd Asif";
+let purchaseAmount = 15000;
+let giftVoucher = 0;
+let finalPurchaseAmount = 0;
+if(purchaseAmount >= 5000){
+    giftVoucher = 500;
+}
+finalPurchaseAmount = purchaseAmount + giftVoucher;
+console.log(`Customer Name: ${festivalCustomer}`);
+console.log(`Shopping Amount: ${purchaseAmount}`);
+console.log(`Gift Voucher: ₹${giftVoucher}`);
+console.log(`Final Purchase Amount: ${finalPurchaseAmount}`);
