@@ -806,3 +806,35 @@ console.log(`Employee Name: ${staffMember}`);
 console.log(`Basic Salary: ${monthlySalary}`);
 console.log(`Bonus Amount: ${bonusAmount}`);
 console.log(`Final Salary: ${updatedSalary}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q24. Mobile Recharge Cashback 
+Question 
+Ek Mobile Recharge System banao. 
+• Customer ka naam store karo.  
+• Recharge Amount store karo.  
+• Agar recharge ₹399 ya usse zyada hai to ₹50 cashback do.  
+• Warna cashback mat do.  
+• Final payment details dikhani hain.  
+===========================================================================
+*/
+let mobileSubscriber = "Mohd Asif";
+let rechargeCost = 299;
+let cashbackValue = 0;
+let totalRechargeValue = 0;
+if(rechargeCost >= 399){
+    cashbackValue = 50;
+}
+totalRechargeValue = rechargeCost + cashbackValue;
+console.log(`Customer Name: ${mobileSubscriber}`);
+console.log(`Recharge Amount: ${rechargeCost}`);
+console.log(`Cashback: ₹${cashbackValue}`);
+console.log(`Final Recharge Value: ${totalRechargeValue}`);
