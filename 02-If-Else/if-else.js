@@ -838,3 +838,41 @@ console.log(`Customer Name: ${mobileSubscriber}`);
 console.log(`Recharge Amount: ${rechargeCost}`);
 console.log(`Cashback: ₹${cashbackValue}`);
 console.log(`Final Recharge Value: ${totalRechargeValue}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q25. Electricity Bill 
+Question 
+Ek Electricity Bill System banao. 
+• Customer ka naam store karo.  
+• Total Units store karo.  
+• Per Unit Price store karo.  
+• Agar total units 300 se zyada hain to bill par 8% surcharge 
+lagao.  
+• Warna normal bill dikhana hai.
+=============================================================================
+*/
+let powerConsumer = "Mohd Asif";
+let electricityUnits = 400;
+let pricePerUnit = 8;
+let electricityBill = electricityUnits * pricePerUnit;
+let surchargeAmount = 0;
+let finalBillAmount = 0;
+if(electricityUnits > 300){
+    surchargeAmount = 8;
+}
+surchargeAmount = (electricityBill * surchargeAmount) / 100;
+finalBillAmount = electricityBill + surchargeAmount;
+console.log(`Customer Name: ${powerConsumer}`);
+console.log(`Total Units: ${electricityUnits}`);
+console.log(`Per Unit Price: ₹${pricePerUnit}`);
+console.log(`Electricity Bill: ${electricityBill}`);
+console.log(`Surcharge: ${surchargeAmount}`);
+console.log(`Final Bill: ${finalBillAmount}`);
