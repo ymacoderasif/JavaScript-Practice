@@ -1346,3 +1346,39 @@ console.log(`Bonus Amount: ₹${serviceBonus}`);
 console.log(`Salary After Bonus: ₹${salaryAfterBonus}`);
 console.log(`Professional Tax: ₹${professionalTax}`);
 console.log(`Net Salary: ₹${netSalary}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q37. Mobile Recharge System 
+Question 
+Ek Mobile Recharge System banao. 
+• Customer ka naam store karo.  
+• Recharge Amount store karo.  
+• Customer Type store karo.  
+• Agar recharge ₹499 ya usse zyada hai to 2GB extra data do.  
+• Agar customer Premium hai to 100 reward points bhi do. 
+=========================================================================
+*/
+let subscriber = "Mohd Asif";
+let topupValue = 599;
+let planCategory = "Premium";
+let extraDataGB = 0;
+let rewardCredits = 0;
+if(topupValue >= 499){
+    extraDataGB = 2;
+}
+if(planCategory === "Premium"){
+    rewardCredits = 100;
+}
+console.log(`Subscriber: ${subscriber}`);
+console.log(`Topup Value: ${topupValue}`);
+console.log(`Plan Category: ${planCategory  }`);
+console.log(`Extra Data: ${extraDataGB}GB`);
+console.log(`Reward Credits: ${rewardCredits}`);
