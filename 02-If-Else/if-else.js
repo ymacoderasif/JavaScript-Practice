@@ -1599,3 +1599,46 @@ if(obtainedMarks >= 90){
 console.log(`Learner Full Name: ${learnerFullName}`);
 console.log(`Exam Score: ${obtainedMarks}`);
 console.log(`Final Grade: ${finalGrade}`);
+
+
+
+
+
+
+
+
+/*
+===================================================================================
+Q42. Income Tax System 
+Question 
+Ek Income Tax System banao. 
+• Employee ka naam store karo.  
+• Annual Income store karo.  
+• Agar income ₹4,00,000 tak hai to No Tax.  
+• Agar income ₹4,00,001 - ₹8,00,000 ke beech hai to 10% Tax.  
+• Agar income ₹8,00,001 - ₹12,00,000 ke beech hai to 20% Tax.  
+• Agar income ₹12,00,000 se zyada hai to 30% Tax.  
+• Final tax aur remaining income dikhani hai.  
+====================================================================================
+*/
+let employeeLabel = "Mohd Asif";
+let yearlyIncome = 900000;
+let taxRate = 0;
+let taxAmount = 0;
+let incomeAfterTax = 0;
+if(yearlyIncome <= 400000){
+    taxRate = 0;
+}else if(yearlyIncome <= 800000){
+    taxRate = 10;
+}else if(yearlyIncome <= 1200000){
+    taxRate = 20;
+}else{
+    taxRate = 30;
+}
+taxAmount = (yearlyIncome * taxRate) / 100;
+incomeAfterTax = yearlyIncome - taxAmount;
+console.log(`Staff Member: ${employeeLabel}`);
+console.log(`Yearly Income: ₹${yearlyIncome}`);
+console.log(`Tax Rate: ${taxRate}%`);
+console.log(`Tax Amount: ₹${taxAmount}`);
+console.log(`Income After Tax: ₹${incomeAfterTax}`);
