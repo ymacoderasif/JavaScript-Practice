@@ -1717,3 +1717,40 @@ if(ageValue < 12){
 console.log(`Viewer Name: ${viewerName}`);
 console.log(`Age Value: ${ageValue}`);
 console.log(`Ticket Price: ${admissionFee}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q45. Courier Charge System 
+Question 
+Ek Courier Service System banao. 
+• Customer ka naam store karo.  
+• Parcel Weight store karo.  
+• Agar weight 1 KG tak hai to pehla charge lagao.  
+• Agar weight 1–5 KG ke beech hai to doosra charge lagao.  
+• Agar weight 5–10 KG ke beech hai to teesra charge lagao.  
+• Agar weight 10 KG se zyada hai to chautha charge lagao.  
+• Final courier charge dikhana hai. 
+==============================================================================
+*/
+let senderName = "Mohd Asif";
+let parcelMass = 6;
+let deliveryCharge = 0;
+if(parcelMass <= 1){
+    deliveryCharge = 80;
+}else if(parcelMass <= 5){
+    deliveryCharge = 150;
+}else if(parcelMass <= 10){
+    deliveryCharge = 250;
+}else{
+    deliveryCharge = 400;
+}
+console.log(`Sender Name: ${senderName}`);
+console.log(`Parcel Mass: ${parcelMass}KG`);
+console.log(`Delivery Charge: ₹${deliveryCharge}`);
