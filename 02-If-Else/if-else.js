@@ -1105,3 +1105,45 @@ console.log(`Membership Tier: ${membershipTier}`);
 console.log(`Base Discount: ₹${baseDiscount}`);
 console.log(`Premium Discount: ₹${premiumDiscount}`);
 console.log(`Net Payable: ₹${netPayable}`);
+
+
+
+
+
+
+
+
+/*
+===========================================================================
+Q32. ATM Daily Limit 
+Question 
+Ek ATM System banao. 
+• Customer ka naam store karo.  
+• Account Balance store karo.  
+• Withdraw Amount store karo.  
+• Daily Withdrawal Limit store karo.  
+• Transaction tabhi allow hogi jab:  
+o Withdrawal amount daily limit ke andar ho.  
+o Withdrawal ke baad account me ₹1000 ya usse zyada 
+balance bache.  
+• Warna transaction reject kar do.  
+===========================================================================
+*/
+let accountOwner = "Mohd Asif";
+let availableFunds = 7000;
+let requestedCash = Number(prompt("Enter your Amount for Withdraw:"));
+let dailyLimit = 10000;
+let remainingFunds = 0;
+let transactionStatus = "";
+if(requestedCash <= dailyLimit && (availableFunds - requestedCash) >= 1000){
+    remainingFunds = availableFunds - requestedCash;
+    transactionStatus = "Approved";
+}else{
+    transactionStatus = "Rejected";
+}
+console.log(`Account Owner: ${accountOwner}`);
+console.log(`Available Funds: ₹${availableFunds}`);
+console.log(`Requested Cash: ₹${requestedCash}`);
+console.log(`Daily Limit: ₹${dailyLimit}`);
+console.log(`Remaining Funds: ₹${remainingFunds}`);
+console.log(`Transaction Status: ${transactionStatus}`);
