@@ -1233,3 +1233,71 @@ console.log(`Complimentary Ticket Value: ₹${complimentaryTicketValue}`);
 console.log(`Amount After Free Ticket: ₹${amountAfterFreeTicket}`);
 console.log(`Entertainment Charge: ₹${entertainmentCharge}`);
 console.log(`Final Payable: ₹${finalPayable}`);
+
+
+
+
+
+
+
+
+/*
+====================================================================================================================
+Q35. Cab Fare Calculation (Advanced)
+Question
+• Ek Cab Booking System banao.
+• Customer ka naam store karo.
+• Distance (KM) store karo.
+• Per Kilometer Fare store karo.
+• Night Time booking hai ya nahi store karo (true / false).
+• Premium Customer hai ya nahi store karo (true / false).
+
+Business Rules
+• Sabse pehle total fare calculate karo.
+• Agar distance 20 KM se zyada hai to 15% discount do.
+• Agar Night Time booking hai to ₹150 Night Charge add karo.
+• Agar Premium Customer hai to discount ke baad wale amount par 5% extra discount do.
+• Agar final fare ₹3000 se zyada ho jaye to ₹200 Service Charge add karo.
+Final fare aur booking details dikhani hain.
+=====================================================================================================================
+*/
+let traveler = "Mohd Asif";
+let rideLength = 30;
+let fareRate = 120;
+let midnightRide = "Yes";
+let vipCustomer = "Yes";
+let baseFare = rideLength * fareRate;
+let travelDiscount = 0;
+let amountAfterDiscount = 0;
+let midnightFee = 0;
+let eliteBenefit = 0;
+let convenienceFee = 0;
+let payableRideAmount = 0;
+if(rideLength > 20){
+    travelDiscount = 15;
+}
+travelDiscount = (baseFare * travelDiscount) / 100;
+amountAfterDiscount = baseFare - travelDiscount;
+if(midnightRide === "Yes"){
+    midnightFee = 150;
+}
+if(vipCustomer === "Yes"){
+    eliteBenefit = ((amountAfterDiscount + midnightFee) * 5) / 100;
+}
+payableRideAmount = (amountAfterDiscount + midnightFee) - eliteBenefit;
+if(payableRideAmount > 3000){
+    convenienceFee = 200;
+}
+payableRideAmount = payableRideAmount + convenienceFee;
+console.log(`Traveler: ${traveler}`);
+console.log(`Ride Length: ${rideLength}KM`);
+console.log(`Fare Rate: ₹${fareRate}`);
+console.log(`Midnight Ride: ${midnightRide}`);
+console.log(`VIP Customer: ${vipCustomer}`);
+console.log(`Ride Total: ₹${baseFare}`);
+console.log(`Travel Discount: ₹${travelDiscount}`);
+console.log(`Amount After Discount: ₹${amountAfterDiscount}`);
+console.log(`Midnight Fee: ₹${midnightFee}`);
+console.log(`Elite Benefit  : ₹${eliteBenefit}`);
+console.log(`Convenience Fee: ₹${convenienceFee}`);
+console.log(`Payable Ride Amount: ₹${payableRideAmount}`);
