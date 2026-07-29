@@ -1559,3 +1559,43 @@ console.log(`Fee After Discount: ₹${feeAfterRelief}`);
 console.log(`Emergency Charge: ₹${urgentCareCharge}`);
 console.log(`Medical Service Charge: ₹${medicalServiceCharge}`);
 console.log(`Final Hospital Bill: ₹${hospitalBillTotal}`);
+
+
+
+
+
+
+
+
+/*
+=====================================================================
+Q41. Student Grade System 
+Question 
+Ek Student Grade System banao. 
+• Student ka naam store karo.  
+• Total Marks store karo.  
+• Agar marks 90 ya usse zyada hain to Grade A do.  
+• Agar marks 75 ya usse zyada hain to Grade B do.  
+• Agar marks 60 ya usse zyada hain to Grade C do.  
+• Agar marks 33 ya usse zyaada hain to Grade D do.  
+• Warna Fail dikhana hai.  
+• Student ka naam aur final grade dikhana hai.  
+=====================================================================
+*/
+let learnerFullName = "Mohd Asif";
+let obtainedMarks = 66;
+let finalGrade = "";
+if(obtainedMarks >= 90){
+    finalGrade = "A";
+}else if(obtainedMarks >= 75){
+    finalGrade = "B";
+}else if(obtainedMarks >= 60){
+    finalGrade = "C";
+}else if(obtainedMarks >= 33){
+    finalGrade = "D";
+}else{
+    finalGrade = "Fail";
+}
+console.log(`Learner Full Name: ${learnerFullName}`);
+console.log(`Exam Score: ${obtainedMarks}`);
+console.log(`Final Grade: ${finalGrade}`);
