@@ -1061,3 +1061,47 @@ console.log(`Cart Value: ₹${cartValue}`);
 console.log(`Shipping Fee: ₹${shippingFee}`);
 console.log(`Invoice Amount: ₹${invoiceAmount}`);
 console.log(`Payable Bill: ₹${payableBill}`);
+
+
+
+
+
+
+
+
+/*
+==============================================================================
+Q31. Online Shopping Premium Offer 
+Question 
+Ek Shopping Website ka Billing System banao. 
+• Customer ka naam store karo.  
+• Shopping Amount store karo.  
+• Customer Type store karo (Normal ya Premium).  
+• Agar shopping amount ₹5000 ya usse zyada hai to 20% 
+discount do.  
+• Agar customer Premium hai to extra 5% discount do.  
+• Final payable amount aur customer details dikhani hain.  
+==============================================================================
+*/
+let shopperName = "Mohd Asif";
+let purchaseValue = 7000;
+let membershipTier = "Premium";
+let baseDiscount = 0;
+let premiumDiscount = 0;
+let remainingAmount = 0;
+let netPayable = 0;
+if(purchaseValue >= 5000){
+    baseDiscount = 20;
+}if(membershipTier === "Premium"){
+    premiumDiscount = 5;
+}
+baseDiscount = (purchaseValue * baseDiscount) / 100;
+remainingAmount = purchaseValue - baseDiscount;
+premiumDiscount = (remainingAmount * premiumDiscount) / 100;
+netPayable = remainingAmount - premiumDiscount;
+console.log(`Shopper Name: ${shopperName}`);
+console.log(`Purchase Value: ₹${purchaseValue}`);
+console.log(`Membership Tier: ${membershipTier}`);
+console.log(`Base Discount: ₹${baseDiscount}`);
+console.log(`Premium Discount: ₹${premiumDiscount}`);
+console.log(`Net Payable: ₹${netPayable}`);
