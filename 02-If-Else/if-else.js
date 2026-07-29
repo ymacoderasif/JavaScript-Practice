@@ -1506,3 +1506,56 @@ console.log(`Amount After Green Discount: ₹${amountAfterGreenDiscount}`);
 console.log(`Senior Discount: ₹${seniorDiscount}`);
 console.log(`Digital Service Fee: ₹${digitalServiceFee}`);
 console.log(`Total Bill Payable: ₹${totalBillPayable}`);
+
+
+
+
+
+
+
+
+/*
+================================================================================
+Q40. Hospital Registration 
+Question 
+Ek Hospital Registration System banao. 
+• Patient ka naam store karo.  
+• Age store karo.  
+• Registration Fee store karo.  
+• Agar patient Senior Citizen hai to 50% fee kam karo.  
+• Agar patient Emergency me aaya hai to ₹1000 emergency 
+charge add karo.  
+• Final bill aur registration details dikhani hain.  
+=================================================================================
+*/
+let visitorFullName = "Mohd Asif";
+let ageYears = 65;
+let entryFee = 8000;
+let emergencyCase = true;
+let citizenRelief = 0;
+let feeAfterRelief = 0;
+let urgentCareCharge = 0;
+let medicalServiceCharge = 0;
+let hospitalBillTotal = 0;
+if(ageYears >= 60){
+    citizenRelief = 50;
+}
+citizenRelief = (entryFee * citizenRelief) / 100;
+feeAfterRelief = entryFee - citizenRelief;
+if(emergencyCase === true){
+    urgentCareCharge = 1000;
+}
+hospitalBillTotal = feeAfterRelief + urgentCareCharge;
+if(hospitalBillTotal > 5000){
+    medicalServiceCharge = 200;
+}
+hospitalBillTotal = hospitalBillTotal + medicalServiceCharge;
+console.log(`Patient Name: ${visitorFullName}`);
+console.log(`Patient Age: ${ageYears}`);
+console.log(`Registration Charge: ${entryFee}`);
+console.log(`Emergency Case: ${emergencyCase}`);
+console.log(`Senior Discount: ₹${citizenRelief}`);
+console.log(`Fee After Discount: ₹${feeAfterRelief}`);
+console.log(`Emergency Charge: ₹${urgentCareCharge}`);
+console.log(`Medical Service Charge: ₹${medicalServiceCharge}`);
+console.log(`Final Hospital Bill: ₹${hospitalBillTotal}`);
