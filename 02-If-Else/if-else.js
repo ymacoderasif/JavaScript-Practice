@@ -1185,3 +1185,51 @@ console.log(`Score Percentage: ${scorePercentage}`);
 console.log(`Household Income: ₹${householdIncome}`);
 console.log(`Scholarship Status: ${scholarshipStatus}`);
 console.log(`Scholarship Rate: ${scholarshipRate}%`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================================================
+Q34.Water Park Entry System
+Question
+Ek Water Park Entry System banao.
+• Visitor ka naam store karo.
+• Total Tickets store karo.
+• Per Ticket Price store karo.
+• Weekend Visit hai ya nahi store karo (Yes ya No).
+Agar Total Tickets 5 ya usse zyada hain to 1 Ticket ka Price free kar do.
+Agar Weekend Visit = Yes hai to final amount par 12% extra entertainment charge add karo.
+Final payable amount aur visitor ki details dikhani hain.
+==============================================================================================================
+*/
+let visitorName = "Mohd Asif";
+let ticketCount = 5;
+let ticketPrice = 500;
+let weekendVisit = true;
+let grossTotal = ticketCount * ticketPrice;
+let complimentaryTicketValue = 0;
+let entertainmentCharge = 0;
+let amountAfterFreeTicket = 0;
+let finalPayable = 0;
+if(ticketCount >= 5){
+    complimentaryTicketValue = ticketPrice;
+}if(weekendVisit === true){
+    entertainmentCharge = 12;
+}
+amountAfterFreeTicket = grossTotal - complimentaryTicketValue;
+entertainmentCharge = (amountAfterFreeTicket * entertainmentCharge) / 100;
+finalPayable = entertainmentCharge + amountAfterFreeTicket;
+console.log(`Visitor Name: ${visitorName}`);
+console.log(`Ticket Count: ${ticketCount}`);
+console.log(`Ticket Price: ₹${ticketPrice}`);
+console.log(`Weekend Visit: ${weekendVisit ? "Yes" : "No"}`);
+console.log(`Gross Total: ₹${grossTotal}`);
+console.log(`Complimentary Ticket Value: ₹${complimentaryTicketValue}`);
+console.log(`Amount After Free Ticket: ₹${amountAfterFreeTicket}`);
+console.log(`Entertainment Charge: ₹${entertainmentCharge}`);
+console.log(`Final Payable: ₹${finalPayable}`);
