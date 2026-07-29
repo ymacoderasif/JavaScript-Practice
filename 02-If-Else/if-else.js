@@ -1147,3 +1147,41 @@ console.log(`Requested Cash: ₹${requestedCash}`);
 console.log(`Daily Limit: ₹${dailyLimit}`);
 console.log(`Remaining Funds: ₹${remainingFunds}`);
 console.log(`Transaction Status: ${transactionStatus}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q33. Student Scholarship 
+Question 
+Ek Scholarship System banao. 
+• Student ka naam store karo.  
+• Marks store karo.  
+• Family Income store karo.  
+• Agar marks 90 ya usse zyada hain aur family income 
+₹3,00,000 se kam hai to 100% scholarship do.  
+• Warna scholarship mat do.  
+• Final result dikhana hai. 
+==========================================================================
+*/
+let candidateName = "Mohd Asif";
+let scorePercentage = 96;
+let householdIncome = 350000;
+let scholarshipStatus = "";
+let scholarshipRate = 0;
+if(scorePercentage >= 90 && householdIncome < 300000){
+    scholarshipRate = 100;
+    scholarshipStatus = "Approved";
+}else{
+    scholarshipStatus = "Not Approved";
+}
+console.log(`Candidate Name: ${candidateName}`);
+console.log(`Score Percentage: ${scorePercentage}`);
+console.log(`Household Income: ₹${householdIncome}`);
+console.log(`Scholarship Status: ${scholarshipStatus}`);
+console.log(`Scholarship Rate: ${scholarshipRate}%`);
