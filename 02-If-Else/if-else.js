@@ -1382,3 +1382,49 @@ console.log(`Topup Value: ${topupValue}`);
 console.log(`Plan Category: ${planCategory  }`);
 console.log(`Extra Data: ${extraDataGB}GB`);
 console.log(`Reward Credits: ${rewardCredits}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q38. Bike Rental System 
+Question 
+Ek Bike Rental System banao. 
+• Customer ka naam store karo.  
+• Total Hours store karo.  
+• Per Hour Charge store karo.  
+• Helmet liya hai ya nahi, ye bhi store karo.  
+• Agar rental 10 hours se zyada hai to 10% discount do.  
+• Agar helmet nahi liya hai to ₹200 penalty add karo. 
+==========================================================================
+*/
+let renter = "Mohd Asif";
+let usageTime = 12;
+let hourlyRate = 100;
+let helmetTaken = false;
+let rentalAmount = usageTime * hourlyRate;
+let longRentalDiscount = 0;
+let penaltyCharge = 0;
+let finalRentalCost = 0;
+if(usageTime > 10){
+    longRentalDiscount = 10;
+}
+longRentalDiscount = (rentalAmount * longRentalDiscount) / 100;
+rentalAmount = rentalAmount - longRentalDiscount;
+if(helmetTaken === false){
+    penaltyCharge = 200;
+}
+finalRentalCost = penaltyCharge + rentalAmount;
+console.log(`Renter: ${renter}`);
+console.log(`Rental Hours: ${usageTime}`);
+console.log(`Hourly Rate: ₹${hourlyRate}`);
+console.log(`Helmet Taken: ${helmetTaken}`);
+console.log(`Rental Amount: ₹${rentalAmount}`);
+console.log(`Long Rental Discount: ₹${longRentalDiscount}`);
+console.log(`Penalty Charge: ₹${penaltyCharge}`);
+console.log(`Final Rental Cost : ₹${finalRentalCost}`);
