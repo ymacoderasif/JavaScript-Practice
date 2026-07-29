@@ -1428,3 +1428,81 @@ console.log(`Rental Amount: ₹${rentalAmount}`);
 console.log(`Long Rental Discount: ₹${longRentalDiscount}`);
 console.log(`Penalty Charge: ₹${penaltyCharge}`);
 console.log(`Final Rental Cost : ₹${finalRentalCost}`);
+
+
+
+
+
+
+
+
+/*
+=====================================================================================================================
+Q39. Electricity Bill System (Advanced)
+Question
+Ek Electricity Bill System banao.
+• Customer ka naam store karo.
+• Total Units store karo.
+• Per Unit Price store karo.
+• Senior Citizen hai ya nahi store karo (true / false).
+• Green Energy Subscriber hai ya nahi store karo (true / false).
+Business Rules
+• Sabse pehle total electricity bill calculate karo.
+• Agar Total Units 300 se zyada hain to 8% Surcharge add karo.
+• Agar Total Units 500 se zyada hain to ₹300 Extra Maintenance Charge add karo.
+• Agar Green Energy Subscriber = true hai to Surcharge ke baad wale amount par 3% Green Discount do.
+• Agar Senior Citizen = true hai to Green Discount ke baad wale amount par 5% Senior Citizen Discount do.
+• Agar Final Bill ₹10,000 se zyada ho jaye to ₹250 Digital Service Charge add karo.
+• Final electricity bill aur customer details dikhani hain.
+=======================================================================================================================
+*/
+let clientName = "Mohd Asif";
+let powerUnits = 550;
+let ratePerUnit = 20;
+let seniorCitizen = true;
+let greenSubscriber = true;
+let electricityCharge = powerUnits * ratePerUnit;
+let extraSurcharge = 0;
+let maintenanceFee = 0;
+let amountAfterSurcharge = 0;
+let greenDiscount = 0;
+let amountAfterGreenDiscount = 0;
+let seniorDiscount = 0;
+let digitalServiceFee = 0;
+let totalBillPayable = 0;
+if(powerUnits > 300){
+    extraSurcharge = 8;
+}
+extraSurcharge = (electricityCharge * extraSurcharge) / 100;
+if(powerUnits > 500){
+    maintenanceFee = 300;
+}
+amountAfterSurcharge = electricityCharge + extraSurcharge + maintenanceFee;
+if(greenSubscriber === true){
+    greenDiscount = 3;
+}
+
+greenDiscount = (amountAfterSurcharge * greenDiscount) / 100;
+amountAfterGreenDiscount = amountAfterSurcharge - greenDiscount;
+if(seniorCitizen === true){
+    seniorDiscount = 5;
+}
+seniorDiscount = (amountAfterGreenDiscount * seniorDiscount) / 100;
+totalBillPayable = amountAfterGreenDiscount - seniorDiscount;
+if(totalBillPayable > 10000){
+    digitalServiceFee = 250;
+}
+totalBillPayable = digitalServiceFee + totalBillPayable;
+console.log(`Consumer Name: ${clientName}`);
+console.log(`Power Units: ${powerUnits}`);
+console.log(`Senior Citizen: ${seniorCitizen}`);
+console.log(`Green Subscriber: ${greenSubscriber}`);
+console.log(`Bill Amount: ₹${electricityCharge}`);
+console.log(`Surcharge Amount: ₹${extraSurcharge}`);
+console.log(`Maintenance Fee: ₹${maintenanceFee}`);
+console.log(`Amount After Surcharge: ₹${amountAfterSurcharge}`);
+console.log(`Green Discount: ₹${greenDiscount}`);
+console.log(`Amount After Green Discount: ₹${amountAfterGreenDiscount}`);
+console.log(`Senior Discount: ₹${seniorDiscount}`);
+console.log(`Digital Service Fee: ₹${digitalServiceFee}`);
+console.log(`Total Bill Payable: ₹${totalBillPayable}`);
