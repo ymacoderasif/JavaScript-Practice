@@ -1642,3 +1642,43 @@ console.log(`Yearly Income: ₹${yearlyIncome}`);
 console.log(`Tax Rate: ${taxRate}%`);
 console.log(`Tax Amount: ₹${taxAmount}`);
 console.log(`Income After Tax: ₹${incomeAfterTax}`);
+
+
+
+
+
+
+
+
+/*
+==============================================================================
+Q43. Electricity Bill Slab 
+Question 
+Ek Electricity Bill System banao. 
+• Customer ka naam store karo.  
+• Total Units store karo.  
+• Agar units 100 tak hain to pehla rate lagao.  
+• Agar units 101–300 ke beech hain to doosra rate lagao.  
+• Agar units 301–500 ke beech hain to teesra rate lagao.  
+• Agar units 500 se zyada hain to chautha rate lagao.  
+• Final bill dikhana hai. 
+===============================================================================
+*/
+let customerLabel = "Mohd Asif";
+let totalUnits = 350;
+let unitPrice = 0;
+let billPayable = 0;
+if(totalUnits <= 100){
+    unitPrice = 5;
+}else if(totalUnits <= 300){
+    unitPrice = 7;
+}else if(totalUnits <= 500){
+    unitPrice = 9;
+}else{
+    unitPrice = 12;
+}
+billPayable = (totalUnits * unitPrice);
+console.log(`Customer Label: ${customerLabel}`);
+console.log(`Total Units: ${totalUnits}`);
+console.log(`Unit Price: ₹${unitPrice}`);
+console.log(`Electricity Bill: ₹${billPayable}`);
