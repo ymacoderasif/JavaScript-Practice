@@ -1301,3 +1301,48 @@ console.log(`Midnight Fee: ₹${midnightFee}`);
 console.log(`Elite Benefit  : ₹${eliteBenefit}`);
 console.log(`Convenience Fee: ₹${convenienceFee}`);
 console.log(`Payable Ride Amount: ₹${payableRideAmount}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q36. Employee Salary System 
+Question 
+Ek Employee Salary System banao. 
+• Employee ka naam store karo.  
+• Basic Salary store karo.  
+• Experience store karo.  
+• Agar experience 5 saal ya usse zyada hai to 10% bonus do.  
+• Agar salary ₹70,000 ya usse zyada hai to Professional Tax bhi 
+kaatna hai.  
+• Final salary dikhani hai. 
+==============================================================================
+*/
+let staffName = "Mohd Asif";
+let basePay = 80000;
+let yearsWorked = 6;
+let serviceBonus = 0;
+let salaryAfterBonus = 0;
+let professionalTax = 0;
+let netSalary = 0;
+if(yearsWorked >= 5){
+    serviceBonus = 10;
+}
+serviceBonus = (basePay * serviceBonus) / 100;
+salaryAfterBonus = basePay + serviceBonus;
+if(salaryAfterBonus >= 70000){
+    professionalTax = 500;
+}
+netSalary = salaryAfterBonus - professionalTax;
+console.log(`Staff Name: ${staffName}`);
+console.log(`Base Pay: ₹${basePay}`);
+console.log(`Years Worked : ${yearsWorked}`);
+console.log(`Bonus Amount: ₹${serviceBonus}`);
+console.log(`Salary After Bonus: ₹${salaryAfterBonus}`);
+console.log(`Professional Tax: ₹${professionalTax}`);
+console.log(`Net Salary: ₹${netSalary}`);
