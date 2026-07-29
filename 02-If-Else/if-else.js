@@ -1754,3 +1754,43 @@ if(parcelMass <= 1){
 console.log(`Sender Name: ${senderName}`);
 console.log(`Parcel Mass: ${parcelMass}KG`);
 console.log(`Delivery Charge: ₹${deliveryCharge}`);
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q46. Mobile Recharge Plans 
+Question 
+Ek Mobile Recharge System banao. 
+• Customer ka naam store karo.  
+• Recharge Amount store karo.  
+• Agar recharge ₹199 hai to Plan A activate karo.  
+• Agar recharge ₹299 hai to Plan B activate karo.  
+• Agar recharge ₹399 hai to Plan C activate karo.  
+• Agar recharge ₹599 ya usse zyada hai to Premium Plan 
+activate karo.  
+• Final plan details dikhani hain. 
+=====================================================================
+*/
+let subscriberName = "Mohd Asif";
+let rechargeAmount = 700;
+let activatedPlan = "";
+if(rechargeAmount === 199){
+    activatedPlan = "A";
+}else if(rechargeAmount === 299){
+    activatedPlan = "B";
+}else if(rechargeAmount === 399){
+    activatedPlan = "C";
+}else if(rechargeAmount >= 599){
+    activatedPlan = "Premium Plan";
+}else{
+    activatedPlan = "No Valid Plan";
+}
+console.log(`User Name: ${subscriberName}`);
+console.log(`Recharge Value: ₹${rechargeAmount}`);
+console.log(`Activated Plan: ${activatedPlan}`);
