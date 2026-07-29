@@ -1682,3 +1682,38 @@ console.log(`Customer Label: ${customerLabel}`);
 console.log(`Total Units: ${totalUnits}`);
 console.log(`Unit Price: ₹${unitPrice}`);
 console.log(`Electricity Bill: ₹${billPayable}`);
+
+
+
+
+
+
+
+
+/*
+============================================================================
+Q44. Movie Ticket Price 
+Question 
+Ek Movie Ticket Booking System banao. 
+• Customer ka naam store karo.  
+• Age store karo.  
+• Agar age 12 se kam hai to Child Ticket Price lagao.  
+• Agar age 12–59 ke beech hai to Normal Ticket Price lagao.  
+• Agar age 60 ya usse zyada hai to Senior Citizen Ticket Price 
+lagao.  
+• Final ticket details dikhani hain. 
+=============================================================================
+*/
+let viewerName = "Mohd Asif";
+let ageValue = 25;
+let admissionFee = 0;
+if(ageValue < 12){
+    admissionFee = 150;
+}else if(ageValue <= 59){
+    admissionFee = 300;
+}else{
+    admissionFee = 200;
+}
+console.log(`Viewer Name: ${viewerName}`);
+console.log(`Age Value: ${ageValue}`);
+console.log(`Ticket Price: ${admissionFee}`);
