@@ -2411,3 +2411,69 @@ console.log(`Order Status: ${orderStatus}`);
 console.log(`Delivery Charge: ₹${shippingCharge}`);
 console.log(`Extra Delivery Charge: ₹${extraDeliveryCharge}`);
 console.log(`Total Order Bill: ₹${totalOrderBill}`);
+
+
+
+
+
+
+
+
+/*
+===================================================================================
+Q58. Railway Reservation System 
+Question 
+Ek Railway Reservation System banao. 
+• Passenger ka naam store karo.  
+• Age store karo.  
+• Seat Available hai ya nahi, ye store karo.  
+• Ticket Type store karo.  
+• Journey Distance store karo.  
+• Base Fare store karo.  
+Business Rules 
+• Seat available nahi hai to Waiting List dikhani hai.  
+• Senior Citizen ko 40% discount dena hai.  
+• Tatkal Ticket par 30% extra charge lagana hai.  
+• Journey 1000 KM se zyada ho to ₹250 Superfast Charge add 
+karna hai.  
+• Final ticket amount aur booking status dikhana hai. 
+====================================================================================
+*/
+let railPassenger = "Mohd Asif";
+let passengerYears = 65;
+let seatAvailable = "Yes";
+let ticketCategory = "Tatkal";
+let journeyDistance = 1200;
+let ticketFare = 2000;
+let seniorRelief = 0;
+let tatkalCharge = 0;
+let superfastCharge = 0;
+let bookingStatus = "";
+let finalRailFare = 0;
+if(seatAvailable === "No"){
+    bookingStatus = "Waiting List";
+}else{
+    bookingStatus = "Confirmed";
+}if(passengerYears >= 60){
+    seniorRelief = 40;
+}
+seniorRelief = (ticketFare * seniorRelief) / 100;
+if(ticketCategory === "Tatkal"){
+    tatkalCharge = 30;
+}
+tatkalCharge = (ticketFare * tatkalCharge) / 100;
+if(journeyDistance > 1000){
+    superfastCharge = 250;
+}
+finalRailFare = (ticketFare + tatkalCharge + superfastCharge) - seniorRelief;
+console.log(`Rail Passenger: ${railPassenger}`);
+console.log(`Traveler Age: ${passengerYears}`);
+console.log(`Seat Available: ${seatAvailable}`);
+console.log(`Ticket Category: ${ticketCategory}`);
+console.log(`Journey Distance: ${journeyDistance}KM`);
+console.log(`Base Fare: ₹${ticketFare}`);
+console.log(`Booking Status: ${bookingStatus}`);
+console.log(`Age Discount: ₹${seniorRelief}`);
+console.log(`Tatkal Charge : ₹${tatkalCharge}`);
+console.log(`Superfast Charge: ₹${superfastCharge}`);
+console.log(`Final Rail Fare: ₹${finalRailFare}`);
