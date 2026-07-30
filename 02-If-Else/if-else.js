@@ -2155,3 +2155,61 @@ console.log(`Senior Citizen Discount: ₹${seniorCitizenDiscount}`);
 console.log(`Service Charge: ₹${serviceCharge}`);
 console.log(`Emergency Charge: ₹${emergencyCharge}`);
 console.log(`Final Payable Amount: ₹${payableHospitalBill}`);
+
+
+
+
+
+
+
+
+/*
+==================================================================================
+Q54. University Admission System 
+          Question 
+Ek University Admission System banao. 
+• Student ka naam store karo.  
+• Percentage store karo.  
+• Entrance Exam Marks store karo.  
+• Category store karo.  
+• Annual Family Income store karo.  
+Business Rules 
+• Percentage 60% se kam ho to admission reject.  
+• Entrance marks 50 se kam ho to admission reject.  
+• Percentage 90% ya usse zyada ho to Merit Admission.  
+• Family income ₹3,00,000 se kam ho to scholarship do.  
+• Reserved category ke students ko admission priority do.  
+• Final admission status aur scholarship details dikhani hain. 
+==================================================================================
+*/
+let studentApplicant = "Mohd Asif";
+let academicPercentage = 92;
+let entranceScore = 78;
+let studentCategory = "Reserved";
+let familyIncome = 250000;
+let admissionStatus = "";
+let scholarshipResult = "Not Approved";
+let admissionPriority = "";
+if(academicPercentage < 60){
+    admissionStatus = "Rejected";
+}else if(entranceScore < 50){
+    admissionStatus = "Rejected";
+}else if(academicPercentage >= 90){
+    admissionStatus = "Merit Admission";
+}else{
+    admissionStatus = "Approved";
+}if(familyIncome < 300000){
+    scholarshipResult = "Approved";
+}if(studentCategory === "Reserved"){
+    admissionPriority = "Yes";
+}else{
+    admissionPriority = "No";
+}
+console.log(`Candidate Name: ${studentApplicant}`);
+console.log(`Academic Percentage: ${academicPercentage}`);
+console.log(`Entrance Score: ${entranceScore}`);
+console.log(`Student Category: ${studentCategory}`);
+console.log(`Family Income: ₹${familyIncome}`);
+console.log(`Admission Status: ${admissionStatus}`);
+console.log(`Scholarship Status: ${scholarshipResult}`);
+console.log(`Admission Priority: ${admissionPriority}`);
