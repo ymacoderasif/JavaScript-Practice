@@ -1902,3 +1902,38 @@ if(monthlyBudget <= 500){
 console.log(`Client Label: ${clientLabel}`);
 console.log(`Monthly Budget: ₹${monthlyBudget}`);
 console.log(`Plan Suggestion: ${planSuggestion}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q50. Banking Reward System 
+          Question 
+Ek Banking Reward System banao. 
+• Customer ka naam store karo.  
+• Total Yearly Spending store karo.  
+• Spending ke hisaab se Bronze, Silver, Gold ya Platinum 
+reward level do.  
+• Final reward details dikhani hain.  
+===========================================================================
+*/
+let rewardCustomer = "Mohd Asif";
+let annualSpending = 450000;
+let rewardLevel = "";
+if(annualSpending <= 100000){
+    rewardLevel = "Bronze";
+}else if(annualSpending <= 300000){
+    rewardLevel = "Silver";
+}else if(annualSpending <= 700000){
+    rewardLevel = "Gold";
+}else{
+    rewardLevel = "Platinum";
+}
+console.log(`Account Holder: ${rewardCustomer}`);
+console.log(`Annual Spending:  ₹${annualSpending}`);
+console.log(`Reward Level: ${rewardLevel}`);
