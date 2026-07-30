@@ -2626,3 +2626,93 @@ console.log(`Internal Marks: ${internalMarks}`);
 console.log(`Result Status: ${resultStatus}`);
 console.log(`Percentage: ${overallPercentage}%`);
 console.log(`Grade: ${finalGrade}`);
+
+
+
+
+
+
+
+
+/*
+=======================================================================================
+Q61. Airport Check-in & Boarding System 
+Question 
+Ek Airport Check-in System banao. 
+• Passenger ka naam store karo.  
+• Age store karo.  
+• Ticket Type store karo.  
+• Passport Valid hai ya nahi store karo.  
+• Visa Valid hai ya nahi store karo.  
+• Check-in Time store karo.  
+• Flight Departure Time store karo.  
+• Baggage Weight store karo.  
+• Cabin Baggage Weight store karo.  
+• Dangerous Item hai ya nahi store karo.  
+Business Rules 
+• Passport valid hona chahiye.  
+• International flight ke liye visa valid hona chahiye.  
+• Check-in departure se 45 minutes pehle complete hona 
+chahiye.  
+• Cabin baggage 7 KG se zyada nahi hona chahiye.  
+• Check-in baggage 20 KG se zyada ho to har extra KG par ₹800 
+charge lagega.  
+• Dangerous item hone par boarding reject.  
+• Senior Citizen ko priority boarding milegi.  
+• Business Class ko lounge access milega.  
+• Final ticket amount aur boarding status dikhana hai. 
+========================================================================================
+*/
+let airPassenger = "Mohd Asif";
+let travelerYears = 65;
+let flightType = "Business";
+let passportValid = true;
+let visaValid = true;
+let checkInMinutesBeforeDeparture = 60;
+let checkInBaggage = 25;
+let cabinBaggage = 6;
+let dangerousItem = false;
+let ticketBaseAmount = 20000;
+let boardingStatus  = "";
+let baggageFee = 0;
+let priorityBoarding = "";
+let loungeAccess = "";
+let payableFare = 0;
+if(passportValid !== true){
+    boardingStatus = "Rejected";
+}else if(flightType === "International" && visaValid !== true){
+    boardingStatus = "Rejected";
+}else if(checkInMinutesBeforeDeparture < 45){
+    boardingStatus  = "Rejected";
+}else if(cabinBaggage > 7){
+    boardingStatus  = "Rejected";
+}else if(dangerousItem === true){
+    boardingStatus  = "Rejected";
+}else{
+    boardingStatus  = "Approved";
+}if(checkInBaggage > 20){
+    baggageFee = (checkInBaggage - 20)*800;
+}if(travelerYears >= 60){
+    priorityBoarding = "Yes";
+}else{
+    priorityBoarding = "No";
+}if(flightType === "Business"){
+    loungeAccess = "Yes";
+}else{
+    loungeAccess = "No";
+}
+payableFare = ticketBaseAmount + baggageFee;
+console.log(`Air Passenger: ${airPassenger}`);
+console.log(`Traveler Years: ${travelerYears}`);
+console.log(`Flight Type: ${flightType}`);
+console.log(`Passport Valid: ${passportValid}`);
+console.log(`Visa Valid: ${visaValid}`);
+console.log(`Check-in Minutes Before Departure: ${checkInMinutesBeforeDeparture}`);
+console.log(`Check-in Baggage: ${checkInBaggage}KG`);
+console.log(`Cabin Baggage: ${cabinBaggage}KG`);
+console.log(`Dangerous Item: ${dangerousItem}`);
+console.log(`Boarding Status: ${boardingStatus }`);
+console.log(`Extra Baggage Charge: ₹${baggageFee}`);
+console.log(`Priority Boarding: ${priorityBoarding}`);
+console.log(`Lounge Access: ${loungeAccess}`);
+console.log(`Final Ticket Amount: ₹${payableFare}`);
