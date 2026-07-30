@@ -2084,3 +2084,74 @@ console.log(`Employment Type: ${employmentType}`);
 console.log(`Loan Decision: ${loanDecision}`);
 console.log(`Interest Category: ${interestCategory}`);
 console.log(`Rejection Reason: ${rejectionReason}`);
+
+
+
+
+
+
+
+
+/*
+===================================================================================
+Q53. Hospital Billing System 
+Question 
+Ek Hospital Billing System banao. 
+• Patient ka naam store karo.  
+• Age store karo.  
+• Room Charges store karo.  
+• Medicine Charges store karo.  
+• Test Charges store karo.  
+• Insurance Status store karo.  
+Business Rules 
+• Pehle total bill nikalo.  
+• Insurance hai to bill ka 80% insurance cover karega.  
+• Senior Citizen ko 10% discount milega.  
+• Agar total bill ₹1,00,000 se zyada hai to 5% additional service 
+charge add karo.  
+• Emergency patient ho to ₹2,500 emergency charge add karo.  
+• Final payable amount dikhana hai.  
+===================================================================================
+*/
+let patientLabel = "Mohd Asif";
+let ageGroup = 65;
+let roomCost = 70000;
+let medicineCost = 20000;
+let testCost = 15000;
+let insuranceActive = true;
+let emergencyStatus = true;
+let grossBill = roomCost + medicineCost + testCost;
+let insuranceCoverage = 0;
+let amountAfterInsurance = 0;
+let seniorCitizenDiscount = 0;
+let serviceCharge = 0;
+let emergencyCharge = 0;
+let payableHospitalBill = 0;
+if(insuranceActive === true){
+    insuranceCoverage = (grossBill * 80) / 100;
+}
+amountAfterInsurance = grossBill - insuranceCoverage;
+if(ageGroup >= 60){
+    seniorCitizenDiscount = (amountAfterInsurance * 10) / 100;
+}
+if(grossBill > 100000){
+    serviceCharge = (amountAfterInsurance * 5) / 100;
+}
+if(emergencyStatus === true){
+    emergencyCharge = 2500;
+}
+payableHospitalBill = (serviceCharge + emergencyCharge + amountAfterInsurance) - seniorCitizenDiscount;
+console.log(`Patient Label: ${patientLabel}`);
+console.log(`Age Years: ${ageGroup}`);
+console.log(`Room Rent: ₹${roomCost}`);
+console.log(`Medicine Cost: ₹${medicineCost}`);
+console.log(`Test Cost: ₹${testCost}`);
+console.log(`Insurance Active: ${insuranceActive}`);
+console.log(`Emergency Case: ${emergencyStatus}`);
+console.log(`Total Bill: ₹${grossBill}`);
+console.log(`Insurance Coverage: ₹${insuranceCoverage}`);
+console.log(`Amount After Insurance: ₹${amountAfterInsurance}`);
+console.log(`Senior Citizen Discount: ₹${seniorCitizenDiscount}`);
+console.log(`Service Charge: ₹${serviceCharge}`);
+console.log(`Emergency Charge: ₹${emergencyCharge}`);
+console.log(`Final Payable Amount: ₹${payableHospitalBill}`);
