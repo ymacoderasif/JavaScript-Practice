@@ -2277,3 +2277,71 @@ console.log(`Seat Upgrade Charge: ₹${seatUpgradeCharge}`);
 console.log(`Extra Baggage Charge: ₹${extraBaggageCharge}`);
 console.log(`Meal Charge: ₹${mealCharge}`);
 console.log(`Payable Ticket Amount: ₹${payableTicketAmount}`);
+
+
+
+
+
+
+
+
+/*
+============================================================================================
+Q56. Insurance Claim Verification System 
+Question 
+Ek Insurance Company ka Claim Verification System banao. 
+• Customer ka naam store karo.  
+• Policy Status store karo.  
+• Policy Duration (Years) store karo.  
+• Claim Amount store karo.  
+• Accident Type store karo.  
+• Police Report Available hai ya nahi, ye store karo.  
+Business Rules 
+• Agar policy inactive hai to claim reject.  
+• Agar policy duration 1 saal se kam hai to claim reject.  
+• Agar claim amount ₹5,00,000 se zyada hai to manager 
+approval zaroori hai.  
+• Agar accident major hai to police report hona zaroori hai.  
+• Agar police report nahi hai to claim reject.  
+• Agar claim approve hota hai to final approved amount 
+dikhana hai.  
+• Final status aur reason bhi dikhana hai. 
+===========================================================================================
+*/
+let claimCustomer = "Mohd Asif";
+let policyStatus = "Active";
+let policyYears = 3;
+let claimValue = 650000;
+let accidentCategory = "Major";
+let policeReportAvailable = true;
+let claimStatus = "";
+let managerApproval = "No";
+let approvedAmount = 0;
+let claimRemark = "";
+if(policyStatus !== "Active"){
+    claimStatus = "Rejected";
+    claimRemark = "Policy inactive";
+}else if(policyYears < 1){
+    claimStatus = "Rejected";
+    claimRemark = "Policy duration less than 1 year";
+}else if(accidentCategory === "Major" && policeReportAvailable !== true ){
+    claimStatus = "Rejected";
+    claimRemark = "Police report required for major accident";
+}else{
+    claimStatus = "Approved";
+    claimRemark = "None";
+}if(claimValue > 500000){
+    managerApproval = "Yes";
+}if(claimStatus === "Approved"){
+    approvedAmount = claimValue;
+}
+console.log(`Claim Customer: ${claimCustomer}`);
+console.log(`Policy Status: ${policyStatus}`);
+console.log(`Policy Years: ${policyYears}`);
+console.log(`Claim Value: ₹${claimValue}`);
+console.log(`Accident Category: ${accidentCategory}`);
+console.log(`Police Report Available: ${policeReportAvailable}`);
+console.log(`Claim Status: ${claimStatus}`);
+console.log(`Manager Approval: ${managerApproval}`);
+console.log(`Approved Amount: ₹${approvedAmount}`);
+console.log(`Rejection Reason: ${claimRemark}`);
