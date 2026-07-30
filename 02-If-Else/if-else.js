@@ -1937,3 +1937,78 @@ if(annualSpending <= 100000){
 console.log(`Account Holder: ${rewardCustomer}`);
 console.log(`Annual Spending:  ₹${annualSpending}`);
 console.log(`Reward Level: ${rewardLevel}`);
+
+
+
+
+
+
+
+
+/*
+=====================================================================================
+Q51. Employee Salary & Bonus Management System 
+Question 
+Ek Company ka Salary Management System banao. 
+• Employee ka naam store karo.  
+• Basic Salary store karo.  
+• Experience store karo.  
+• Attendance Percentage store karo.  
+• Performance Rating store karo.  
+• Overtime Hours store karo.  
+Business Rules 
+• Agar attendance 75% se kam hai to koi bonus nahi milega.  
+• Agar experience 5 saal ya usse zyada hai to basic salary ka 
+10% bonus milega.  
+• Agar experience 10 saal ya usse zyada hai to basic salary ka 
+20% bonus milega.  
+• Agar performance rating 5 hai to ₹15,000 incentive milega.  
+• Agar performance rating 4 hai to ₹8,000 incentive milega.  
+• Agar overtime 20 hours se zyada hai to ₹5,000 extra add karo.  
+• Agar final salary ₹1,00,000 se zyada ho jaye to ₹4,000 
+Professional Tax kaat do.  
+• Final Salary aur Employee Details dikhani hain. 
+====================================================================================
+*/
+let workerName = "Mohd Asif";
+let baseSalary = 90000;
+let experienceYears = 12;
+let attendanceRate = 92;
+let performanceScore = 5;
+let extraHours = 25;
+let bonusValue = 0;
+let incentiveValue = 0;
+let overtimeAmount = 0;
+let taxDeduction = 0;
+let salaryBeforeTax = 0;
+let finalSalaryAmount = 0;
+if(attendanceRate < 75){
+    bonusValue = 0;
+}else if(experienceYears >= 10){
+    bonusValue = (baseSalary * 20) / 100;
+}else if(experienceYears >= 5){
+    bonusValue = (baseSalary * 10) / 100; 
+}if(performanceScore === 5){
+    incentiveValue = 15000;
+}else if(performanceScore === 4){
+    incentiveValue = 8000;
+}if(extraHours > 20){
+    overtimeAmount = 5000;
+}
+salaryBeforeTax = baseSalary + bonusValue + incentiveValue + overtimeAmount;
+if(salaryBeforeTax > 100000){
+    taxDeduction = 4000;
+}
+finalSalaryAmount = salaryBeforeTax - taxDeduction;
+console.log(`Worker Name: ${workerName}`);
+console.log(`Base Salary: ₹${baseSalary}`);
+console.log(`Experience Years: ${experienceYears}`);
+console.log(`Attendance Rate: ${attendanceRate}%`);
+console.log(`Performance Score: ${performanceScore}`);
+console.log(`Extra Hours : ${extraHours}`);
+console.log(`Bonus Value: ₹${bonusValue}`);
+console.log(`Incentive Value: ₹${incentiveValue}`);
+console.log(`Overtime Amount: ₹${overtimeAmount}`);
+console.log(`Salary Before Tax: ₹${salaryBeforeTax}`);
+console.log(`Professional Tax: ₹${taxDeduction}`);
+console.log(`Net Salary: ₹${finalSalaryAmount}`);
