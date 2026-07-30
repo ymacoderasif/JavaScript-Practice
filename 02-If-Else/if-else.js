@@ -2345,3 +2345,69 @@ console.log(`Claim Status: ${claimStatus}`);
 console.log(`Manager Approval: ${managerApproval}`);
 console.log(`Approved Amount: ₹${approvedAmount}`);
 console.log(`Rejection Reason: ${claimRemark}`);
+
+
+
+
+
+
+
+
+/*
+=================================================================================
+Q57. Amazon Order Processing System 
+Question 
+Ek E-Commerce Order Processing System banao. 
+• Customer ka naam store karo.  
+• Order Amount store karo.  
+• Prime Membership store karo.  
+• Payment Status store karo.  
+• Stock Available hai ya nahi, ye store karo.  
+• Delivery Distance store karo.  
+Business Rules 
+• Payment successful hona chahiye.  
+• Product stock me hona chahiye.  
+• Prime customer ko free delivery milegi.  
+• Non-Prime customer ko free delivery tab milegi jab order 
+₹999 ya usse zyada ho.  
+• Delivery distance 50 KM se zyada ho to ₹150 extra delivery 
+charge lagao.  
+• Final bill aur order status dikhana hai.  
+=================================================================================
+*/
+let shopperName = "Mohd Asif";
+let orderValue = 1200;
+let primeMember = false;
+let paymentStatus = "Successful";
+let stockAvailable = true;
+let deliveryRange = 60;
+let orderStatus = "";
+let shippingCharge = 0;
+let extraDeliveryCharge = 0;
+let totalOrderBill = 0;
+if(paymentStatus !== "Successful"){
+    orderStatus = "Cancelled";
+}else if(stockAvailable === false){
+    orderStatus = "Cancelled";
+}else{
+    orderStatus = "Confirmed";
+}if(primeMember === true){
+    shippingCharge = 0;
+}else if(orderValue >= 999){
+    shippingCharge = 0;
+}else{
+    shippingCharge = 100;
+}if(deliveryRange > 50){
+    extraDeliveryCharge = 150;
+}
+totalOrderBill = orderValue + shippingCharge +extraDeliveryCharge;
+console.log(`Buyer Name: ${shopperName}`);
+console.log(`Order Value: ₹${orderValue}`);
+console.log(`Prime Member: ${primeMember}`);
+console.log(`Payment Status: ${paymentStatus}`);
+console.log(`Stock Available: ${stockAvailable}`);
+console.log(`Delivery Range: ${deliveryRange}KM`);
+console.log(`Order Status: ${orderStatus}`);
+console.log(`Delivery Charge: ₹${shippingCharge}`);
+console.log(`Extra Delivery Charge: ₹${extraDeliveryCharge}`);
+console.log(`Total Order Bill: ₹${totalOrderBill}`);
