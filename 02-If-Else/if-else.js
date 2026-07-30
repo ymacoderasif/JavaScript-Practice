@@ -2012,3 +2012,75 @@ console.log(`Overtime Amount: ₹${overtimeAmount}`);
 console.log(`Salary Before Tax: ₹${salaryBeforeTax}`);
 console.log(`Professional Tax: ₹${taxDeduction}`);
 console.log(`Net Salary: ₹${finalSalaryAmount}`);
+
+
+
+
+
+
+
+
+/*
+======================================================================
+Q52. Bank Loan Eligibility System 
+Question 
+Ek Bank Loan Approval System banao. 
+• Customer ka naam store karo.  
+• Age store karo.  
+• Monthly Income store karo.  
+• Credit Score store karo.  
+• Existing Loan Amount store karo.  
+• Employment Status store karo.  
+Business Rules 
+• Age 21 se kam ho to loan reject.  
+• Monthly income ₹30,000 se kam ho to loan reject.  
+• Credit Score 750 ya usse zyada ho to best interest rate.  
+• Credit Score 650–749 ho to normal interest rate.  
+• Credit Score 650 se kam ho to loan reject.  
+• Existing loan ₹5,00,000 se zyada ho to loan reject.  
+• Employment permanent ho to hi approval milega.  
+• Final decision aur reason dikhana hai. 
+======================================================================
+*/
+let loanApplicant = "Mohd Asif";
+let ageNumber = 30;
+let monthlyEarnings = 60000;
+let creditRating = 780;
+let outstandingLoan = 200000;
+let employmentType = "Permanent";
+let loanDecision = "";
+let interestCategory = "";
+let rejectionReason = "";
+if(ageNumber < 21){
+    loanDecision = "Reject";
+    rejectionReason = "Age below 21";
+}else if(monthlyEarnings < 30000){
+    loanDecision = "Reject";
+    rejectionReason = "Monthly income below ₹30,000";
+}else if(creditRating < 650){
+    loanDecision = "Reject";
+    rejectionReason = "Credit score below 650";
+}else if(outstandingLoan > 500000){
+    loanDecision = "Reject";
+    rejectionReason = "Existing loan above ₹5,00,000";
+}else if(employmentType !== "Permanent"){
+    loanDecision = "Reject";
+    rejectionReason = "Employment is not permanent";
+}else if(creditRating >= 750){
+    loanDecision = "Approve";
+    interestCategory = "Best";
+    rejectionReason = "None"
+}else{
+    loanDecision = "Approve";
+    interestCategory = "Normal";
+    rejectionReason = "None";
+}
+console.log(`Applicant Name: ${loanApplicant}`);
+console.log(`Age Number: ${ageNumber}`);
+console.log(`Monthly Earnings: ₹${monthlyEarnings}`);
+console.log(`Credit Rating: ${creditRating}`);
+console.log(`Outstanding Loan: ₹${outstandingLoan}`);
+console.log(`Employment Type: ${employmentType}`);
+console.log(`Loan Decision: ${loanDecision}`);
+console.log(`Interest Category: ${interestCategory}`);
+console.log(`Rejection Reason: ${rejectionReason}`);
