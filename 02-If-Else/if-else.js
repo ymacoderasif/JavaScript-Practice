@@ -1831,3 +1831,38 @@ if( performancePoints >= 90){
 console.log(`Employee Tag: ${employeeTag}`);
 console.log(`Performance Points: ${performancePoints}`);
 console.log(`Performance Rating: ${performanceRating}`);
+
+
+
+
+
+
+
+
+/*
+===========================================================================
+Q48. Hotel Room Selection 
+Question 
+Ek Hotel Booking System banao. 
+• Customer ka naam store karo.  
+• Budget store karo.  
+• Budget ke hisaab se Standard, Deluxe, Super Deluxe ya Suite 
+room suggest karo.  
+• Final booking details dikhani hain. 
+============================================================================
+*/
+let guestLabel = "Mohd Asif";
+let budgetAmount = 7500;
+let roomSuggestion = "";
+if(budgetAmount <= 3000){
+    roomSuggestion = "Standard Room";
+}else if(budgetAmount <= 6000){
+    roomSuggestion = "Deluxe Room";
+}else if(budgetAmount <= 10000){
+    roomSuggestion = "Super Deluxe Room";
+}else{
+    roomSuggestion = "Suite Room";
+}
+console.log(`Guest Label: ${guestLabel}`);
+console.log(`Budget Amount: ${budgetAmount}`);
+console.log(`Room Suggestion: ${roomSuggestion}`);
