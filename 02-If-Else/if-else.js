@@ -2477,3 +2477,80 @@ console.log(`Age Discount: ₹${seniorRelief}`);
 console.log(`Tatkal Charge : ₹${tatkalCharge}`);
 console.log(`Superfast Charge: ₹${superfastCharge}`);
 console.log(`Final Rail Fare: ₹${finalRailFare}`);
+
+
+
+
+
+
+
+
+/*
+=======================================================================================
+Q59. Credit Card Eligibility System 
+Question 
+Ek Credit Card Approval System banao. 
+• Applicant ka naam store karo.  
+• Age store karo.  
+• Monthly Income store karo.  
+• Credit Score store karo.  
+• Existing EMI Amount store karo.  
+• Employment Type store karo.  
+Business Rules 
+• Age 21 se kam ho to reject.  
+• Monthly income ₹40,000 se kam ho to reject.  
+• Credit score 750 ya usse zyada ho to Platinum Card.  
+• Credit score 700–749 ho to Gold Card.  
+• Credit score 650–699 ho to Silver Card.  
+• Credit score 650 se kam ho to reject.  
+• Existing EMI monthly income ke 50% se zyada ho to reject.  
+• Permanent employee ko hi approval milega.  
+• Final card category ya rejection reason dikhana hai. 
+========================================================================================
+*/
+let cardApplicant = "Mohd Asif";
+let applicantYears = 30;
+let monthlyIncome = 80000;
+let creditScore = 760;
+let currentEMI = 20000;
+let jobStatus = "Permanent";
+let applicationStatus = "";
+let cardCategory = "";
+let applicationRemark = "None";
+if(applicantYears < 21){
+    applicationStatus = "Rejected";
+    applicationRemark = "Age below 21";
+}else if(monthlyIncome < 40000){
+    applicationStatus = "Rejected";
+    applicationRemark = "Monthly income below ₹40,000";
+}else if(creditScore < 650){
+    applicationStatus = "Rejected";
+    applicationRemark = "Credit score below 650";
+}else if(currentEMI > ((monthlyIncome * 50) / 100)){
+    applicationStatus = "Rejected";
+    applicationRemark = "EMI exceeds 50% of monthly income";
+}else if(jobStatus !== "Permanent"){
+    applicationStatus = "Rejected";
+    applicationRemark = "Employment is not permanent";
+}else if(creditScore >= 750){
+    applicationStatus = "Approved";
+    cardCategory = "Platinum";
+    applicationRemark = "Eligible for Platinum Card";
+}else if(creditScore >= 700){
+    applicationStatus = "Approved"
+    cardCategory = "Gold";
+    applicationRemark = "Eligible for Gold Card";
+}else{
+    applicationStatus = "Approved";
+    cardCategory = "Silver";
+    applicationRemark = "Eligible for Silver Card";
+}
+console.log(`Card Applicant: ${cardApplicant}`);
+console.log(`Applicant Years: ${applicantYears}`);
+console.log(`Monthly Income:  ₹${monthlyIncome}`);
+console.log(`Credit Score: ${creditScore}`);
+console.log(`Current EMI: ₹${currentEMI}`);
+console.log(`Employment Type: ${jobStatus}`);
+console.log(`Application Status: ${applicationStatus}`);
+console.log(`Card Category: ${cardCategory}`);
+console.log(`Application Remark: ${applicationRemark}`);
