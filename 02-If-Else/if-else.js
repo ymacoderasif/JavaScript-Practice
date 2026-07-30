@@ -1866,3 +1866,39 @@ if(budgetAmount <= 3000){
 console.log(`Guest Label: ${guestLabel}`);
 console.log(`Budget Amount: ${budgetAmount}`);
 console.log(`Room Suggestion: ${roomSuggestion}`);
+
+
+
+
+
+
+
+
+
+/*
+=======================================================================
+ Q49. Internet Speed Plans 
+          Question 
+Ek Internet Provider System banao. 
+• Customer ka naam store karo.  
+• Monthly Budget store karo.  
+• Budget ke hisaab se Basic, Standard, Premium ya Ultra plan 
+suggest karo.  
+• Final plan details dikhani hain. 
+=======================================================================
+*/
+let clientLabel = "Mohd Asif";
+let monthlyBudget = 1500;
+let planSuggestion = "";
+if(monthlyBudget <= 500){
+    planSuggestion = "Basic Plan";
+}else if(monthlyBudget <= 1000){
+    planSuggestion = "Standard Plan";
+}else if(monthlyBudget <= 2000){
+    planSuggestion = "Premium Plan";
+}else{
+    planSuggestion = "Ultra Plan";
+}
+console.log(`Client Label: ${clientLabel}`);
+console.log(`Monthly Budget: ₹${monthlyBudget}`);
+console.log(`Plan Suggestion: ${planSuggestion}`);
