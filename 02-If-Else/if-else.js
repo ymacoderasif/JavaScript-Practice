@@ -2554,3 +2554,75 @@ console.log(`Employment Type: ${jobStatus}`);
 console.log(`Application Status: ${applicationStatus}`);
 console.log(`Card Category: ${cardCategory}`);
 console.log(`Application Remark: ${applicationRemark}`);
+
+
+
+
+
+
+
+
+/*
+================================================================================
+Q60. University Semester Result System 
+Question 
+Ek University Result System banao. 
+• Student ka naam store karo.  
+• Theory Marks store karo.  
+• Practical Marks store karo.  
+• Attendance Percentage store karo.  
+• Internal Marks store karo.  
+Business Rules 
+• Attendance 75% se kam ho to result rok do.  
+• Theory me minimum passing marks hone chahiye.  
+• Practical me minimum passing marks hone chahiye.  
+• Internal marks minimum hone chahiye.  
+• Sab conditions complete hone ke baad total percentage 
+nikalo.  
+• Percentage ke hisaab se Grade do.  
+• Final result aur grade dikhana hai. 
+=================================================================================
+*/
+let learnerName = "Mohd Asif";
+let theoryMarks = 85;
+let practicalMarks = 80;
+let attendancePercent = 90;
+let internalMarks = 25;
+let resultStatus = "";
+let totalMarks = 0;
+let overallPercentage = 0;
+let finalGrade = "";
+if (attendancePercent < 75) {
+    resultStatus = "Withheld";
+} else if (theoryMarks < 33) {
+    resultStatus = "Failed";
+} else if (practicalMarks < 33) {
+    resultStatus = "Failed";
+} else if (internalMarks < 20) {
+    resultStatus = "Failed";
+} else {
+    resultStatus = "Passed";
+}
+if (resultStatus === "Passed") {
+    totalMarks = theoryMarks + practicalMarks + internalMarks;
+    overallPercentage = ((totalMarks / 230) * 100).toFixed(2);
+    if (overallPercentage >= 90) {
+        finalGrade = "A";
+    } else if (overallPercentage >= 75) {
+        finalGrade = "B";
+    } else if (overallPercentage >= 60) {
+        finalGrade = "C";
+    } else if (overallPercentage >= 50) {
+        finalGrade = "D";
+    } else {
+        finalGrade = "Fail";
+    }
+}
+console.log(`Student Name: ${learnerName}`);
+console.log(`Theory Marks: ${theoryMarks}`);
+console.log(`Practical Marks: ${practicalMarks}`);
+console.log(`Attendance Rate: ${attendancePercent}%`);
+console.log(`Internal Marks: ${internalMarks}`);
+console.log(`Result Status: ${resultStatus}`);
+console.log(`Percentage: ${overallPercentage}%`);
+console.log(`Grade: ${finalGrade}`);
