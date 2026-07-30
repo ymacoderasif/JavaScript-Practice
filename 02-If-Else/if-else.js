@@ -2213,3 +2213,67 @@ console.log(`Family Income: ₹${familyIncome}`);
 console.log(`Admission Status: ${admissionStatus}`);
 console.log(`Scholarship Status: ${scholarshipResult}`);
 console.log(`Admission Priority: ${admissionPriority}`);
+
+
+
+
+
+
+
+
+/*
+============================================================================================
+Q55. Airline Ticket Billing System 
+Question 
+Ek Airline Booking System banao. 
+• Passenger ka naam store karo.  
+• Age store karo.  
+• Ticket Price store karo.  
+• Baggage Weight store karo.  
+• Seat Type store karo.  
+• Meal Required store karo.  
+Business Rules 
+• Senior Citizen ko 15% discount do.  
+• Business Seat ho to ₹8,000 extra add karo.  
+• Baggage 20 KG se zyada ho to har extra KG par ₹500 charge 
+add karo.  
+• Meal liya ho to ₹750 add karo.  
+• Final ticket amount aur booking details dikhani hain.  
+==============================================================================================
+*/
+let travelerName = "Mohd Asif";
+let travelerAge = 65;
+let baseTicketFare = 20000;
+let luggageWeight = 25;
+let seatCategory = "Business";
+let mealRequired = true;
+let ageDiscount = 0;
+let seatUpgradeCharge = 0;
+let extraBaggageCharge = 0;
+let mealCharge = 0;
+let payableTicketAmount = 0;
+if(travelerAge >= 60){
+    ageDiscount = 15;
+}
+ageDiscount = (baseTicketFare * ageDiscount) / 100;
+if(seatCategory === "Business"){
+    seatUpgradeCharge = 8000;
+}
+if(luggageWeight > 20){
+    extraBaggageCharge = (luggageWeight - 20)*500;
+}
+if(mealRequired === true){
+    mealCharge = 750;
+}
+payableTicketAmount = (baseTicketFare - ageDiscount) + seatUpgradeCharge + extraBaggageCharge + mealCharge;
+console.log(`Traveler Name: ${travelerName}`);
+console.log(`Traveler Age: ${travelerAge}`);
+console.log(`Base Ticket Fare: ₹${baseTicketFare}`);
+console.log(`Luggage Weight: ${luggageWeight}`);
+console.log(`Seat Category: ${seatCategory}`);
+console.log(`Meal Required: ${mealRequired}`);
+console.log(`Senior Discount: ₹${ageDiscount}`);
+console.log(`Seat Upgrade Charge: ₹${seatUpgradeCharge}`);
+console.log(`Extra Baggage Charge: ₹${extraBaggageCharge}`);
+console.log(`Meal Charge: ₹${mealCharge}`);
+console.log(`Payable Ticket Amount: ₹${payableTicketAmount}`);
