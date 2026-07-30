@@ -1794,3 +1794,40 @@ if(rechargeAmount === 199){
 console.log(`User Name: ${subscriberName}`);
 console.log(`Recharge Value: ₹${rechargeAmount}`);
 console.log(`Activated Plan: ${activatedPlan}`);
+
+
+
+
+
+
+
+
+/*
+==================================================================================
+Q47. Employee Performance Rating 
+          Question 
+Ek Employee Performance System banao. 
+• Employee ka naam store karo.  
+• Performance Score store karo.  
+• Score ke hisaab se Excellent, Good, Average, Needs 
+Improvement ya Poor rating do.  
+• Employee ka naam aur rating dikhani hai. 
+===================================================================================
+*/
+let employeeTag = "Mohd Asif";
+let performancePoints = 95;
+let performanceRating = "";
+if( performancePoints >= 90){
+    performanceRating = "Excellent";
+}else if(performancePoints >= 75){
+    performanceRating = "Good";
+}else if(performancePoints >= 60){
+    performanceRating = "Average";
+}else if(performancePoints >= 40){
+    performanceRating = "Needs Improvement";
+}else{
+    performanceRating = "Poor";
+}
+console.log(`Employee Tag: ${employeeTag}`);
+console.log(`Performance Points: ${performancePoints}`);
+console.log(`Performance Rating: ${performanceRating}`);
