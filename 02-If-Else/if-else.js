@@ -3243,3 +3243,70 @@ console.log(`Cheating Detected: ${cheatingDetected}`);
 console.log(`Exam Status: ${examStatus}`);
 console.log(`Submission Status: ${submissionStatus}`);
 console.log(`Exam Result: ${examResult}`);
+
+
+
+
+
+
+
+
+/*
+============================================================================
+Q69. Car Rental Booking System 
+Question 
+Ek Car Rental System banao. 
+• Customer ka naam store karo.  
+• Driving Licence Valid hai ya nahi store karo.  
+• Customer Age store karo.  
+• Rental Days store karo.  
+• Car Type store karo.  
+• Security Deposit store karo.  
+• Insurance Required hai ya nahi store karo.  
+Business Rules 
+• Valid licence mandatory hai.  
+• Age 21 saal ya usse zyada honi chahiye.  
+• Luxury car ke liye minimum security deposit zaroori hai.  
+• Rental 7 din se zyada ho to discount do.  
+• Insurance lene par extra charge add karo.  
+• Final rental amount aur booking status dikhana hai.  
+============================================================================
+*/
+let rentalCustomer = "Mohd Asif";
+let licenceValid = true;
+let driverAge = 25;
+let rentalDays = 10;
+let vehicleType = "Luxury";
+let securityDeposit = 60000;
+let insuranceRequired = true;
+let reservationStatus = "";
+let extendedStayDiscount = 0;
+let insuranceCharge = 0;
+let baseRentalCost = 30000;
+let finalRentalAmount = 0;
+if(licenceValid !== true){
+    reservationStatus = "Rejected";
+}else if(driverAge < 21){
+    reservationStatus = "Rejected";
+}else if(vehicleType === "Luxury" && securityDeposit < 50000){
+    reservationStatus = "Rejected";
+}else{
+    reservationStatus = "Approved";
+}if(rentalDays > 7){
+    extendedStayDiscount = (baseRentalCost * 10) / 100;
+}if(insuranceRequired === true){
+    insuranceCharge = 2000;
+}
+finalRentalAmount = (baseRentalCost + insuranceCharge) - extendedStayDiscount;
+console.log(`Rental Customer: ${rentalCustomer}`);
+console.log(`Licence Valid: ${licenceValid}`);
+console.log(`Driver Age: ${driverAge}`);
+console.log(`Rental Days: ${rentalDays}`);
+console.log(`Vehicle Type: ${vehicleType}`);
+console.log(`Security Deposit: ₹${securityDeposit}`);
+console.log(`Insurance Required: ${insuranceRequired}`);
+console.log(`Rental Amount: ₹${baseRentalCost}`);
+console.log(`Booking Status: ${reservationStatus}`);
+console.log(`Discount Amount: ₹${extendedStayDiscount}`);
+console.log(`Insurance Charge: ₹${insuranceCharge}`);
+console.log(`Final Rental Amount: ₹${finalRentalAmount}`);
