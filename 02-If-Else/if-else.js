@@ -3014,3 +3014,87 @@ console.log(`Express Charge: ₹${expressCharge}`);
 console.log(`Delivery Surcharge: ₹${deliverySurcharge}`);
 console.log(`Final Invoice: ₹${totalInvoice}`);
 console.log(`Dispatch Status: ${dispatchStatus}`);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q66. E-Commerce Return & Refund System 
+Question 
+Ek E-Commerce Return System banao. 
+• Customer ka naam store karo.  
+• Order Amount store karo.  
+• Product Category store karo.  
+• Delivery ke baad kitne din hue store karo.  
+• Product Used hai ya nahi store karo.  
+• Product Damage Status store karo.  
+• Premium Member hai ya nahi store karo.  
+Business Rules 
+• Return sirf 7 din ke andar allow hoga.  
+• Electronics category ke liye return tabhi allow hoga jab 
+product use na hua ho.  
+• Damaged product ka refund turant approve hoga.  
+• Premium member ko pickup free milega.  
+• Order amount ₹10,000 se zyada ho to manager approval 
+zaroori hai.  
+• Approved return par refund amount dikhana hai.  
+• Rejected return par exact reason dikhana hai. 
+========================================================================
+*/
+let customerProfile = "Mohd Asif";
+let purchaseTotalValue = 12000;
+let itemType = "Electronics";
+let daysAfterDelivery = 5;
+let productConditionUsed = false;
+let damageReported = false;
+let priorityMember = true;
+let returnApproval = "";
+let refundValue = 0;
+let pickupFee = 0;
+let approvalByManager = "";
+let returnRejectReason = "";
+if(damageReported === true){
+    returnApproval = "Approved";
+}else if(daysAfterDelivery > 7){
+    returnApproval = "Rejected";
+    returnRejectReason = "Return window expired";
+}else if(itemType === "Electronics" && productConditionUsed === true){
+    returnApproval = "Rejected";
+    returnRejectReason = "Used electronics cannot be returned";
+}else{
+    returnApproval = "Approved";
+}
+if(priorityMember === true){
+    pickupFee = 0;
+}else{
+    pickupFee = 200;
+}
+if(purchaseTotalValue > 10000){
+    approvalByManager = "Required";
+}else{
+    approvalByManager = "Not Required";
+}
+if(returnApproval === "Approved"){
+    refundValue = purchaseTotalValue;
+}else{
+    refundValue = 0;
+}
+console.log(`Customer Name: ${customerProfile}`);
+console.log(`Order Amount: ₹${purchaseTotalValue}`);
+console.log(`Product Category: ${itemType}`);
+console.log(`Days After Delivery: ${daysAfterDelivery}`);
+console.log(`Product Used: ${productConditionUsed}`);
+console.log(`Product Damaged: ${damageReported}`);
+console.log(`Premium Member: ${priorityMember}`);
+console.log(`Pickup Fee: ₹${pickupFee}`);
+console.log(`Manager Approval: ${approvalByManager}`);
+console.log(`Return Status: ${returnApproval}`);
+console.log(`Refund Amount: ₹${refundValue}`);
+if(returnApproval === "Rejected"){
+    console.log(`Reason: ${returnRejectReason}`);
+}
