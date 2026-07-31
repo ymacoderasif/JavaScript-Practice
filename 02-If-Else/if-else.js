@@ -2716,3 +2716,84 @@ console.log(`Extra Baggage Charge: ₹${baggageFee}`);
 console.log(`Priority Boarding: ${priorityBoarding}`);
 console.log(`Lounge Access: ${loungeAccess}`);
 console.log(`Final Ticket Amount: ₹${payableFare}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q62. Netflix Subscription System 
+          Question 
+Ek OTT Subscription System banao. 
+• User ka naam store karo.  
+• Current Plan store karo.  
+• Devices Count store karo.  
+• Payment Status store karo.  
+• Subscription Days Left store karo.  
+• Coupon Available hai ya nahi store karo.  
+• Student Status store karo.  
+Business Rules 
+• Payment pending ho to account suspend.  
+• Trial khatam ho chuka ho to renewal zaroori hai.  
+• Student ko 20% discount milega.  
+• Coupon valid ho to 10% extra discount milega.  
+• Basic Plan me 1 device allowed.  
+• Standard Plan me 2 devices allowed.  
+• Premium Plan me 4 devices allowed.  
+• Device limit cross hone par login block.  
+• Final payable amount aur account status dikhana hai. 
+=======================================================================
+*/
+let streamUser = "Mohd Asif";
+let subscriptionPlan = "Premium";
+let deviceCount = 3;
+let billingState = "Paid";
+let daysRemaining = 25;
+let couponAvailable = true;
+let studentUser = true;
+let planAmount = 799;
+let educationDiscount = 0;
+let couponDiscount = 0;
+let finalSubscriptionAmount = 0;
+let subscriptionState = "";
+let loginStatus = "";
+if(billingState !== "Paid"){
+    subscriptionState = "Suspended";
+}else if(daysRemaining <= 0){
+    subscriptionState = "Renewal Required";
+}else{
+    subscriptionState = "Active";
+}if(studentUser === true){
+    educationDiscount = 20;
+}
+educationDiscount = (planAmount * educationDiscount) / 100;
+if(couponAvailable === true){
+    couponDiscount = (planAmount * 10) / 100;
+}
+finalSubscriptionAmount = (planAmount - educationDiscount - couponDiscount).toFixed(2);
+if(subscriptionPlan === "Basic" && deviceCount > 1){
+    loginStatus = "Blocked";
+}else if(subscriptionPlan === "Standard" && deviceCount > 2){
+    loginStatus = "Blocked";
+}else if(subscriptionPlan === "Premium" && deviceCount > 4){
+    loginStatus = "Blocked";
+}else{
+    loginStatus = "Allowed";
+}
+console.log(`Subscriber Name: ${streamUser}`);
+console.log(`Subscription Plan: ${subscriptionPlan}`);
+console.log(`Device Count: ${deviceCount}`);
+console.log(`Payment Status: ${billingState}`);
+console.log(`Days Remaining: ${daysRemaining}`);
+console.log(`Coupon Available: ${couponAvailable}`);
+console.log(`Student User: ${studentUser}`);
+console.log(`Plan Amount: ₹${planAmount}`);
+console.log(`Student Discount: ₹${educationDiscount}`);
+console.log(`Coupon Discount: ₹${couponDiscount}`);
+console.log(`Payable Amount: ₹${finalSubscriptionAmount}`);
+console.log(`Account Status: ${subscriptionState}`);
+console.log(`Login Status: ${loginStatus}`);
