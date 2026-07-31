@@ -3310,3 +3310,67 @@ console.log(`Booking Status: ${reservationStatus}`);
 console.log(`Discount Amount: ₹${extendedStayDiscount}`);
 console.log(`Insurance Charge: ₹${insuranceCharge}`);
 console.log(`Final Rental Amount: ₹${finalRentalAmount}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q70. Digital Wallet Payment System 
+Question 
+Ek Digital Wallet System banao. 
+• User ka naam store karo.  
+• Wallet Balance store karo.  
+• Payment Amount store karo.  
+• KYC Complete hai ya nahi store karo.  
+• Daily Transaction Amount store karo.  
+• Cashback Coupon Available hai ya nahi store karo.  
+Business Rules 
+• KYC complete hona chahiye.  
+• Wallet me sufficient balance hona chahiye.  
+• Daily transaction limit cross nahi honi chahiye.  
+• Cashback coupon valid ho to cashback add karo.  
+• Payment successful hone ke baad updated wallet balance 
+dikhana hai.  
+• Final transaction status aur payment details dikhani hain.  
+===========================================================================
+*/
+let walletUser = "Mohd Asif";
+let walletAmount = 5000;
+let paymentAmount = 1200;
+let kycVerified = true;
+let dailySpentAmount = 3000;
+let cashbackCoupon = true
+let paymentResult = ""
+let cashbackAmount = 0;
+let updatedWalletBalance = 0;
+if(kycVerified !== true){
+    paymentResult = "Failed";
+}else if(walletAmount < paymentAmount){
+    paymentResult = "Failed";
+}else if((dailySpentAmount + paymentAmount) > 10000){
+    paymentResult = "Failed";
+}else{
+    paymentResult = "Successful";
+}
+if(cashbackCoupon === true){
+    cashbackAmount = (paymentAmount * 5) / 100;
+}
+if(paymentResult === "Successful"){
+    updatedWalletBalance = walletAmount - paymentAmount + cashbackAmount;
+}else{
+    updatedWalletBalance = walletAmount;
+}
+console.log(`Wallet User: ${walletUser}`);
+console.log(`Wallet Amount: ₹${walletAmount}`);
+console.log(`Payment Amount: ₹${paymentAmount}`);
+console.log(`KYC Verified: ${kycVerified}`);
+console.log(`Daily Spent Amount: ₹${dailySpentAmount}`);
+console.log(`Cashback Coupon: ${cashbackCoupon}`);
+console.log(`Transaction Status: ${paymentResult}`);
+console.log(`Cashback Amount: ₹${cashbackAmount}`);
+console.log(`Updated Wallet Balance: ₹${updatedWalletBalance}`);
