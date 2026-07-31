@@ -3098,3 +3098,70 @@ console.log(`Refund Amount: ₹${refundValue}`);
 if(returnApproval === "Rejected"){
     console.log(`Reason: ${returnRejectReason}`);
 }
+
+
+
+
+
+
+
+
+/*
+=====================================================================
+Q67. Hotel Check-in Management System 
+Question 
+Ek Hotel Check-in System banao. 
+• Guest ka naam store karo.  
+• Booking Status store karo.  
+• Check-in Time store karo.  
+• Room Type store karo.  
+• ID Proof Available hai ya nahi store karo.  
+• Extra Guests store karo.  
+• Breakfast Include hai ya nahi store karo.  
+Business Rules 
+• Booking confirm honi chahiye.  
+• ID Proof mandatory hai.  
+• Check-in time se pehle room allot nahi hoga.  
+• Deluxe aur Suite room me free breakfast milega.  
+• Extra guest par extra charge add karo.  
+• Late check-in par late fee add karo.  
+• Final bill aur room status dikhana hai.
+====================================================================
+*/
+let hotelVisitor = "Mohd Asif";
+let bookingConfirmed = true;
+let arrivalTime = 14;
+let reservedRoomType = "Deluxe";
+let identityProofAvailable = true;
+let additionalGuests = 2;
+let breakfastIncluded = "";
+let guestExtraCharge = 0;
+let lateCheckInFee = 0;
+let roomStatus = "";
+let finalStayBill = 0;
+if(bookingConfirmed === true && identityProofAvailable === true && arrivalTime >= 12){
+    roomStatus = "Allotted";
+}else{
+    roomStatus = "Not Allotted";
+}
+if(reservedRoomType === "Deluxe" || reservedRoomType === "Suite"){
+    breakfastIncluded = true;
+}else{
+    breakfastIncluded = false;
+}
+guestExtraCharge = additionalGuests * 1000;
+if(arrivalTime >= 18){
+    lateCheckInFee = 500;
+}
+finalStayBill = guestExtraCharge + lateCheckInFee;
+console.log(`Guest Name: ${hotelVisitor}`);
+console.log(`Booking Status: ${bookingConfirmed}`);
+console.log(`Check-in Time: ${arrivalTime}`);
+console.log(`Room Type: ${reservedRoomType}`);
+console.log(`ID Proof: ${identityProofAvailable}`);
+console.log(`Extra Guests: ${additionalGuests}`);
+console.log(`Breakfast Included: ${breakfastIncluded}`);
+console.log(`Extra Guest Charge: ₹${guestExtraCharge}`);
+console.log(`Late Check-in Fee: ₹${lateCheckInFee}`);
+console.log(`Final Bill: ₹${finalStayBill}`);
+console.log(`Room Status: ${roomStatus}`);
