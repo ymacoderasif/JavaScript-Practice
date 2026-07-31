@@ -3165,3 +3165,81 @@ console.log(`Extra Guest Charge: ₹${guestExtraCharge}`);
 console.log(`Late Check-in Fee: ₹${lateCheckInFee}`);
 console.log(`Final Bill: ₹${finalStayBill}`);
 console.log(`Room Status: ${roomStatus}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q68. Online Examination Portal 
+Question 
+Ek Online Exam System banao. 
+• Student ka naam store karo.  
+• Login Status store karo.  
+• Webcam Status store karo.  
+• Internet Speed store karo.  
+• Exam Time store karo.  
+• Submitted Time store karo.  
+• Cheating Detected hai ya nahi store karo.  
+Business Rules 
+• Login successful hona chahiye.  
+• Webcam mandatory hai.  
+• Minimum internet speed honi chahiye.  
+• Time ke baad submit karne par late submission mark karo.  
+• Cheating detect hone par exam cancel kar do.  
+• Final exam status aur result dikhana hai. 
+=========================================================================
+*/
+let examStudent = "Mohd Asif";
+let accessStatus = "Successful";
+let webcamEnabled = true;
+let internetSpeed = 10;
+let examEndTime = "12:00";
+let submittedTime = "12:20";
+let cheatingDetected = true;
+let examStatus = "";
+let examResult = "";
+let submissionStatus = "";
+if (accessStatus !== "Successful") {
+    examStatus = "Cancelled";
+} else if (webcamEnabled !== true) {
+    examStatus = "Cancelled";
+} else if (internetSpeed < 5) {
+    examStatus = "Cancelled";
+} else if (cheatingDetected === true) {
+    examStatus = "Cancelled";
+} else {
+    examStatus = "Completed";
+}
+let endMinutes = Number(examEndTime.split(":")[0]) * 60 + Number(examEndTime.split(":")[1]);
+let submitMinutes = Number(submittedTime.split(":")[0]) * 60 + Number(submittedTime.split(":")[1]);
+if (examStatus === "Completed") {
+    if (submitMinutes > endMinutes) {
+        submissionStatus = "Late Submission";
+    } else {
+        submissionStatus = "On Time";
+    }
+} else {
+    submissionStatus = "Not Applicable";
+}
+if (examStatus === "Completed" && submissionStatus === "On Time") {
+    examResult = "Passed";
+} else if (examStatus === "Completed" && submissionStatus === "Late Submission") {
+    examResult = "Late Submission";
+} else {
+    examResult = "Failed";
+}
+console.log(`Exam Student: ${examStudent}`);
+console.log(`Access State: ${accessStatus}`);
+console.log(`Webcam Enabled: ${webcamEnabled}`);
+console.log(`Internet Speed: ${internetSpeed}Mbps`);
+console.log(`Exam End Time: ${examEndTime}`);
+console.log(`Submitted Time: ${submittedTime}`);
+console.log(`Cheating Detected: ${cheatingDetected}`);
+console.log(`Exam Status: ${examStatus}`);
+console.log(`Submission Status: ${submissionStatus}`);
+console.log(`Exam Result: ${examResult}`);
