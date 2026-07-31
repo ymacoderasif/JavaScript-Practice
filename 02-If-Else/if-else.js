@@ -2865,3 +2865,84 @@ console.log(`Peak Hour Bonus: ₹${peakHourBonus}`);
 console.log(`Rain Bonus: ₹${rainBonus}`);
 console.log(`Monthly Bonus: ₹${monthlyBonus}`);
 console.log(`Final Earnings: ₹${finalEarnings}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q64. GST Billing System 
+Question 
+Ek GST Billing System banao. 
+• Customer ka naam store karo.  
+• Product Category store karo.  
+• Product Price store karo.  
+• Quantity store karo.  
+• State store karo.  
+• Business Customer hai ya nahi store karo.  
+Business Rules 
+• Total amount calculate karo.  
+• Product category ke hisaab se GST decide karo.  
+• Same state ho to alag tax structure lagao.  
+• Different state ho to alag tax structure lagao.  
+• Business customer ko GST details alag dikhani hain.  
+• Final invoice generate karna hai. 
+=========================================================================
+*/
+let customerIdentity = "Mohd Asif";
+let itemCategory = "Electronics";
+let itemPrice = 25000;
+let itemQuantity = 2;
+let customerState = "Uttar Pradesh";
+let isBusinessClient = false;
+let grossAmount = 0;
+let gstRate = 0;
+let gstAmount = 0;
+let cgst = 0;
+let sgst = 0;
+let igst = 0;
+let invoiceTotal = 0;
+grossAmount = itemPrice * itemQuantity;
+if(itemCategory === "Electronics"){
+    gstRate = 18;
+}else if(itemCategory === "Clothing"){
+    gstRate = 12;
+}else if(itemCategory === "Food"){
+    gstRate = 5;
+}else{
+    gstRate = 18;
+}
+gstAmount = (grossAmount * gstRate) / 100;
+if(customerState === "Uttar Pradesh"){
+    cgst = gstAmount / 2;
+    sgst = gstAmount /2;
+}else{
+    igst = gstAmount;
+}
+invoiceTotal = grossAmount + gstAmount; 
+if(isBusinessClient === true){
+    console.log(`Customer Name: ${customerIdentity}`);
+    console.log(`Product Category: ${itemCategory}`);
+    console.log(`Product Price: ${itemPrice}`);
+    console.log(`Quantity: ${itemQuantity}`);
+    console.log(`State: ${customerState}`);
+    console.log(`Business Customer: ${isBusinessClient}`);
+    console.log(`Gross Amount: ${grossAmount}`);
+    console.log(`GST Rate: ${gstRate}%`);
+    console.log(`GST Amount: ₹${gstAmount}`);
+    console.log(`CGST: ₹${cgst}`);
+    console.log(`SGST: ₹${sgst}`);
+    console.log(`IGST: ₹${igst}`);
+    console.log(`Final Invoice: ₹${invoiceTotal}`);
+}else{
+    console.log(`Customer Name: ${customerIdentity}`);
+    console.log(`Product Category: ${itemCategory}`);
+    console.log(`Product Price: ${itemPrice}`);
+    console.log(`Quantity: ${itemQuantity}`);   
+    console.log(`Gross Amount: ${grossAmount}`);
+    console.log(`Final Invoice: ₹${invoiceTotal}`);
+}
