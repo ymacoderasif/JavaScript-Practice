@@ -2946,3 +2946,71 @@ if(isBusinessClient === true){
     console.log(`Gross Amount: ${grossAmount}`);
     console.log(`Final Invoice: ₹${invoiceTotal}`);
 }
+
+
+
+
+
+
+
+
+/*
+============================================================================
+Q65. Warehouse Dispatch System 
+Question 
+Ek Warehouse Dispatch System banao. 
+• Product Name store karo.  
+• Ordered Quantity store karo.  
+• Available Stock store karo.  
+• Payment Status store karo.  
+• Delivery Location store karo.  
+• Fragile Product hai ya nahi store karo.  
+• Express Delivery store karo.  
+Business Rules 
+• Stock available hona chahiye.  
+• Payment successful hona chahiye.  
+• Fragile product ke liye special packaging charge add karo.  
+• Express delivery par extra charge add karo.  
+• Remote location ho to delivery surcharge add karo.  
+• Dispatch approve ya reject karna hai.  
+• Final invoice aur dispatch status dikhana hai. 
+============================================================================
+*/
+let productTitle = "Laptop";
+let orderedQuantity = 5;
+let availableStock = 10;
+let paymentCompleted = true;
+let deliveryLocation = "Remote";
+let isFragileProduct = true;
+let isExpressDelivery = true;
+let specialPackagingCharge = 0;
+let expressCharge = 0;
+let deliverySurcharge = 0;
+let dispatchStatus = "";
+let totalInvoice = 0;
+if(availableStock >= orderedQuantity && paymentCompleted === true){
+    dispatchStatus = "Approved";
+}else{
+    dispatchStatus = "Rejected";
+}if(isFragileProduct === true){
+    specialPackagingCharge = 200;
+}
+if(isExpressDelivery === true){
+    expressCharge = 300;
+}
+if(deliveryLocation === "Remote"){
+    deliverySurcharge = 500;
+}
+totalInvoice = specialPackagingCharge + deliverySurcharge + expressCharge;
+console.log(`Product: ${productTitle}`);
+console.log(`Ordered Quantity: ${orderedQuantity}`);
+console.log(`Available Stock: ${availableStock}`);
+console.log(`Payment: ${paymentCompleted}`);
+console.log(`Fragile: ${isFragileProduct}`);
+console.log(`Express: ${isExpressDelivery}`);
+console.log(`Location: ${deliveryLocation}`);
+console.log(`Special Packaging: ₹${specialPackagingCharge}`);
+console.log(`Express Charge: ₹${expressCharge}`);
+console.log(`Delivery Surcharge: ₹${deliverySurcharge}`);
+console.log(`Final Invoice: ₹${totalInvoice}`);
+console.log(`Dispatch Status: ${dispatchStatus}`);
