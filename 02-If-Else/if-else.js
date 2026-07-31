@@ -2797,3 +2797,71 @@ console.log(`Coupon Discount: ₹${couponDiscount}`);
 console.log(`Payable Amount: ₹${finalSubscriptionAmount}`);
 console.log(`Account Status: ${subscriptionState}`);
 console.log(`Login Status: ${loginStatus}`);
+
+
+
+
+
+
+
+
+
+/*
+===========================================================================
+Q63. Swiggy Delivery Partner Earnings 
+Question 
+Ek Delivery Partner Earnings System banao. 
+• Partner ka naam store karo.  
+• Total Deliveries store karo.  
+• Total Distance store karo.  
+• Customer Rating store karo.  
+• Rain Status store karo.  
+• Peak Hour store karo.  
+Business Rules 
+• Har delivery ka base payment add karo.  
+• Distance ke hisaab se payment add karo.  
+• Rating 4.8 ya usse zyada ho to incentive do.  
+• Peak hour me extra incentive do.  
+• Rain mode me extra payment do.  
+• Deliveries 100 se zyada ho to monthly bonus do.  
+• Final earnings dikhani hain. 
+===========================================================================
+*/
+let deliveryPartner = "Mohd Asif";
+let completedOrders = 120;
+let coveredDistance = 850;
+let partnerRating = 4.9;
+let isRaining = true;
+let isPeakTime = true;
+let basePayment = 0;
+let distancePayment = 0;
+let ratingBonus = 0;
+let peakHourBonus = 0;
+let rainBonus = 0;
+let monthlyBonus = 0;
+let finalEarnings = 0;
+basePayment = completedOrders * 40;
+distancePayment = coveredDistance * 8;
+if(partnerRating >= 4.8){
+    ratingBonus = 1000;
+}if(isPeakTime === true){
+    peakHourBonus = 500;
+}if(isRaining === true){
+    rainBonus = 700;
+}if(completedOrders > 100){
+    monthlyBonus = 2000;
+}
+finalEarnings = basePayment + distancePayment + rainBonus + peakHourBonus + ratingBonus + monthlyBonus;
+console.log(`Partner Name: ${deliveryPartner}`);
+console.log(`Total Deliveries: ${completedOrders}`);
+console.log(`Total Distance: ${coveredDistance} KM`);
+console.log(`Customer Rating: ${partnerRating}`);
+console.log(`Rain Status: ${isRaining}`);
+console.log(`Peak Hour: ${isPeakTime}`);
+console.log(`Base Payment: ₹${basePayment}`);
+console.log(`Distance Payment: ₹${distancePayment}`);
+console.log(`Rating Bonus: ₹${ratingBonus}`);
+console.log(`Peak Hour Bonus: ₹${peakHourBonus}`);
+console.log(`Rain Bonus: ₹${rainBonus}`);
+console.log(`Monthly Bonus: ₹${monthlyBonus}`);
+console.log(`Final Earnings: ₹${finalEarnings}`);
