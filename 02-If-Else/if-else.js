@@ -3374,3 +3374,83 @@ console.log(`Cashback Coupon: ${cashbackCoupon}`);
 console.log(`Transaction Status: ${paymentResult}`);
 console.log(`Cashback Amount: ₹${cashbackAmount}`);
 console.log(`Updated Wallet Balance: ₹${updatedWalletBalance}`);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q71. Food Delivery Order Management System 
+Question 
+Ek Food Delivery System banao. 
+• Customer ka naam store karo.  
+• Restaurant Rating store karo.  
+• Order Amount store karo.  
+• Distance store karo.  
+• Payment Status store karo.  
+• Coupon Available hai ya nahi store karo.  
+• Delivery Partner Available hai ya nahi store karo.  
+Business Rules 
+• Payment successful hona chahiye.  
+• Restaurant rating 3 se kam ho to warning dikhani hai.  
+• Distance 10 KM se zyada ho to extra delivery charge lagao.  
+• Order amount ₹500 se zyada ho to free delivery do.  
+• Coupon available ho to discount apply karo.  
+• Delivery partner available na ho to order cancel karo.  
+• Final bill aur order status dikhana hai.  
+=========================================================================
+*/
+let foodCustomer = "Mohd Asif";
+let restaurantScore = 4.5;
+let cartTotal = 650;
+let deliveryRadius = 12;
+let paymentState = "Successful";
+let promoAvailable = true;
+let partnerReady = true;
+let deliveryStatus = "";
+let restaurantWarning = "";
+let serviceFee = 0;
+let promoSavings = 0;
+let netAmount = 0;
+if(paymentState !== "Successful"){
+    deliveryStatus = "Cancelled";
+}else if(partnerReady !== true){
+    deliveryStatus = "Cancelled";
+}else{
+    deliveryStatus = "Confirmed";
+}
+if(restaurantScore  < 3){
+    restaurantWarning = "Low Rated Restaurant";
+}else{
+    restaurantWarning = "None";
+}
+if(cartTotal > 500){
+    serviceFee = 0;
+}else if(deliveryRadius > 10){
+    serviceFee = 100;
+}else{
+    serviceFee = 50;
+}
+if(promoAvailable === true){
+    promoSavings = (cartTotal * 10) / 100;
+}
+if(deliveryStatus === "Confirmed"){
+    netAmount = (cartTotal + serviceFee) - promoSavings;
+}else{
+    netAmount = 0;
+}
+console.log(`Food Customer: ${foodCustomer}`);
+console.log(`Restaurant Score: ${restaurantScore}`);
+console.log(`Cart Total: ₹${cartTotal}`);
+console.log(`Delivery Radius: ${deliveryRadius}KM`);
+console.log(`Promo Available: ${promoAvailable}`);
+console.log(`Partner Ready: ${partnerReady}`);
+console.log(`Delivery Status: ${deliveryStatus}`);
+console.log(`Restaurant Warning: ${restaurantWarning}`);
+console.log(`Service Fee: ₹${serviceFee}`);
+console.log(`Promo Savings: ₹${promoSavings}`);
+console.log(`Final Amount: ₹${netAmount}`);
