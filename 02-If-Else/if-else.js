@@ -3603,3 +3603,84 @@ console.log(`Accident Charge: ₹${accidentCharge}`);
 console.log(`New Vehicle Discount: ₹${newVehicleDiscount}`);
 console.log(`Long Term Discount: ₹${longTermDiscount}`);
 console.log(`Final Premium: ₹${finalPremium}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================
+Q74. College Fee Management System 
+          Question 
+Ek College Fee System banao. 
+• Student Name store karo.  
+• Course Name store karo.  
+• Total Fee store karo.  
+• Scholarship Status store karo.  
+• Payment Amount store karo.  
+• Late Days store karo.  
+Business Rules 
+• Scholarship available ho to fee reduce karo.  
+• Payment late ho to late fine add karo.  
+• Full payment karne par discount do.  
+• Payment incomplete ho to pending status dikhayo.  
+• Course ke hisaab se fee category dikhani hai.  
+• Final payable amount dikhana hai.  
+============================================================
+*/
+let collegeStudent = "Mohd Asif";
+let programName = "Engineering";
+let tuitionFee = 100000;
+let scholarshipActive = true;
+let paidAmount = 100000;
+let delayDays = 0;
+let feeStatus = "";
+let grantReduction = 0;
+let lateFine = 0;
+let fullPaymentDiscount = 0;
+let feeCategory = "";
+let finalFeeAmount = 0;
+if(scholarshipActive === true){
+    grantReduction = (tuitionFee * 20) / 100;
+}
+if(delayDays > 0){
+    lateFine = delayDays * 100;
+}
+if(paidAmount === (tuitionFee - grantReduction)){
+    fullPaymentDiscount = (tuitionFee * 5) / 100;
+    feeStatus = "Paid";
+}
+else if(paidAmount < (tuitionFee - grantReduction)){
+    feeStatus = "Pending";
+}else{
+    feeStatus = "Paid";
+}
+if(programName === "Engineering"){
+    feeCategory = "Technical";
+}else if(programName === "Medical"){
+    feeCategory = "Professional";
+}else if(programName === "BBA"){
+    feeCategory = "Management";
+}else{
+    feeCategory = "General";
+}
+if(feeStatus === "Paid"){
+    finalFeeAmount = ((tuitionFee + lateFine ) - grantReduction) - fullPaymentDiscount;
+}else{
+    finalFeeAmount = ((tuitionFee + lateFine ) - grantReduction) - paidAmount;
+}
+console.log(`College Student: ${collegeStudent}`);
+console.log(`Program Name: ${programName}`);
+console.log(`Tuition Fee: ₹${tuitionFee}`);
+console.log(`Scholarship Active: ${scholarshipActive}`);
+console.log(`Paid Amount: ₹${paidAmount}`);
+console.log(`Delay Days: ${delayDays}`);
+console.log(`Fee Status: ${feeStatus}`);
+console.log(`Grant Reduction: ₹${grantReduction}`);
+console.log(`Late Fine: ₹${lateFine}`);
+console.log(`Full Payment Discount: ₹${fullPaymentDiscount}`);
+console.log(`Fee Category: ${feeCategory}`);
+console.log(`Final Fee Amount: ₹${finalFeeAmount}`);
