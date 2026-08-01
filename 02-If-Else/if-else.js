@@ -3527,3 +3527,79 @@ console.log(`Transaction Result: ${transactionResult}`);
 console.log(`Failure Reason: ${failureReason}`);
 console.log(`Extra Verification: ${extraVerification}`);
 console.log(`Updated Balance: ₹${closingBalance}`);
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q73. Vehicle Insurance Premium Calculator 
+Question 
+Ek Vehicle Insurance System banao. 
+• Owner Name store karo.  
+• Vehicle Type store karo.  
+• Vehicle Age store karo.  
+• Accident History store karo.  
+• Insurance Duration store karo.  
+• Premium Amount store karo.  
+Business Rules 
+• Vehicle age 15 saal se zyada ho to insurance reject karo.  
+• Accident history zyada ho to premium increase karo.  
+• New vehicle ko discount do.  
+• Long duration insurance par discount do.  
+• Vehicle type ke hisaab se premium change karo.  
+• Final premium aur insurance status dikhana hai. 
+=========================================================================
+*/
+let vehicleOwner = "Mohd Asif";
+let vehicleCategory = "SUV";
+let vehicleYears = 1;
+let accidentCount = 0;
+let policyDuration = 3;
+let basePremium = 20000;
+let insuranceStatus = "";
+let accidentCharge = 0;
+let newVehicleDiscount = 0;
+let longTermDiscount = 0;
+let finalPremium = 0;
+if (vehicleYears > 15) {
+    insuranceStatus = "Rejected";
+} else {
+    insuranceStatus = "Approved";
+}
+if (insuranceStatus === "Approved" && accidentCount >= 2) {
+    accidentCharge = (basePremium * 20) / 100;
+}
+if (insuranceStatus === "Approved" && vehicleYears <= 2) {
+    newVehicleDiscount = (basePremium * 10) / 100;
+}
+if (insuranceStatus === "Approved" && policyDuration >= 3) {
+    longTermDiscount = (basePremium * 15) / 100;
+}
+if (insuranceStatus === "Approved" && vehicleCategory === "SUV") {
+    basePremium = basePremium + 3000;
+} else if (insuranceStatus === "Approved" && vehicleCategory === "Sedan") {
+    basePremium = basePremium + 1500;
+} else if (insuranceStatus === "Approved" && vehicleCategory === "Bike") {
+    basePremium = basePremium + 500;
+}
+if (insuranceStatus === "Approved") {
+    finalPremium = ((basePremium + accidentCharge) - longTermDiscount) - newVehicleDiscount;
+
+} else {
+    finalPremium = 0;
+}
+console.log(`Vehicle Owner: ${vehicleOwner}`);
+console.log(`Vehicle Category: ${vehicleCategory}`);
+console.log(`Vehicle Years: ${vehicleYears}`);
+console.log(`Accident Count: ${accidentCount}`);
+console.log(`Policy Duration: ${policyDuration} Years`);
+console.log(`Base Premium: ₹${basePremium}`);
+console.log(`Insurance Status: ${insuranceStatus}`);
+console.log(`Accident Charge: ₹${accidentCharge}`);
+console.log(`New Vehicle Discount: ₹${newVehicleDiscount}`);
+console.log(`Long Term Discount: ₹${longTermDiscount}`);
+console.log(`Final Premium: ₹${finalPremium}`);
