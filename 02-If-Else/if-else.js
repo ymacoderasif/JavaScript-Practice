@@ -3833,3 +3833,79 @@ console.log(`Loan Status: ${loanStatus}`);
 console.log(`Rate Category: ${rateCategory}`);
 console.log(`Interest Rate: ${interestRate}%`);
 console.log(`EMI Amount: ₹${emiAmount}`);
+
+
+
+
+
+
+
+
+/*
+=====================================================================
+Q77. Online Food Restaurant Partner System 
+Question 
+Ek Restaurant Partner Management System banao. 
+• Restaurant Name store karo.  
+• Monthly Orders store karo.  
+• Customer Rating store karo.  
+• Cancellation Rate store karo.  
+• Delivery Time store karo.  
+• Partner Status store karo.  
+Business Rules 
+• Rating low hone par warning do.  
+• Cancellation rate zyada hone par account review me bhejo.  
+• Orders zyada hone par bonus do.  
+• Fast delivery par extra reward do.  
+• Partner status active ya suspended decide karo. 
+=====================================================================
+*/
+let restaurantTitle = "Spice Hub";
+let monthlyOrderCount = 1500;
+let customerScore = 4.6;
+let cancelRate = 4;
+let deliveryDuration = 25;
+let accountState = "";
+let ratingWarning = "";
+let accountReview = "";
+let orderBonus = 0;
+let speedReward = 0;
+let totalReward = 0;
+if(customerScore < 3.5){
+    ratingWarning = "Low Rated Restaurant";
+}else{
+    ratingWarning = "None";
+}
+if(cancelRate > 10){
+    accountReview = "Under Review";
+    accountState = "Suspended";
+}else{
+    accountReview = "Clear";
+    accountState = "Active";
+}
+if(accountState === "Active" && monthlyOrderCount > 1000){
+    orderBonus = 5000;
+}else{
+    orderBonus = 0;
+}
+if(accountState === "Active" && deliveryDuration <= 30){
+    speedReward = 2000;
+}else{
+    speedReward = 0;
+}
+if(accountState === "Active"){
+    totalReward = speedReward + orderBonus;
+}else{
+    totalReward = 0;
+}
+console.log(`Restaurant Title: ${restaurantTitle}`);
+console.log(`Monthly Order Count: ${monthlyOrderCount}`);
+console.log(`Customer Score: ${customerScore}`);
+console.log(`Cancel Rate: ${cancelRate}%`);
+console.log(`Delivery Duration: ${deliveryDuration} Minutes`);
+console.log(`Account State: ${accountState}`);
+console.log(`Rating Warning: ${ratingWarning}`);
+console.log(`Account Review: ${accountReview}`);
+console.log(`Order Bonus: ₹${orderBonus}`);
+console.log(`Speed Reward: ₹${speedReward}`);
+console.log(`Total Reward: ₹${totalReward}`);
