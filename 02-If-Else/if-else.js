@@ -3909,3 +3909,87 @@ console.log(`Account Review: ${accountReview}`);
 console.log(`Order Bonus: ₹${orderBonus}`);
 console.log(`Speed Reward: ₹${speedReward}`);
 console.log(`Total Reward: ₹${totalReward}`);
+
+
+
+
+
+
+
+
+/*
+======================================================================
+Q78. Smart Parking System 
+Question 
+Ek Smart Parking System banao. 
+• Vehicle Number store karo.  
+• Vehicle Type store karo.  
+• Parking Hours store karo.  
+• Available Slots store karo.  
+• Electric Vehicle hai ya nahi store karo.  
+• Payment Status store karo.  
+Business Rules 
+• Slot available nahi hai to parking reject karo.  
+• Electric Vehicle ko special slot do.  
+• Parking hours ke hisaab se charges calculate karo.  
+• Payment pending ho to exit allow mat karo.  
+• Long parking par extra charge add karo.  
+• Final parking bill aur status dikhana hai.  
+=====================================================================
+*/
+let vehicleId = "DL01AB1234";
+let vehicleKind = "Car";
+let parkingDuration = 12;
+let slotCount = 5;
+let electricCar = true;
+let parkingPaymentStatus = "Paid";
+let parkingStatus = "";
+let slotType = "";
+let parkingCharge = 0;
+let extraParkingCharge = 0;
+let finalParkingBill = 0;
+let exitPermission = "";
+if(slotCount === 0){
+    parkingStatus = "Rejected";
+}else{
+    parkingStatus = "Approved";
+}
+if(parkingStatus === "Approved" && electricCar === true){
+    slotType = "Special EV Slot";
+}else if(parkingStatus === "Approved"){
+    slotType = "Regular Slot";
+}else{
+    slotType = "None";
+}
+if(parkingStatus === "Approved"){
+    parkingCharge = parkingDuration * 50;
+}else{
+    parkingCharge = 0
+}
+if(parkingStatus === "Approved" && parkingDuration > 10){
+    extraParkingCharge = 500;
+}else{
+    extraParkingCharge = 0;
+}
+if(parkingPaymentStatus === "Pending"){
+    exitPermission = "Not Allowed";
+}else{
+    exitPermission = "Allowed";
+}
+if(parkingStatus === "Approved" && parkingPaymentStatus === "Paid"){
+    finalParkingBill = parkingCharge + extraParkingCharge;
+}else{
+    finalParkingBill = 0;
+}
+console.log(`Vehicle ID: ${vehicleId}`);
+console.log(`Vehicle Kind: ${vehicleKind}`);
+console.log(`Parking Duration: ${parkingDuration} Hours`);
+console.log(`Available Slots: ${slotCount}`);
+console.log(`Electric Car: ${electricCar}`);
+console.log(`Parking Payment Status: ${parkingPaymentStatus}`);
+console.log(`Parking Status: ${parkingStatus}`);
+console.log(`Slot Type: ${slotType}`);
+console.log(`Parking Charge: ₹${parkingCharge}`);
+console.log(`Extra Parking Charge: ₹${extraParkingCharge}`);
+console.log(`Exit Permission: ${exitPermission}`);
+console.log(`Final Parking Bill: ₹${finalParkingBill}`);
