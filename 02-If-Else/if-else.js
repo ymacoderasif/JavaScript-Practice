@@ -3993,3 +3993,77 @@ console.log(`Parking Charge: ₹${parkingCharge}`);
 console.log(`Extra Parking Charge: ₹${extraParkingCharge}`);
 console.log(`Exit Permission: ${exitPermission}`);
 console.log(`Final Parking Bill: ₹${finalParkingBill}`);
+
+
+
+
+
+
+
+
+/*
+================================================================
+ Q79. Employee Attendance Management System 
+          Question 
+Ek Employee Attendance System banao. 
+• Employee Name store karo.  
+• Total Working Days store karo.  
+• Present Days store karo.  
+• Leave Days store karo.  
+• Late Coming Count store karo.  
+• Salary store karo.  
+Business Rules 
+• Attendance percentage calculate karo.  
+• Low attendance par salary deduction karo.  
+• Zyada late hone par warning do.  
+• Extra working days par incentive do.  
+• Leave limit cross hone par penalty lagao.  
+• Final salary aur attendance report dikhani hai. 
+=================================================================
+*/
+let employeeRecord = "Mohd Asif";
+let workingDays = 30;
+let presentDays = 26;
+let leaveDays = 4;
+let lateCount = 2;
+let payAmount = 50000;
+let attendanceScore = 0;
+let salaryCut = 0;
+let lateWarning = "";
+let overtimeIncentive = 0;
+let leavePenalty = 0;
+let salaryAfterAdjustments = 0;
+attendanceScore = ((presentDays / workingDays) * 100).toFixed(2);
+if(attendanceScore < 75){
+    salaryCut = (payAmount * 10) / 100;
+}else{
+    salaryCut = 0;
+}
+if(lateCount > 5){
+    lateWarning = "Warning Issued";
+}else{
+    lateWarning = "None";
+}
+if(presentDays > workingDays){
+    overtimeIncentive = 3000;
+}else{
+    overtimeIncentive = 0;
+}
+if(leaveDays > 5){
+    leavePenalty = (leaveDays - 5) * 500;
+}else{
+    leavePenalty = 0;
+}
+salaryAfterAdjustments = payAmount - salaryCut - leavePenalty + overtimeIncentive;
+console.log(`Employee Name: ${employeeRecord}`);
+console.log(`Working Days: ${workingDays}`);
+console.log(`Present Days: ${presentDays}`);
+console.log(`Leave Days: ${leaveDays}`);
+console.log(`Late Count: ${lateCount}`);
+console.log(`Salary Amount: ₹${payAmount}`);
+console.log(`Attendance Score: ${attendanceScore}%`);
+console.log(`Salary Cut: ₹${salaryCut}`);
+console.log(`Late Warning: ${lateWarning}`);
+console.log(`Overtime Incentive: ₹${overtimeIncentive}`);
+console.log(`Leave Penalty: ₹${leavePenalty}`);
+console.log(`Final Salary: ₹${salaryAfterAdjustments}`);
