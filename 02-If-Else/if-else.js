@@ -3684,3 +3684,79 @@ console.log(`Late Fine: ₹${lateFine}`);
 console.log(`Full Payment Discount: ₹${fullPaymentDiscount}`);
 console.log(`Fee Category: ${feeCategory}`);
 console.log(`Final Fee Amount: ₹${finalFeeAmount}`);
+
+
+
+
+
+
+
+
+/*
+======================================================================
+Q75. Smart Home Security System 
+Question 
+Ek Smart Home Security System banao. 
+• Owner Name store karo.  
+• Door Status store karo.  
+• Password Correct hai ya nahi store karo.  
+• Motion Detected hai ya nahi store karo.  
+• Camera Active hai ya nahi store karo.  
+• Alert Mode store karo.  
+Business Rules 
+• Password correct hona chahiye.  
+• Door open aur motion detected ho to alert bhejo.  
+• Camera inactive ho to warning dikhani hai.  
+• Alert mode active ho to security level high karo.  
+• Sab conditions ke basis par final security status dikhana hai. 
+=======================================================================
+*/
+let homeOwner = "Mohd Asif";
+let doorCondition = "Open";
+let passwordMatched = true;
+let motionDetected = true;
+let cameraEnabled = true;
+let alertEnabled = true;
+let securityStatus = "";
+let cameraWarning = "";
+let alertStatus = "";
+let securityLevel = "";
+let finalSecurityStatus = "";
+if(passwordMatched !== true){
+    securityStatus = "Access Denied";
+}else{
+    securityStatus = "Access Granted";
+}
+if(securityStatus === "Access Granted" && doorCondition === "Open" && motionDetected === true){
+    alertStatus = "Alert Sent";
+}else{
+    alertStatus = "No Alert";
+}
+if(cameraEnabled !== true){
+    cameraWarning = "Camera Inactive";
+}else{
+    cameraWarning = "None";
+}
+if(alertEnabled === true){
+    securityLevel = "High";
+}else{
+    securityLevel = "Normal";
+}
+if(securityStatus === "Access Denied"){
+    finalSecurityStatus = "Unauthorized Access";
+}else if(alertStatus === "Alert Sent"){
+    finalSecurityStatus = "Security Alert";
+}else{
+    finalSecurityStatus = "Secure";
+}
+console.log(`Home Owner: ${homeOwner}`);
+console.log(`Door Condition: ${doorCondition}`);
+console.log(`Password Matched: ${passwordMatched}`);
+console.log(`Motion Detected: ${motionDetected}`);
+console.log(`Camera Enabled: ${cameraEnabled}`);
+console.log(`Alert Enabled: ${alertEnabled}`);
+console.log(`Security Status: ${securityStatus}`);
+console.log(`Alert Status: ${alertStatus}`);
+console.log(`Camera Warning: ${cameraWarning}`);
+console.log(`Security Level: ${securityLevel}`);
+console.log(`Final Security Status: ${finalSecurityStatus}`);
