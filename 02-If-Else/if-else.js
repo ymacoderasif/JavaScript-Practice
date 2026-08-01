@@ -3760,3 +3760,76 @@ console.log(`Alert Status: ${alertStatus}`);
 console.log(`Camera Warning: ${cameraWarning}`);
 console.log(`Security Level: ${securityLevel}`);
 console.log(`Final Security Status: ${finalSecurityStatus}`);
+
+
+
+
+
+
+
+
+/*
+=======================================================================
+Q76. Online Banking Loan EMI System 
+Question 
+Ek Loan EMI System banao. 
+• Customer Name store karo.  
+• Loan Amount store karo.  
+• Loan Duration store karo.  
+• Monthly Income store karo.  
+• Credit Score store karo.  
+• Existing EMI store karo.  
+Business Rules 
+• Agar credit score low hai to loan reject karo.  
+• Agar monthly income ke comparison me existing EMI zyada 
+hai to loan reject karo.  
+• Loan amount ke hisaab se interest category decide karo.  
+• Long duration loan par alag interest apply karo.  
+• Final EMI amount aur loan status dikhana hai. 
+========================================================================
+*/
+let loanCustomer = "Mohd Asif";
+let loanPrincipal = 800000;
+let loanYears = 12;
+let salaryPerMonth = 80000;
+let creditPoints = 720;
+let activeEmi = 20000;
+let loanStatus = "";
+let rateCategory = "";
+let interestRate = 0;
+let emiAmount = 0;
+if(creditPoints < 650){
+    loanStatus = "Rejected";
+}else if(activeEmi > ((salaryPerMonth * 50) / 100)){
+    loanStatus = "Rejected";
+}else{
+    loanStatus = "Approved";
+}
+if(loanStatus === "Approved" && loanPrincipal < 500000){
+    rateCategory = "Low";
+    interestRate = 8;
+}else if(loanStatus === "Approved" && loanPrincipal < 2000000){
+    rateCategory = "Medium";
+    interestRate = 10;
+}else if(loanStatus === "Approved" && loanPrincipal >= 2000000){
+    rateCategory = "High";
+    interestRate = 12;
+}
+if(loanStatus === "Approved" && loanYears > 10){
+    interestRate = interestRate + 1;
+}
+if(loanStatus === "Approved"){
+    emiAmount = (((loanPrincipal * interestRate) / 100) / (loanYears * 12)).toFixed(2);
+}else{
+    emiAmount = 0;
+}
+console.log(`Loan Customer: ${loanCustomer}`);
+console.log(`Loan Principal: ₹${loanPrincipal}`);
+console.log(`Loan Years: ${loanYears}`);
+console.log(`Salary Per Month: ₹${salaryPerMonth}`);
+console.log(`Credit Points: ${creditPoints}`);
+console.log(`Active EMI: ₹${activeEmi}`);
+console.log(`Loan Status: ${loanStatus}`);
+console.log(`Rate Category: ${rateCategory}`);
+console.log(`Interest Rate: ${interestRate}%`);
+console.log(`EMI Amount: ₹${emiAmount}`);
