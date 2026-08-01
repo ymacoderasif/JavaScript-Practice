@@ -3454,3 +3454,76 @@ console.log(`Restaurant Warning: ${restaurantWarning}`);
 console.log(`Service Fee: ₹${serviceFee}`);
 console.log(`Promo Savings: ₹${promoSavings}`);
 console.log(`Final Amount: ₹${netAmount}`);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q72. Bank Transaction Security System 
+Question 
+Ek Bank Transaction System banao. 
+• Account Holder Name store karo.  
+• Account Balance store karo.  
+• Transaction Amount store karo.  
+• OTP Verified hai ya nahi store karo.  
+• Account Active hai ya nahi store karo.  
+• Transaction Type store karo.  
+Business Rules 
+• Account active hona chahiye.  
+• OTP verify hona chahiye.  
+• Balance transaction amount se zyada hona chahiye.  
+• Withdrawal amount ₹50,000 se zyada ho to extra verification 
+chahiye.  
+• Failed transaction par reason dikhana hai.  
+• Successful transaction ke baad updated balance dikhana 
+hai. 
+=============================================================================
+*/
+let bankUser = "Mohd Asif";
+let balanceAmount = 80000;
+let transferAmount = 20000;
+let otpConfirmed = true;
+let accountEnabled = true;
+let transactionMode = "Transfer";
+let transactionResult = "";
+let failureReason = "";
+let closingBalance = 0;
+let extraVerification = "";
+if(accountEnabled !== true){
+    transactionResult = "Failed";
+    failureReason = "Account is inactive";
+}else if(otpConfirmed !== true){
+    transactionResult = "Failed";
+    failureReason = "OTP not verified";
+}else if(balanceAmount < transferAmount){
+    transactionResult = "Failed";
+    failureReason = "Insufficient balance";
+}else if(transactionMode === "Withdrawal" && transferAmount > 50000){
+    extraVerification = "Required";
+    transactionResult = "Pending";
+    failureReason = "Extra verification required";
+}else{
+    extraVerification = "None";
+    transactionResult = "Successful";
+    failureReason = "None";
+}
+if(transactionResult === "Successful"){
+    closingBalance = balanceAmount - transferAmount;
+}else{
+    closingBalance = balanceAmount;
+}
+console.log(`Bank User: ${bankUser}`);
+console.log(`Available Balance: ₹${balanceAmount}`);
+console.log(`Transaction Amount: ₹${transferAmount}`);
+console.log(`OTP Confirmed: ${otpConfirmed}`);
+console.log(`Account Enabled: ${accountEnabled}`);
+console.log(`Transaction Mode: ${transactionMode}`);
+console.log(`Transaction Result: ${transactionResult}`);
+console.log(`Failure Reason: ${failureReason}`);
+console.log(`Extra Verification: ${extraVerification}`);
+console.log(`Updated Balance: ₹${closingBalance}`);
