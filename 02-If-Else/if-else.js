@@ -4067,3 +4067,75 @@ console.log(`Late Warning: ${lateWarning}`);
 console.log(`Overtime Incentive: ₹${overtimeIncentive}`);
 console.log(`Leave Penalty: ₹${leavePenalty}`);
 console.log(`Final Salary: ₹${salaryAfterAdjustments}`);
+
+
+
+
+
+
+
+
+/*
+===================================================================
+Q80. Travel Booking System 
+Question 
+Ek Travel Booking System banao. 
+• Customer Name store karo.  
+• Destination store karo.  
+• Age store karo.  
+• Package Price store karo.  
+• Season Type store karo.  
+• Membership Status store karo.  
+Business Rules 
+• Senior Citizen ko discount do.  
+• Peak season me extra charge add karo.  
+• Premium member ko special discount do.  
+• Package price ke hisaab se category decide karo.  
+• Final booking amount aur details dikhani hain. 
+====================================================================
+*/
+let tripGuest = "Mohd Asif";
+let tripDestination = "Goa";
+let guestAge = 65;
+let tourCost = 30000;
+let travelSeason = "Peak";
+let memberTier = "Premium";
+let elderDiscount = 0;
+let seasonSurcharge = 0;
+let membershipDiscount = 0;
+let tourCategory = "";
+let bookingTotal = 0;
+if(guestAge >= 60){
+    elderDiscount = (tourCost * 10) / 100;
+}else{
+    elderDiscount = 0;
+}
+if(travelSeason === "Peak"){
+    seasonSurcharge = (tourCost * 20) / 100;
+}else{
+    seasonSurcharge = 0;
+}
+if(memberTier === "Premium"){
+    membershipDiscount = (tourCost * 10) / 100;
+}else{
+    membershipDiscount = 0;
+}
+if(tourCost <= 20000){
+    tourCategory = "Budget";
+}else if(tourCost <= 50000){
+    tourCategory = "Standard";
+}else{
+    tourCategory = "Luxury";
+}
+bookingTotal = tourCost + seasonSurcharge - elderDiscount - membershipDiscount;
+console.log(`Customer Name: ${tripGuest}`);
+console.log(`Destination: ${tripDestination}`);
+console.log(`Age: ${guestAge}`);
+console.log(`Package Price: ₹${tourCost}`);
+console.log(`Season Type: ${travelSeason}`);
+console.log(`Membership Status: ${memberTier}`);
+console.log(`Senior Citizen Discount: ₹${elderDiscount}`);
+console.log(`Peak Season Charge: ₹${seasonSurcharge}`);
+console.log(`Premium Member Discount: ₹${membershipDiscount}`);
+console.log(`Package Category: ${tourCategory}`);
+console.log(`Final Booking Amount: ₹${bookingTotal}`);
