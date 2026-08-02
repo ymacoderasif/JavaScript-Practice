@@ -5350,3 +5350,78 @@ console.log(`Leave Approval: ${leaveApprovalStatus}`);
 console.log(`Extra Leave Benefit: ${extraLeaveBenefit}`);
 console.log(`Remaining Leave: ${remainingLeaveCount}`);
 console.log(`Final Leave Status: ${finalLeaveStatus}`);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q98. Online Exam Result Analysis System 
+Question 
+Ek Exam Result Analysis System banao. 
+• Student Name store karo.  
+• Total Marks store karo.  
+• Attendance Percentage store karo.  
+• Assignment Score store karo.  
+• Extra Activity Score store karo.  
+Business Rules 
+• Attendance requirement complete honi chahiye.  
+• Marks ke basis par grade decide karo.  
+• Assignment score ke basis par bonus marks add karo.  
+• Extra activity ke basis par reward do.  
+• Final percentage aur grade dikhana hai. 
+========================================================================
+*/
+let studentIdentity = "Mohd Asif";
+let obtainedMarks = 420;
+let attendancePercentage = 85;
+let assignmentScore = 18;
+let extraActivityScore = 9;
+let attendanceStatus = "";
+let grade = "";
+let bonusMarks = 0;
+let activityReward = "";
+let finalPercentage = 0;
+
+if(attendancePercentage >= 75){
+    attendanceStatus = "Eligible";
+}else{
+    attendanceStatus = "Not Eligible";
+}
+
+if(obtainedMarks >= 450){
+    grade = "A";
+}else if(obtainedMarks >= 350){
+    grade = "B";
+}else{
+    grade = "C";
+}
+
+if(assignmentScore >= 15){
+    bonusMarks = 10;
+}else{
+    bonusMarks = 0;
+}
+
+if(extraActivityScore >= 8){
+    activityReward = "Reward";
+}else{
+    activityReward = "No Reward";
+}
+
+finalPercentage = ((obtainedMarks + bonusMarks) / 500) * 100;
+
+console.log(`Student Name: ${studentIdentity}`);
+console.log(`Total Marks: ${obtainedMarks}`);
+console.log(`Attendance Percentage: ${attendancePercentage}%`);
+console.log(`Assignment Score: ${assignmentScore}`);
+console.log(`Extra Activity Score: ${extraActivityScore}`);
+console.log(`Attendance Status: ${attendanceStatus}`);
+console.log(`Grade: ${grade}`);
+console.log(`Bonus Marks: ${bonusMarks}`);
+console.log(`Activity Reward: ${activityReward}`);
+console.log(`Final Percentage: ${finalPercentage}%`);
