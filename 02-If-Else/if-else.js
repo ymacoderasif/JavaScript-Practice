@@ -4371,3 +4371,65 @@ console.log(`Treatment Priority: ${treatmentPriority}`);
 console.log(`Emergency Room: ${emergencyRoom}`);
 console.log(`Billing Category: ${billingCategory}`);
 console.log(`Final Priority Level: ${finalPriorityLevel}`);
+
+
+
+
+
+
+
+
+/*
+=======================================================================
+Q84. Bank Credit Card Reward System 
+          Question 
+Ek Credit Card Reward System banao. 
+• Customer Name store karo.  
+• Monthly Spending store karo.  
+• Payment History store karo.  
+• Card Type store karo.  
+• Late Payment Count store karo.  
+Business Rules 
+• Spending ke basis par reward points calculate karo.  
+• Time par payment karne wale customer ko bonus points do.  
+• Late payment hone par points reduce karo.  
+• Premium card holder ko extra rewards do.  
+• Final reward points dikhana hai.  
+=======================================================================
+*/
+let cardCustomer = "Mohd Asif";
+let monthlySpend = 50000;
+let paymentHistory = "On Time";
+let cardType = "Premium";
+let latePaymentCount = 1;
+let earnedPoints = 0;
+let bonusPoints = 0;
+let lateDeduction = 0;
+let premiumReward = 0;
+let finalRewardPoints = 0;
+earnedPoints = monthlySpend / 100;
+if(paymentHistory === "On Time"){
+    bonusPoints = 1000;
+}else{
+    bonusPoints = 0;
+}
+if(latePaymentCount >= 2){
+    lateDeduction = latePaymentCount * 200;
+}else{
+    lateDeduction = 0;
+}if(cardType === "Premium"){
+    premiumReward = 1500;
+}else{
+    premiumReward = 0;
+}
+finalRewardPoints = earnedPoints + bonusPoints + premiumReward - lateDeduction;
+console.log(`Customer Name: ${cardCustomer}`);
+console.log(`Monthly Spending: ₹${monthlySpend}`);
+console.log(`Payment History: ${paymentHistory}`);
+console.log(`Card Type: ${cardType}`);
+console.log(`Late Payment Count: ${latePaymentCount}`);
+console.log(`Earned Points: ${earnedPoints}`);
+console.log(`Bonus Points: ${bonusPoints}`);
+console.log(`Late Payment Deduction: ${lateDeduction}`);
+console.log(`Premium Card Reward: ${premiumReward}`);
+console.log(`Final Reward Points: ${finalRewardPoints}`);
