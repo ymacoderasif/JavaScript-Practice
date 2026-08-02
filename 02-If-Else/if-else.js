@@ -5013,3 +5013,77 @@ console.log(`Availability Status: ${availabilityStatus}`);
 console.log(`Priority Supply: ${prioritySupplyStatus}`);
 console.log(`Restock Alert: ${restockAlert}`);
 console.log(`Final Stock Status: ${stockStatus}`);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q93. Car Service Center Management System 
+Question 
+Ek Car Service System banao. 
+• Customer Name store karo.  
+• Car Model store karo.  
+• Car Age store karo.  
+• Total Kilometer store karo.  
+• Service Type store karo.  
+• Previous Service Record store karo.  
+Business Rules 
+• Car age ke hisaab se service category decide karo.  
+• Kilometer ke basis par service suggest karo.  
+• Premium service par extra charges add karo.  
+• Previous pending service hone par warning do.  
+• Final service bill aur suggestion dikhana hai. 
+========================================================================
+*/
+let serviceCustomerName = "Mohd Asif";
+let vehicleModel = "Swift";
+let vehicleAge = 6;
+let totalKilometers = 65000;
+let selectedServiceType = "Premium";
+let previousServiceRecord = "Pending";
+let ageServiceCategory = "";
+let serviceSuggestion = "";
+let premiumServiceCharge = 0;
+let serviceWarning = "";
+let finalServiceBill = 0;
+if(vehicleAge > 5){
+    ageServiceCategory = "Old Car";
+}else{
+    ageServiceCategory = "New Car";
+}
+if(totalKilometers > 50000){
+    serviceSuggestion = "Major Service";
+}else{
+    serviceSuggestion = "Regular Service";
+}
+if(selectedServiceType === "Premium"){
+    premiumServiceCharge = 3000;
+}else{
+    premiumServiceCharge = 0;
+}
+if(previousServiceRecord === "Pending"){
+    serviceWarning = "Pending Service Found";
+}else{
+    serviceWarning = "No Pending Service";
+}
+if(serviceSuggestion === "Major Service"){
+    finalServiceBill = 8000 + premiumServiceCharge;
+}else{
+    finalServiceBill = 4000 + premiumServiceCharge;
+}
+console.log(`Customer Name: ${serviceCustomerName}`);
+console.log(`Car Model: ${vehicleModel}`);
+console.log(`Car Age: ${vehicleAge}`);
+console.log(`Total Kilometer: ${totalKilometers}`);
+console.log(`Service Type: ${selectedServiceType}`);
+console.log(`Previous Service Record: ${previousServiceRecord}`);
+console.log(`Service Category: ${ageServiceCategory}`);
+console.log(`Service Suggestion: ${serviceSuggestion}`);
+console.log(`Premium Service Charge: ₹${premiumServiceCharge}`);
+console.log(`Service Warning: ${serviceWarning}`);
+console.log(`Final Service Bill: ₹${finalServiceBill}`);
