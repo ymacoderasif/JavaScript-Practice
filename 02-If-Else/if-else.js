@@ -4654,3 +4654,70 @@ console.log("Category:", admissionCategory);
 console.log("Selection Result:", selectionResult);
 console.log("Scholarship:", feeSupport);
 console.log("Final Admission Status:", finalAdmissionStatus);
+
+
+
+
+
+
+
+
+/*
+===================================================================
+Q88. Electricity Smart Meter System 
+Question 
+Ek Smart Electricity Meter System banao. 
+• Customer Name store karo.  
+• Units Consumed store karo.  
+• Connection Type store karo.  
+• Payment History store karo.  
+• Solar Connection hai ya nahi store karo.  
+Business Rules 
+• Units ke according bill calculate karo.  
+• Solar connection hone par discount do.  
+• Late payment par fine add karo.  
+• Connection type ke hisaab se charges change karo.  
+• Final bill dikhana hai. 
+==================================================================
+*/
+let consumerIdentity = "Mohd Asif";
+let energyUsage = 350;
+let serviceCategory = "Domestic";
+let billingRecord = "Late";
+let solarStatus = true;
+let energyBill = 0;
+let greenEnergyDiscount = 0;
+let lateFee = 0;
+let connectionCharge = 0;
+let totalElectricityCost = 0;
+if(energyUsage <= 200){
+    energyBill = energyUsage * 5;
+}else{
+    energyBill = energyUsage * 8;
+}
+if(solarStatus === true){
+    greenEnergyDiscount = (energyBill * 10) / 100;
+}else{
+    greenEnergyDiscount = 0;
+}
+if(billingRecord === "Late"){
+    lateFee = 500;
+}else{
+    lateFee = 0;
+}
+if(serviceCategory === "Commercial"){
+    connectionCharge = 1000;
+}else{
+    connectionCharge = 500;
+}
+totalElectricityCost = energyBill - greenEnergyDiscount + connectionCharge + lateFee;
+console.log(`Customer Name: ${consumerIdentity}`);
+console.log(`Units Consumed: ${energyUsage}`);
+console.log(`Connection Type: ${serviceCategory}`);
+console.log(`Payment History: ${billingRecord}`);
+console.log(`Solar Connection: ${solarStatus}`);
+console.log(`Electricity Bill: ₹${energyBill}`);
+console.log(`Solar Discount: ₹${greenEnergyDiscount}`);
+console.log(`Late Fee: ₹${lateFee}`);
+console.log(`Connection Charge: ₹${connectionCharge}`);
+console.log(`Final Bill: ₹${totalElectricityCost}`);
