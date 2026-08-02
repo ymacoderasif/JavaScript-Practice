@@ -4585,3 +4585,72 @@ console.log(`Priority Charge: ₹${priorityCharge}`);
 console.log(`Delivery Category: ${deliveryCategory}`);
 console.log(`Return Process: ${returnProcess}`);
 console.log(`Final Delivery Status: ${finalDeliveryStatus}`);
+
+
+
+
+
+
+
+
+/*
+=======================================================================
+Q87. School Admission Portal 
+Question 
+Ek School Admission System banao. 
+• Student Name store karo.  
+• Age store karo.  
+• Previous Class Marks store karo.  
+• Entrance Marks store karo.  
+• Parent Income store karo.  
+• Category store karo.  
+Business Rules 
+• Age school criteria ke according honi chahiye.  
+• Marks minimum requirement complete honi chahiye.  
+• Entrance marks ke basis par admission decide karo.  
+• Income ke basis par scholarship decide karo.  
+• Final admission status dikhana hai. 
+=======================================================================
+*/
+let admissionCandidate = "Mohd Asif";
+let studentAge = 10;
+let previousClassMarks = 82;
+let entranceMarks = 78;
+let parentIncome = 250000;
+let admissionCategory = "General";
+let selectionResult = "";
+let feeSupport = "";
+let finalAdmissionStatus = "";
+let minimumAge = 5;
+let maximumAge = 15;
+let minimumMarks = 40;
+let minimumEntranceMarks = 50;
+let scholarshipIncomeLimit = 300000;
+if (studentAge >= minimumAge && studentAge <= maximumAge) {
+    if (previousClassMarks >= minimumMarks) {
+        if (entranceMarks >= minimumEntranceMarks) {
+            selectionResult = "Admission Approved";
+        } else {
+            selectionResult = "Admission Rejected";
+        }
+    } else {
+        selectionResult = "Admission Rejected";
+    }
+} else {
+    selectionResult = "Admission Rejected";
+}
+if (parentIncome <= scholarshipIncomeLimit) {
+    feeSupport = "Scholarship Approved";
+} else {
+    feeSupport = "No Scholarship";
+}
+if (selectionResult === "Admission Approved") {
+    finalAdmissionStatus = "Student Admitted";
+} else {
+    finalAdmissionStatus = "Student Not Admitted";
+}
+console.log("Student Name:", admissionCandidate);
+console.log("Category:", admissionCategory);
+console.log("Selection Result:", selectionResult);
+console.log("Scholarship:", feeSupport);
+console.log("Final Admission Status:", finalAdmissionStatus);
