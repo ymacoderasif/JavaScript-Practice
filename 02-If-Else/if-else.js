@@ -5425,3 +5425,80 @@ console.log(`Grade: ${grade}`);
 console.log(`Bonus Marks: ${bonusMarks}`);
 console.log(`Activity Reward: ${activityReward}`);
 console.log(`Final Percentage: ${finalPercentage}%`);
+
+
+
+
+
+
+
+
+/*
+=====================================================================
+Q99. Smart Home Electricity Control System 
+Question 
+Ek Smart Home Automation System banao. 
+• Owner Name store karo.  
+• Current Usage store karo.  
+• Temperature store karo.  
+• Device Count store karo.  
+• Power Saving Mode store karo.  
+Business Rules 
+• High usage par warning do.  
+• Temperature ke basis par device control karo.  
+• Power saving mode active ho to consumption reduce karo.  
+• Device count zyada hone par alert do.  
+• Final home status dikhana hai. 
+=====================================================================
+*/
+let homeOwnerName = "Mohd Asif";
+let currentUsage = 650;
+let roomTemperature = 34;
+let connectedDeviceCount = 12;
+let powerSavingMode = true;
+let usageWarning = "";
+let deviceControlStatus = "";
+let reducedConsumption = 0;
+let deviceAlert = "";
+let finalHomeStatus = "";
+
+if(currentUsage > 500){
+    usageWarning = "High Usage";
+}else{
+    usageWarning = "Normal Usage";
+}
+
+if(roomTemperature > 30){
+    deviceControlStatus = "Cooling Devices On";
+}else{
+    deviceControlStatus = "Cooling Devices Off";
+}
+
+if(powerSavingMode === true){
+    reducedConsumption = currentUsage - 100;
+}else{
+    reducedConsumption = currentUsage;
+}
+
+if(connectedDeviceCount > 10){
+    deviceAlert = "Too Many Devices";
+}else{
+    deviceAlert = "Normal Device Count";
+}
+
+if(usageWarning === "High Usage" || deviceAlert === "Too Many Devices"){
+    finalHomeStatus = "Attention Required";
+}else{
+    finalHomeStatus = "Home Running Normally";
+}
+
+console.log(`Owner Name: ${homeOwnerName}`);
+console.log(`Current Usage: ${currentUsage}`);
+console.log(`Temperature: ${roomTemperature}°C`);
+console.log(`Device Count: ${connectedDeviceCount}`);
+console.log(`Power Saving Mode: ${powerSavingMode}`);
+console.log(`Usage Warning: ${usageWarning}`);
+console.log(`Device Control: ${deviceControlStatus}`);
+console.log(`Reduced Consumption: ${reducedConsumption}`);
+console.log(`Device Alert: ${deviceAlert}`);
+console.log(`Final Home Status: ${finalHomeStatus}`);
