@@ -5285,3 +5285,68 @@ console.log(`Refund Percentage: ${refundPercentage}%`);
 console.log(`Tatkal Status: ${tatkalRefundStatus}`);
 console.log(`Special Benefit: ₹${specialBenefit}`);
 console.log(`Final Refund Amount: ₹${finalRefundAmount}`);
+
+
+
+
+
+
+
+
+/*
+======================================================================
+Q97. Office Leave Management System 
+          Question 
+Ek Employee Leave System banao. 
+• Employee Name store karo.  
+• Total Leave Available store karo.  
+• Requested Leave store karo.  
+• Employee Experience store karo.  
+• Emergency Leave hai ya nahi store karo.  
+Business Rules 
+• Available leave se zyada request reject karo.  
+• Senior employee ko extra leave benefit do.  
+• Emergency leave ke liye special approval do.  
+• Remaining leave calculate karo.  
+• Final leave status dikhana hai. 
+======================================================================
+*/
+let employeeIdentity = "Mohd Asif";
+let availableLeaveCount = 20;
+let requestedLeaveCount = 5;
+let employeeExperience = 6;
+let emergencyLeaveStatus = true;
+let leaveApprovalStatus = "";
+let extraLeaveBenefit = 0;
+let remainingLeaveCount = 0;
+let finalLeaveStatus = "";
+
+if(requestedLeaveCount > availableLeaveCount){
+    leaveApprovalStatus = "Rejected";
+}else{
+    leaveApprovalStatus = "Approved";
+}
+
+if(employeeExperience >= 5){
+    extraLeaveBenefit = 2;
+}else{
+    extraLeaveBenefit = 0;
+}
+
+if(emergencyLeaveStatus === true){
+    finalLeaveStatus = "Special Approval";
+}else{
+    finalLeaveStatus = leaveApprovalStatus;
+}
+
+remainingLeaveCount = (availableLeaveCount + extraLeaveBenefit) - requestedLeaveCount;
+
+console.log(`Employee Name: ${employeeIdentity}`);
+console.log(`Total Leave Available: ${availableLeaveCount}`);
+console.log(`Requested Leave: ${requestedLeaveCount}`);
+console.log(`Employee Experience: ${employeeExperience}`);
+console.log(`Emergency Leave: ${emergencyLeaveStatus}`);
+console.log(`Leave Approval: ${leaveApprovalStatus}`);
+console.log(`Extra Leave Benefit: ${extraLeaveBenefit}`);
+console.log(`Remaining Leave: ${remainingLeaveCount}`);
+console.log(`Final Leave Status: ${finalLeaveStatus}`);
