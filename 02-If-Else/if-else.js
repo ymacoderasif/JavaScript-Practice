@@ -4942,3 +4942,74 @@ console.log(`Location Verification: ${locationVerificationStatus}`);
 console.log(`Security Check: ${securityCheckStatus}`);
 console.log(`Account Lock Status: ${accountLockStatus}`);
 console.log(`Final Transaction Status: ${finalTransactionStatus}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q92. Hospital Medicine Stock Management System 
+Question 
+Ek Hospital Medicine Stock System banao. 
+• Medicine Name store karo.  
+• Available Quantity store karo.  
+• Expiry Date Status store karo.  
+• Demand Level store karo.  
+• Emergency Requirement store karo.  
+Business Rules 
+• Expired medicine use nahi karni.  
+• Stock zero hone par unavailable dikhana hai.  
+• Emergency requirement hone par priority supply deni hai.  
+• High demand medicine ke liye restock alert dikhana hai.  
+• Final stock status dikhana hai. 
+=========================================================================
+*/
+let medicineTitle = "Paracetamol";
+let medicineQuantity = 100;
+let expiryStatus = "Valid";
+let demandLevel = "High";
+let emergencyRequirement = true;
+let availabilityStatus = "";
+let prioritySupplyStatus = "";
+let restockAlert = "";
+let stockStatus = "";
+if(expiryStatus === "Expired"){
+    stockStatus = "Do Not Use";
+}else{
+    stockStatus = "Available";
+}
+if(medicineQuantity === 0){
+    availabilityStatus = "Unavailable";
+}else{
+    availabilityStatus = "Available";
+}
+if(emergencyRequirement === true){
+    prioritySupplyStatus = "Priority Supply";
+}else{
+    prioritySupplyStatus = "Normal Supply";
+}
+if(demandLevel === "High"){
+    restockAlert = "Restock Required";
+}else{
+    restockAlert = "No Restock Required";
+}
+if(expiryStatus === "Expired"){
+    stockStatus = "Do Not Use";
+}else if(medicineQuantity === 0){
+    stockStatus = "Unavailable";
+}else{
+    stockStatus = "Available";
+}
+console.log(`Medicine Name: ${medicineTitle}`);
+console.log(`Available Quantity: ${medicineQuantity}`);
+console.log(`Expiry Status: ${expiryStatus}`);
+console.log(`Demand Level: ${demandLevel}`);
+console.log(`Emergency Requirement: ${emergencyRequirement}`);
+console.log(`Availability Status: ${availabilityStatus}`);
+console.log(`Priority Supply: ${prioritySupplyStatus}`);
+console.log(`Restock Alert: ${restockAlert}`);
+console.log(`Final Stock Status: ${stockStatus}`);
