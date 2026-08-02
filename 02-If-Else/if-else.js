@@ -5502,3 +5502,91 @@ console.log(`Device Control: ${deviceControlStatus}`);
 console.log(`Reduced Consumption: ${reducedConsumption}`);
 console.log(`Device Alert: ${deviceAlert}`);
 console.log(`Final Home Status: ${finalHomeStatus}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+ Q100. Complete Employee Management System 
+          Question 
+Ek Company Employee Management System banao. 
+• Employee Name store karo.  
+• Age store karo.  
+• Salary store karo.  
+• Experience store karo.  
+• Attendance store karo.  
+• Performance Score store karo.  
+• Department store karo.  
+Business Rules 
+• Attendance ke basis par salary adjustment karo.  
+• Experience ke basis par bonus decide karo.  
+• Performance ke basis par promotion eligibility check karo.  
+• Salary ke basis par tax calculate karo.  
+• Department ke basis par role decide karo.  
+• Final employee report dikhani hai. 
+=========================================================================
+*/
+let employeeName = "Mohd Asif";
+let employeeAge = 28;
+let employeeSalary = 60000;
+let employeeExperience = 6;
+let attendanceDays = 28;
+let performanceScore = 90;
+let departmentName = "IT";
+let salaryAdjustment = 0;
+let experienceBonus = 0;
+let promotionStatus = "";
+let taxAmount = 0;
+let employeeRole = "";
+let finalSalary = 0;
+
+if(attendanceDays >= 26){
+    salaryAdjustment = 3000;
+}else{
+    salaryAdjustment = -2000;
+}
+
+if(employeeExperience >= 5){
+    experienceBonus = 5000;
+}else{
+    experienceBonus = 2000;
+}
+
+if(performanceScore >= 80){
+    promotionStatus = "Eligible";
+}else{
+    promotionStatus = "Not Eligible";
+}
+
+if(employeeSalary >= 50000){
+    taxAmount = (employeeSalary * 10) / 100;
+}else{
+    taxAmount = (employeeSalary * 5) / 100;
+}
+
+if(departmentName === "IT"){
+    employeeRole = "Software Developer";
+}else{
+    employeeRole = "Staff";
+}
+
+finalSalary = employeeSalary + salaryAdjustment + experienceBonus - taxAmount;
+
+console.log(`Employee Name: ${employeeName}`);
+console.log(`Age: ${employeeAge}`);
+console.log(`Salary: ₹${employeeSalary}`);
+console.log(`Experience: ${employeeExperience} Years`);
+console.log(`Attendance: ${attendanceDays} Days`);
+console.log(`Performance Score: ${performanceScore}`);
+console.log(`Department: ${departmentName}`);
+console.log(`Salary Adjustment: ₹${salaryAdjustment}`);
+console.log(`Experience Bonus: ₹${experienceBonus}`);
+console.log(`Promotion Status: ${promotionStatus}`);
+console.log(`Tax Amount: ₹${taxAmount}`);
+console.log(`Role: ${employeeRole}`);
+console.log(`Final Salary: ₹${finalSalary}`);
