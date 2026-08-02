@@ -4433,3 +4433,79 @@ console.log(`Bonus Points: ${bonusPoints}`);
 console.log(`Late Payment Deduction: ${lateDeduction}`);
 console.log(`Premium Card Reward: ${premiumReward}`);
 console.log(`Final Reward Points: ${finalRewardPoints}`);
+
+
+
+
+
+
+
+
+/*
+=====================================================================
+Q85. Movie Streaming Recommendation System 
+Question 
+Ek Movie Recommendation System banao. 
+• User Name store karo.  
+• Age store karo.  
+• Subscription Type store karo.  
+• Watch History Count store karo.  
+• Preferred Genre store karo.  
+• Account Status store karo.  
+Business Rules 
+• Account active hona chahiye.  
+• Age ke according content category decide karo.  
+• Premium user ko extra content access do.  
+• Watch history ke basis par recommendation level decide 
+karo.  
+• Final recommendation aur access status dikhana hai.  
+=====================================================================
+*/
+let viewerProfile = "Mohd Asif";
+let viewerAge = 22;
+let memberPlan = "Premium";
+let historyCount = 45;
+let genreChoice = "Action";
+let accountMode = "Active";
+let contentCategory = "";
+let extraAccess = "";
+let recommendationLevel = "";
+let finalRecommendation = "";
+let contentAccess = "";
+if(accountMode === "Active"){
+    if(accountMode === "Active" && viewerAge >= 18){
+        contentCategory = "Adult";
+    }else{
+        contentCategory = "Kids";
+    }
+    if(accountMode === "Active" && memberPlan === "Premium"){
+        extraAccess = "Enabled";
+    }else{
+        extraAccess = "Disabled";
+    }
+    if(historyCount >= 50){
+        recommendationLevel = "Highly Personalized";
+    }else if(historyCount >= 20){
+        recommendationLevel = "Personalized";
+    }else{
+        recommendationLevel = "Basic";
+    }
+    if(accountMode === "Active"){
+        contentAccess = "Allowed";
+        finalRecommendation = genreChoice;
+    }
+}else{
+    contentAccess = "Denied";
+    finalRecommendation = "No Recommendation";
+}
+console.log(`User Name: ${viewerProfile}`);
+console.log(`Age: ${viewerAge}`);
+console.log(`Subscription Type: ${memberPlan}`);
+console.log(`Watch History Count: ${historyCount}`);
+console.log(`Preferred Genre: ${genreChoice}`);
+console.log(`Account Status: ${accountMode}`);
+console.log(`Content Category: ${contentCategory}`);
+console.log(`Extra Content Access: ${extraAccess}`);
+console.log(`Recommendation Level: ${recommendationLevel}`);
+console.log(`Final Recommendation: ${finalRecommendation}`);
+console.log(`Access Status: ${contentAccess}`);
