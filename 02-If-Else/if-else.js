@@ -4509,3 +4509,79 @@ console.log(`Extra Content Access: ${extraAccess}`);
 console.log(`Recommendation Level: ${recommendationLevel}`);
 console.log(`Final Recommendation: ${finalRecommendation}`);
 console.log(`Access Status: ${contentAccess}`);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q86. Courier Delivery Tracking System 
+Question 
+Ek Courier Tracking System banao. 
+• Customer Name store karo.  
+• Package Status store karo.  
+• Distance store karo.  
+• Delivery Attempts store karo.  
+• Priority Delivery hai ya nahi store karo.  
+• Payment Status store karo.  
+Business Rules 
+• Payment pending ho to delivery hold karo.  
+• Priority delivery par extra charge add karo.  
+• Distance ke basis par delivery category decide karo.  
+• Multiple failed attempts par return process start karo.  
+• Final delivery status dikhana hai. 
+========================================================================
+*/
+let courierCustomer = "Mohd Asif";
+let packageStatus = "Out for Delivery";
+let deliveryDistance = 120;
+let attemptCount = 2;
+let priorityDelivery = true;
+let courierPayment = "Paid";
+let deliveryHold = "";
+let priorityCharge = 0;
+let deliveryCategory = "";
+let returnProcess = "";
+let finalDeliveryStatus = "";
+if(courierPayment === "Pending"){
+    deliveryHold = "Yes";
+    finalDeliveryStatus = "On Hold";
+}else{
+    deliveryHold = "No";
+}
+if(courierPayment === "Paid" && priorityDelivery === true){
+    priorityCharge = 300;
+}else{
+    priorityCharge = 0;
+}
+if(deliveryDistance < 50){
+    deliveryCategory = "Local";
+}else if(deliveryDistance < 200){
+    deliveryCategory = "Regional";
+}else{
+    deliveryCategory = "Long Distance";
+}
+if(attemptCount >= 3){
+    returnProcess = "Started";
+    finalDeliveryStatus = "Return Initiated";
+}else{
+    returnProcess = "Not Required";
+}
+if(courierPayment === "Paid" && attemptCount < 3){
+    finalDeliveryStatus = packageStatus;
+}
+console.log(`Customer Name: ${courierCustomer}`);
+console.log(`Package Status: ${packageStatus}`);
+console.log(`Distance: ${deliveryDistance} KM`);
+console.log(`Delivery Attempts: ${attemptCount}`);
+console.log(`Priority Delivery: ${priorityDelivery}`);
+console.log(`Payment Status: ${courierPayment}`);
+console.log(`Delivery Hold: ${deliveryHold}`);
+console.log(`Priority Charge: ₹${priorityCharge}`);
+console.log(`Delivery Category: ${deliveryCategory}`);
+console.log(`Return Process: ${returnProcess}`);
+console.log(`Final Delivery Status: ${finalDeliveryStatus}`);
