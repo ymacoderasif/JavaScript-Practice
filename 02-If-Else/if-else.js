@@ -4295,3 +4295,79 @@ console.log(`Premium Benefit: ₹${premiumBenefit}`);
 console.log(`Account Review: ${reviewStatus}`);
 console.log(`Reward Points: ${rewardPoints}`);
 console.log(`Final Membership Status: ${finalMemberStatus}`);
+
+
+
+
+
+
+
+
+/*
+===========================================================================
+Q83. Hospital Emergency Priority System 
+Question 
+Ek Hospital Patient Priority System banao. 
+• Patient Name store karo.  
+• Age store karo.  
+• Emergency Level store karo.  
+• Blood Pressure Status store karo.  
+• Insurance Status store karo.  
+• Previous Disease Status store karo.  
+Business Rules 
+• Emergency level high ho to priority treatment do.  
+• Senior Citizen ko priority milegi.  
+• Insurance available ho to billing process alag hoga.  
+• Critical condition me emergency room assign karo.  
+• Final priority level aur billing category dikhani hai.  
+===========================================================================
+*/
+let patientRecord = "Mohd Asif";
+let personAge = 68;
+let emergencyLevel = "High";
+let bpStatus = "Critical";
+let coverageStatus = true;
+let previousDisease = true;
+let treatmentPriority = "";
+let billingCategory = "";
+let emergencyRoom = "";
+let finalPriorityLevel = "";
+if(emergencyLevel === "High"){
+    treatmentPriority = "Immediate";
+}else{
+    treatmentPriority = "Normal";
+}
+if(personAge >= 60){
+    treatmentPriority = "High Priority";
+}
+else{
+    treatmentPriority = "Normal";
+}
+if(coverageStatus === true){
+    billingCategory = "Insurance Billing";
+}
+else{
+    billingCategory = "Self Payment";
+}
+if(bpStatus === "Critical"){
+    emergencyRoom = "Assigned";
+}else{
+    emergencyRoom = "Not Required";
+}
+if(emergencyLevel === "High" || bpStatus === "Critical"){
+    finalPriorityLevel = "Emergency";
+}else if(personAge >= 60){
+    finalPriorityLevel = "High Priority";
+}else{
+    finalPriorityLevel = "Normal";
+}
+console.log(`Patient Name: ${patientRecord}`);
+console.log(`Age: ${personAge}`);
+console.log(`Emergency Level: ${emergencyLevel}`);
+console.log(`Blood Pressure Status: ${bpStatus}`);
+console.log(`Insurance Status: ${coverageStatus}`);
+console.log(`Previous Disease Status: ${previousDisease}`);
+console.log(`Treatment Priority: ${treatmentPriority}`);
+console.log(`Emergency Room: ${emergencyRoom}`);
+console.log(`Billing Category: ${billingCategory}`);
+console.log(`Final Priority Level: ${finalPriorityLevel}`);
