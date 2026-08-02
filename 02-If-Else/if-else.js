@@ -4791,3 +4791,77 @@ console.log(`Qualification Status: ${qualificationStatus}`);
 console.log(`Position: ${jobPosition}`);
 console.log(`Hiring Status: ${hiringStatus}`);
 console.log(`Final Hiring Status: ${finalHiringStatus}`);
+
+
+
+
+
+
+
+
+/*
+==================================================================
+Q90. Online Gaming Reward System 
+Question 
+Ek Gaming Reward System banao. 
+• Player Name store karo.  
+• Level store karo.  
+• Total Points store karo.  
+• Matches Played store karo.  
+• Win Count store karo.  
+• Premium Account Status store karo.  
+Business Rules 
+• Points ke basis par rank decide karo.  
+• Premium player ko extra reward do.  
+• Win percentage ke basis par bonus do.  
+• Level ke basis par rewards unlock karo.  
+• Final rank aur rewards dikhana hai.  
+=================================================================
+*/
+let playerFullName = "Mohd Asif";
+let gameLevel = 15;
+let totalGamePoints = 8500;
+let playedMatches = 100;
+let victoryCount = 75;
+let premiumAccountStatus = true;
+let rankStatus = "";
+let extraReward = 0;
+let winBonus = 0;
+let levelReward = 0;
+let totalRewards = 0;
+let finalRank = "";
+if(totalGamePoints >= 10000){
+    rankStatus = "Diamond";
+}else if(totalGamePoints >= 5000){
+    rankStatus = "Gold";
+}else{
+    rankStatus = "Silver";
+}
+if(premiumAccountStatus === true){
+    extraReward = 1000;
+}else{
+    extraReward = 0;
+}
+if(((victoryCount / playedMatches) * 100) >= 70){
+    winBonus = 500;
+}else{
+    winBonus = 0;
+}
+if(gameLevel >= 10){
+    levelReward = 750;
+}else{
+    levelReward = 0;
+}
+totalRewards = extraReward + winBonus + levelReward;
+console.log(`Player Name: ${playerFullName}`);
+console.log(`Level: ${gameLevel}`);
+console.log(`Total Points: ${totalGamePoints}`);
+console.log(`Matches Played: ${playedMatches}`);
+console.log(`Win Count: ${victoryCount}`);
+console.log(`Premium Account: ${premiumAccountStatus}`);
+console.log(`Rank: ${rankStatus}`);
+console.log(`Extra Reward: ₹${extraReward}`);
+console.log(`Win Bonus: ₹${winBonus}`);
+console.log(`Level Reward: ₹${levelReward}`);
+console.log(`Total Rewards: ₹${totalRewards}`);
+console.log(`Final Rank: ${finalRank}`);
