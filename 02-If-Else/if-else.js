@@ -4865,3 +4865,80 @@ console.log(`Win Bonus: ₹${winBonus}`);
 console.log(`Level Reward: ₹${levelReward}`);
 console.log(`Total Rewards: ₹${totalRewards}`);
 console.log(`Final Rank: ${finalRank}`);
+
+
+
+
+
+
+
+
+/*
+============================================================================
+Q91. Online Banking Fraud Detection System 
+Question 
+Ek Banking Fraud Detection System banao. 
+• Customer Name store karo.  
+• Transaction Amount store karo.  
+• Transaction Location store karo.  
+• Usual Location store karo.  
+• Transaction Time store karo.  
+• OTP Verified hai ya nahi store karo.  
+• Previous Fraud Record store karo.  
+Business Rules 
+• OTP verify hona chahiye.  
+• Unknown location se transaction hone par verification 
+chahiye.  
+• High amount transaction par extra security check lagao.  
+• Previous fraud record hone par transaction block karo.  
+• Suspicious transaction hone par account temporarily lock 
+karo.  
+• Final transaction status dikhana hai. 
+===========================================================================
+*/
+let bankCustomerName = "Mohd Asif";
+let transactionAmount = 25000;
+let transactionLocation = "Delhi";
+let usualLocation = "Noida";
+let transactionTime = "Night";
+let otpVerificationStatus = true;
+let previousFraudHistory = false;
+let locationVerificationStatus = "";
+let securityCheckStatus = "";
+let accountLockStatus = "";
+let finalTransactionStatus = "";
+if(otpVerificationStatus !== true){
+    finalTransactionStatus = "Transaction Blocked";
+}else{
+    if(previousFraudHistory === true){
+        finalTransactionStatus = "Transaction Blocked";
+    }else{
+        finalTransactionStatus = "Transaction Allowed";
+    }
+    if(transactionLocation !== usualLocation){
+        locationVerificationStatus = "Verification Required";
+    }else{
+        locationVerificationStatus = "Normal Location";
+    }
+    if(transactionAmount > 50000){
+        securityCheckStatus = "Extra Security Check";
+    }else{
+        securityCheckStatus = "No Extra Check";
+    }
+    if(locationVerificationStatus === "Verification Required" || securityCheckStatus === "Extra Security Check"){
+        accountLockStatus = "Temporarily Locked";
+    }else{
+        accountLockStatus = "Account Active";
+    }
+}
+console.log(`Customer Name: ${bankCustomerName}`);
+console.log(`Transaction Amount: ₹${transactionAmount}`);
+console.log(`Transaction Location: ${transactionLocation}`);
+console.log(`Usual Location: ${usualLocation}`);
+console.log(`Transaction Time: ${transactionTime}`);
+console.log(`OTP Verification: ${otpVerificationStatus}`);
+console.log(`Previous Fraud Record: ${previousFraudHistory}`);
+console.log(`Location Verification: ${locationVerificationStatus}`);
+console.log(`Security Check: ${securityCheckStatus}`);
+console.log(`Account Lock Status: ${accountLockStatus}`);
+console.log(`Final Transaction Status: ${finalTransactionStatus}`);
