@@ -4212,3 +4212,86 @@ console.log(`Cancellation Deduction: ₹${cancelDeduction}`);
 console.log(`Peak Hour Payment: ₹${peakPayment}`);
 console.log(`Final Earning: ₹${totalDriverIncome}`);
 console.log(`Driver Status: ${driverStatus}`);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q82. Online Shopping Membership System 
+Question 
+Ek Shopping Membership System banao. 
+• Customer Name store karo.  
+• Total Purchase Amount store karo.  
+• Membership Type store karo.  
+• Purchase Count store karo.  
+• Return Count store karo.  
+• Account Status store karo.  
+Business Rules 
+• Account active hona chahiye.  
+• Purchase amount ke basis par membership upgrade karo.  
+• Premium member ko extra benefits do.  
+• Return count zyada hone par review karo.  
+• Purchase count zyada hone par reward points do.  
+• Final membership status dikhana hai.
+========================================================================
+*/
+let shopCustomer = "Mohd Asif";
+let billingAmount = 60000;
+let memberLevel = "Gold";
+let totalOrders = 25;
+let returnCount = 2;
+let accountCondition = "Active";
+let upgradeStatus = "";
+let premiumBenefit = 0;
+let reviewStatus = "";
+let rewardPoints = 0;
+let finalMemberStatus = ""
+if(accountCondition === "Active"){
+   if(accountCondition === "Active" && billingAmount >= 100000){
+    upgradeStatus = "Platinum";
+    memberLevel = "Platinum";
+   }else if(accountCondition === "Active" && billingAmount >= 50000){
+    upgradeStatus = "Gold";
+    memberLevel = "Gold";
+   }else{
+    upgradeStatus = "No Upgrade";
+   }
+   if(accountCondition === "Active" && memberLevel === "Premium"){
+    premiumBenefit = 5000;
+   }else{
+    premiumBenefit = 0;
+   }
+   if(returnCount > 5){
+    reviewStatus = "Under Review";
+   }else{
+    reviewStatus = "Clear";
+   }
+   if(totalOrders > 20){
+    rewardPoints = totalOrders * 100;
+   }else{
+    rewardPoints = totalOrders * 50;
+   }
+   if(accountCondition === "Active"){
+    finalMemberStatus = memberLevel;
+   }else{
+    finalMemberStatus = "Inactive";
+   }
+}else{
+    finalMemberStatus = "Inactive";
+}
+console.log(`Customer Name: ${shopCustomer}`);
+console.log(`Total Purchase Amount: ₹${billingAmount}`);
+console.log(`Membership Type: ${memberLevel}`);
+console.log(`Purchase Count: ${totalOrders}`);
+console.log(`Return Count: ${returnCount}`);
+console.log(`Account Status: ${accountCondition}`);
+console.log(`Upgrade Status: ${upgradeStatus}`);
+console.log(`Premium Benefit: ₹${premiumBenefit}`);
+console.log(`Account Review: ${reviewStatus}`);
+console.log(`Reward Points: ${rewardPoints}`);
+console.log(`Final Membership Status: ${finalMemberStatus}`);
