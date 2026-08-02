@@ -5087,3 +5087,73 @@ console.log(`Service Suggestion: ${serviceSuggestion}`);
 console.log(`Premium Service Charge: ₹${premiumServiceCharge}`);
 console.log(`Service Warning: ${serviceWarning}`);
 console.log(`Final Service Bill: ₹${finalServiceBill}`);
+
+
+
+
+
+
+
+
+/*
+=========================================================================
+Q94. Insurance Health Plan System 
+Question 
+Ek Health Insurance Plan System banao. 
+• Customer Name store karo.  
+• Age store karo.  
+• Medical History store karo.  
+• Income Store karo.  
+• Existing Disease Status store karo.  
+• Family Members Count store karo.  
+Business Rules 
+• Age ke according premium decide karo.  
+• Existing disease hone par premium increase karo.  
+• Income ke basis par plan category decide karo.  
+• Family members zyada hone par extra charges add karo.  
+• Final premium amount aur plan dikhana hai. 
+=========================================================================
+*/
+let insuranceCustomerName = "Mohd Asif";
+let customerAge = 35;
+let medicalHistory = "Normal";
+let annualIncome = 600000;
+let existingDiseaseStatus = true;
+let familyMemberCount = 5;
+let premiumAmount = 0;
+let diseaseCharge = 0;
+let insurancePlan = "";
+let familyCharge = 0;
+let finalPremiumAmount = 0;
+if(customerAge < 40){
+    premiumAmount = 5000;
+}else{
+    premiumAmount = 8000;
+}
+if(existingDiseaseStatus === true){
+    diseaseCharge = 2000;
+}else{
+    diseaseCharge = 0;
+}
+if(annualIncome > 500000){
+    insurancePlan = "Premium Plan";
+}else{
+    insurancePlan = "Basic Plan";
+}
+if(familyMemberCount > 4){
+    familyCharge = 1500;
+}else{
+    familyCharge = 0;
+}
+finalPremiumAmount = premiumAmount + diseaseCharge +familyCharge;
+console.log(`Customer Name: ${insuranceCustomerName}`);
+console.log(`Age: ${customerAge}`);
+console.log(`Medical History: ${medicalHistory}`);
+console.log(`Income: ₹${annualIncome}`);
+console.log(`Existing Disease: ${existingDiseaseStatus}`);
+console.log(`Family Members: ${familyMemberCount}`);
+console.log(`Premium Amount: ₹${premiumAmount}`);
+console.log(`Disease Charge: ₹${diseaseCharge}`);
+console.log(`Plan Category: ${insurancePlan}`);
+console.log(`Family Charge: ₹${familyCharge}`);
+console.log(`Final Premium Amount: ₹${finalPremiumAmount}`);
