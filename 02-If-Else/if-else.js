@@ -4721,3 +4721,73 @@ console.log(`Solar Discount: ₹${greenEnergyDiscount}`);
 console.log(`Late Fee: ₹${lateFee}`);
 console.log(`Connection Charge: ₹${connectionCharge}`);
 console.log(`Final Bill: ₹${totalElectricityCost}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q89. Job Hiring Eligibility System 
+Question 
+Ek Company Hiring System banao. 
+• Candidate Name store karo.  
+• Age store karo.  
+• Qualification store karo.  
+• Experience store karo.  
+• Skill Score store karo.  
+• Interview Score store karo.  
+Business Rules 
+• Age requirement complete honi chahiye.  
+• Qualification match honi chahiye.  
+• Experience ke basis par position decide karo.  
+• Skill aur interview score ke basis par selection decide karo.  
+• Final hiring status dikhana hai. 
+==========================================================================
+*/
+let candidateFullName = "Mohd Asif";
+let candidateAge = 24;
+let educationLevel = "BCA";
+let workExperience = 2;
+let technicalSkillScore = 85;
+let interviewPerformanceScore = 80;
+let ageStatus = "";
+let qualificationStatus = "";
+let jobPosition = "";
+let hiringStatus = "";
+let finalHiringStatus = "";
+if(candidateAge >= 18){
+    ageStatus = "Eligible";
+}else{
+    ageStatus = "Not Eligible";
+}
+if(educationLevel === "BCA"){
+    qualificationStatus = "Matched";
+}else{
+    qualificationStatus = "Not Matched";
+}
+if(workExperience >= 3){
+    jobPosition = "Senior Developer";
+}else{
+    jobPosition = "Junior Developer";
+}
+if(technicalSkillScore >= 70 && interviewPerformanceScore >= 70 ){
+    hiringStatus = "Selected";
+}else{
+    hiringStatus = "Rejected";
+}
+finalHiringStatus = ageStatus + qualificationStatus + jobPosition + hiringStatus;
+console.log(`Candidate Name: ${candidateFullName}`);
+console.log(`Age: ${candidateAge}`);
+console.log(`Qualification: ${educationLevel}`);
+console.log(`Experience: ${workExperience}`);
+console.log(`Skill Score: ${technicalSkillScore}`);
+console.log(`Interview Score: ${interviewPerformanceScore}`);
+console.log(`Age Status: ${ageStatus}`);
+console.log(`Qualification Status: ${qualificationStatus}`);
+console.log(`Position: ${jobPosition}`);
+console.log(`Hiring Status: ${hiringStatus}`);
+console.log(`Final Hiring Status: ${finalHiringStatus}`);
