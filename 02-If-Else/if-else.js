@@ -4139,3 +4139,76 @@ console.log(`Peak Season Charge: ₹${seasonSurcharge}`);
 console.log(`Premium Member Discount: ₹${membershipDiscount}`);
 console.log(`Package Category: ${tourCategory}`);
 console.log(`Final Booking Amount: ₹${bookingTotal}`);
+
+
+
+
+
+
+
+
+/*
+======================================================================
+Q81. Uber Driver Incentive System 
+Question 
+Ek Cab Driver Incentive System banao. 
+• Driver Name store karo.  
+• Total Rides store karo.  
+• Total Distance store karo.  
+• Customer Rating store karo.  
+• Cancellation Count store karo.  
+• Peak Hour Rides store karo.  
+Business Rules 
+• Agar rides 100 se zyada hain to bonus do.  
+• Agar rating high hai to extra incentive do.  
+• Agar cancellation zyada hai to incentive reduce karo.  
+• Peak hour rides ke liye extra payment do.  
+• Final earning aur driver status dikhana hai.  
+======================================================================
+*/
+let driverName = "Mohd Asif";
+let rideCount = 120;
+let distanceCovered = 2500;
+let ratingScore = 4.8;
+let cancelCount = 3;
+let peakRideCount = 30;
+let rideBonus = 0;
+let ratingIncentive = 0;
+let cancelDeduction = 0;
+let peakPayment = 0;
+let totalDriverIncome = 0;
+let driverStatus = "";
+if(rideCount > 100){
+    rideBonus = 10000;
+}else{
+    rideBonus = 0;
+}
+if(ratingScore >= 4.5){
+    ratingIncentive = 3000;
+}else{
+    ratingIncentive = 0;
+}
+if(cancelCount > 5){
+    cancelDeduction = 2000;
+}else{
+    cancelDeduction = 0;
+}
+peakPayment = peakRideCount * 100;
+totalDriverIncome = rideBonus + ratingIncentive + peakPayment - cancelDeduction;
+if(cancelCount > 10){
+    driverStatus = "Suspended";
+}else{
+    driverStatus = "Active";
+}
+console.log(`Driver Name: ${driverName}`);
+console.log(`Total Rides: ${rideCount}`);
+console.log(`Total Distance: ${distanceCovered} KM`);
+console.log(`Customer Rating: ${ratingScore}`);
+console.log(`Cancellation Count: ${cancelCount}`);
+console.log(`Peak Hour Rides: ${peakRideCount}`);
+console.log(`Ride Bonus: ₹${rideBonus}`);
+console.log(`Rating Incentive: ₹${ratingIncentive}`);
+console.log(`Cancellation Deduction: ₹${cancelDeduction}`);
+console.log(`Peak Hour Payment: ₹${peakPayment}`);
+console.log(`Final Earning: ₹${totalDriverIncome}`);
+console.log(`Driver Status: ${driverStatus}`);
