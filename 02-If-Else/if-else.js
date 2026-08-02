@@ -5224,3 +5224,64 @@ console.log(`Premium Cashback: ₹${premiumCashback}`);
 console.log(`Payment Reward: ₹${paymentReward}`);
 console.log(`Loyalty Bonus: ₹${loyaltyBonus}`);
 console.log(`Wallet Balance: ₹${finalWalletBalance}`);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q96. Railway Ticket Cancellation System 
+Question 
+Ek Railway Cancellation System banao. 
+• Passenger Name store karo.  
+• Ticket Type store karo.  
+• Booking Days Ago store karo.  
+• Ticket Price store karo.  
+• Cancellation Reason store karo.  
+Business Rules 
+• Cancellation time limit ke andar honi chahiye.  
+• Tatkal ticket ke liye alag rule lagao.  
+• Cancellation time ke basis par refund percentage decide 
+karo.  
+• Special reason hone par extra benefit do.  
+• Final refund amount dikhana hai. 
+==========================================================================
+*/
+let railPassengerName = "Mohd Asif";
+let railTicketType = "Normal";
+let bookingDaysPassed = 5;
+let fareAmount = 2000;
+let cancellationReason = "Medical";
+let refundPercentage = 0;
+let tatkalRefundStatus = "";
+let specialBenefit = 0;
+let finalRefundAmount = 0;
+if(bookingDaysPassed < 7){
+    refundPercentage = 80;
+}else{
+    refundPercentage = 50;
+}
+if(railTicketType === "Tatkal"){
+    tatkalRefundStatus = "Special Tatkal Rule Applied";
+}else{
+    tatkalRefundStatus = "Normal Rule Applied";
+}
+if(cancellationReason === "Medical"){
+    specialBenefit = 500;
+}else{
+    specialBenefit = 0;
+}
+finalRefundAmount = (fareAmount * refundPercentage) / 100 + specialBenefit;
+console.log(`Passenger Name: ${railPassengerName}`);
+console.log(`Ticket Type: ${railTicketType}`);
+console.log(`Booking Days Ago: ${bookingDaysPassed}`);
+console.log(`Ticket Price: ₹${fareAmount}`);
+console.log(`Cancellation Reason: ${cancellationReason}`);
+console.log(`Refund Percentage: ${refundPercentage}%`);
+console.log(`Tatkal Status: ${tatkalRefundStatus}`);
+console.log(`Special Benefit: ₹${specialBenefit}`);
+console.log(`Final Refund Amount: ₹${finalRefundAmount}`);
