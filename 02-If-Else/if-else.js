@@ -5157,3 +5157,70 @@ console.log(`Disease Charge: ₹${diseaseCharge}`);
 console.log(`Plan Category: ${insurancePlan}`);
 console.log(`Family Charge: ₹${familyCharge}`);
 console.log(`Final Premium Amount: ₹${finalPremiumAmount}`);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q95. E-Wallet Cashback System 
+Question 
+Ek Wallet Cashback System banao. 
+• User Name store karo.  
+• Purchase Amount store karo.  
+• User Level store karo.  
+• Payment Method store karo.  
+• Previous Transactions store karo.  
+Business Rules 
+• Purchase amount ke basis par cashback decide karo.  
+• Premium user ko extra cashback do.  
+• Specific payment method par additional reward do.  
+• Previous transaction history ke basis par bonus decide karo.  
+• Final cashback aur wallet balance dikhana hai. 
+=========================================================================
+*/
+let walletUserName = "Mohd Asif";
+let transactionValue = 5000;
+let membershipLevel = "Premium";
+let paymentMethod = "UPI";
+let previousTransactionCount = 15;
+let rewardCashback = 0;
+let premiumCashback = 0;
+let paymentReward = 0;
+let loyaltyBonus = 0;
+let finalWalletBalance = 0;
+if(transactionValue >= 5000){
+    rewardCashback = 500;
+}else{
+    rewardCashback = 100;
+}
+if(membershipLevel === "Premium"){
+    premiumCashback = 200;
+}else{
+    premiumCashback = 0;
+}
+if(paymentMethod === "UPI"){
+    paymentReward = 100;
+}else{
+    paymentReward = 0;
+}
+if(previousTransactionCount > 10){
+    loyaltyBonus = 150;
+}else{
+    loyaltyBonus = 0;
+}
+finalWalletBalance = rewardCashback + premiumCashback + paymentReward +loyaltyBonus;
+console.log(`User Name: ${walletUserName}`);
+console.log(`Purchase Amount: ₹${transactionValue}`);
+console.log(`User Level: ${membershipLevel}`);
+console.log(`Payment Method: ${paymentMethod}`);
+console.log(`Previous Transactions: ${previousTransactionCount}`);
+console.log(`Cashback: ₹${rewardCashback}`);
+console.log(`Premium Cashback: ₹${premiumCashback}`);
+console.log(`Payment Reward: ₹${paymentReward}`);
+console.log(`Loyalty Bonus: ₹${loyaltyBonus}`);
+console.log(`Wallet Balance: ₹${finalWalletBalance}`);
