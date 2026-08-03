@@ -87,3 +87,21 @@ Q5. Print the multiplication table of 5.
 for(let i = 1; i <= 10;i++){
     console.log(`5 * ${i} = ${5 * i}`);
 }
+
+
+
+
+
+
+
+
+/*
+============================================================
+Q6. Find the sum of number form 1 to 100 using a loop. 
+============================================================
+*/
+let sum = 0;
+for(let i = 1; i <= 100; i++){
+    sum = sum + i;
+}
+console.log(sum);
