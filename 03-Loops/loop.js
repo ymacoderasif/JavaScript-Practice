@@ -393,3 +393,28 @@ for(let i = 1; i <= 50; i++){
         console.log(i);
     }
 }
+
+
+
+
+
+
+
+
+/*
+=============================================================
+Q21.Calculate the factorial of 5. 
+Expected: 
+5 × 4 × 3 × 2 × 1 = 120
+=============================================================
+*/
+let num = prompt("Enter a Number :-");
+
+let result = 1;
+for(let i = num; i >= 1; i--){
+    result = result * i
+}
+console.log(`${num}! = ${result}`);
+
+
+
