@@ -720,3 +720,35 @@ for(let i = 1; i <= 50; i++){
         console.log(result);
     }
 }
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q33. Secret Number Hunt 
+Secret number = 37 
+1 se 100 tak loop chalao. 
+Jab secret number mile: 
+• print "Found"  
+• loop stop  
+Saath me batao kitni iterations lagi. 
+====================================================================
+*/
+let secretNumber = 37;
+let iterationNumber = 0;
+
+for(let i = 1; i <= 100; i++){
+    iterationNumber = iterationNumber + 1;
+    if(i === secretNumber){
+        console.log("Found",i);
+        console.log("IterationNumber",iterationNumber);
+        break;
+
+    }
+
+}
