@@ -283,3 +283,22 @@ for(let i = 1; i <= 100; i++){
 console.log(count);
 
 
+
+
+
+
+
+
+/*
+=====================================================================
+Q16.Print all odd numbers from 1 to 25 using a do while loop. 
+=====================================================================
+*/
+let i = 1;
+do{
+    if(i % 2 === 1){
+        console.log(`1 to 25 odd number is ${i}`);   
+    }
+    i++;
+}while(i <= 25);
+
