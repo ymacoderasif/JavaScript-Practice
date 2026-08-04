@@ -624,3 +624,32 @@ for(let i = 1; i <= 10; i++){
         console.log(`7 * ${i} = ${7 * i} Odd`);
     }
 }
+
+
+
+
+
+
+
+
+/*
+============================================================
+Q30. ATM Simulation    
+Balance = 5000 
+Har iteration: 
+withdraw = 750; 
+Balance se subtract karo. 
+Jab next withdrawal possible na ho: 
+Transaction Failed 
+Aur remaining balance print karo. 
+============================================================
+*/
+let balance = 5000;
+let withdraw = 750;
+while(balance >= withdraw){
+    balance = balance - withdraw;
+    console.log(balance); 
+}
+console.log("Transation Failed");
+console.log("Remaining Balance",balance);
+
