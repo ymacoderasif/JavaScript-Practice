@@ -683,3 +683,40 @@ while(health < 100){
 
 }
 console.log("Final Health :",health);
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q32. Number Pattern Logic 
+1 se 50 tak: 
+• 3 se divisible → Fizz  
+• 5 se divisible → Buzz  
+• 7 se divisible → Pop  
+• Multiple conditions ek saath bhi handle karo  
+Example: 
+15 => FizzBuzz 
+21 => FizzPop 
+35 => BuzzPop 
+====================================================================
+*/
+for(let i = 1; i <= 50; i++){
+    result = "";
+    if(i%3===0){
+        result = result + "Fizz";
+    }if(i%5===0){
+        result = result + "Buzz";
+    }if(i%7===0){
+        result = result + "Pop";
+    }
+    if(result === ""){
+        console.log(i);
+    }else{
+        console.log(result);
+    }
+}
