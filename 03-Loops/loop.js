@@ -146,3 +146,23 @@ for(let i = 1; i<= val; i++){
         console.log(`${val} is a odd number`)
     }
 }
+
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q9. Count how many number between 1 to 100 are divisible by 
+both 3 and 5. 
+====================================================================
+*/
+for(let i = 1; i <= 100; i++){
+    if(i%3===0 && i%5===0){
+        console.log(i);   
+    }
+}
