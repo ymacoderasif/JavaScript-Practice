@@ -546,3 +546,23 @@ for(let i = 1; i <= 100; i++){
 console.log(count);
 
 
+
+
+
+
+
+
+/*
+===================================================================
+Q27. Largest Even Number 
+1 se 100 tak loop chalao. 
+Sabse bada even number find karo aur print karo. 
+===================================================================
+*/
+let even = 0;
+for(let i = 1; i <= 100; i++){
+    if(i%2===0 && i > even){
+        even = i; 
+    }
+}console.log(even);
+
