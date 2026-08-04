@@ -123,3 +123,26 @@ for(let i = 1; i <= 50; i++){
         console.log(i);
     }
 }
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q8. Ask the user for a number and print whether each number 
+form 1 to that number is even or odd.
+====================================================================
+*/
+let val = prompt("Enter a Number ");
+
+for(let i = 1; i<= val; i++){
+    if(val%2===0){
+        console.log(`${val} is a even number`);
+    }else{
+        console.log(`${val} is a odd number`)
+    }
+}
