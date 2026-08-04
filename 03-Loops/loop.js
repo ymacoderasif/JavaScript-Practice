@@ -566,3 +566,34 @@ for(let i = 1; i <= 100; i++){
     }
 }console.log(even);
 
+
+
+
+
+
+
+
+/*
+=============================================================
+Q28. Sum Until Limit 
+1 se numbers add karte jao. 
+Jab sum 200 se zyada ho jaye: 
+• loop stop  
+• jis number par stop hua wo print karo  
+Example: 
+1 + 2 + 3 + ... 
+=============================================================
+*/
+let i = 1;
+let sum = 0;
+while(true){
+    sum = sum + i;
+    if(sum>200){
+        console.log("Stoped",i);
+        break;
+    }
+    i++;  
+
+}
+
+
