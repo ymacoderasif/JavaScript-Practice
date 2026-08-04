@@ -653,3 +653,33 @@ while(balance >= withdraw){
 console.log("Transation Failed");
 console.log("Remaining Balance",balance);
 
+
+
+
+
+
+
+
+/*
+==================================================================
+Q31. Health Regeneration             
+health = 25; 
+Rules: 
+• Har turn +15 health  
+• Agar health 80 cross kar jaye toh +5 hi add karo  
+• 100 par stop  
+Final health print karo. 
+==================================================================
+*/
+let health = 25;
+while(health < 100){
+
+    if(health > 80){
+        health = health + 5;
+    }else{
+        health = health + 15;
+    }    
+    console.log(health);
+
+}
+console.log("Final Health :",health);
