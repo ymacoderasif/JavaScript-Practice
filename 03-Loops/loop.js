@@ -752,3 +752,28 @@ for(let i = 1; i <= 100; i++){
     }
 
 }
+
+
+
+
+
+
+
+
+/*
+=======================================================
+Q34. Highest Multiplication Result 
+1 se 20 tak loop. 
+Har number ko 7 se multiply karo. 
+Sabse bada result store karke end me print karo.
+=======================================================
+*/
+let largestNumber = 0;
+for(let i = 1; i <= 20;i++){
+    let result = i * 7;
+    if(result > largestNumber){
+        largestNumber = result;
+    }
+    
+}
+console.log("Highest Value",largestNumber);
