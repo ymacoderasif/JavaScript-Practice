@@ -439,3 +439,29 @@ for(let i = 1; i <= 100; i++){
 console.log(count);
 
 
+
+
+
+
+
+
+/*
+===================================================================
+Q23. (Mix of Loop + Condition) 
+Print numbers from 1 to 30. 
+• If divisible by 2 → print "Even"  
+• If divisible by 3 → print "Divisible by 3"  
+• Otherwise print the number.  
+===================================================================
+*/
+for(let i = 1; i <= 30; i++){
+    if(i%2===0){
+        console.log("Even");
+    }if(i%3===0){
+        console.log("Divisible by 3");
+    }if(i%2 !== 0 && i%3 !== 0){
+        console.log(i);   
+    }
+}
+
+
