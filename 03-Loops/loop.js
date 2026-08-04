@@ -519,3 +519,30 @@ for(let i = 100; i >= 1; i--){
         console.log(i);
     }
 }
+
+
+
+
+
+
+
+
+/*
+======================================================
+Q26. Count Special Numbers 
+1 se 100 tak count karo. 
+Kitne numbers: 
+• 3 se divisible hain  
+• aur 2 se divisible nahi hain  
+Sirf final count print karo.
+======================================================
+*/
+let count = 0;
+for(let i = 1; i <= 100; i++){
+    if(i%3===0 && i%2 !==0){
+    count++;
+    }
+}
+console.log(count);
+
+
