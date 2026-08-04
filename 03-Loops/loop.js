@@ -326,3 +326,29 @@ for( let i = 1; i <= 20; i++){
     }
 }
 
+
+
+
+
+
+
+
+/*
+========================================================
+Q18.Find the largest number from: 
+let a = 10; 
+let b = 25; 
+let c = 18; 
+using if else. 
+========================================================
+*/
+let a = 50;
+let b = 25;
+let c = 35;
+if(a > b && a > c){
+    console.log("largest number is A :-",a);
+}else if(b > a && b > c){
+    console.log("largest number is B :-",b);
+}else{
+    console.log("largest number is C :-",c);
+}
