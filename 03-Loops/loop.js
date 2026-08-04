@@ -465,3 +465,35 @@ for(let i = 1; i <= 30; i++){
 }
 
 
+
+
+
+
+
+
+/*
+==========================================================================
+Q24. (Mini Challenge  ) 
+Print the multiplication tables from 1 to 5. 
+Example: 
+Table of 1 
+1 x 1 = 1 
+... 
+Table of 2 
+2 x 1 = 2 
+... 
+Isme nested loop lagega. Agar nested loop abhi nahi padha hai 
+to baad me karna. 
+Medium Level 
+==========================================================================
+*/
+for (let i = 1; i <= 5; i++) {
+    console.log(`Table of ${i}`);
+
+    for (let j = 1; j <= 10; j++) {
+        console.log(`${i} * ${j} = ${i * j}`);
+    }
+    console.log("---------------");
+}
+
+
