@@ -418,3 +418,24 @@ console.log(`${num}! = ${result}`);
 
 
 
+
+
+
+
+
+/*
+=====================================================================
+Q22. (Good Practice) 
+Count how many numbers between 1 and 100 are divisible by 
+7. 
+=====================================================================
+*/
+let count = 0;
+for(let i = 1; i <= 100; i++){
+    if(i%7===0){
+        count++;
+    }
+}
+console.log(count);
+
+
