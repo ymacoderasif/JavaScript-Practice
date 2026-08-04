@@ -352,3 +352,27 @@ if(a > b && a > c){
 }else{
     console.log("largest number is C :-",c);
 }
+
+
+
+
+
+
+
+
+/*
+===================================================================
+Q19.Check whether a number is positive, negative, or zero. 
+Example: 
+let n.um = -5; 
+===================================================================
+*/
+let num = prompt("Enter a number :-");
+if(num > 0){
+    console.log("Positive");
+}else if(num < 0){
+    console.log("Negative");
+}else{
+    console.log("Zero");
+}
+
