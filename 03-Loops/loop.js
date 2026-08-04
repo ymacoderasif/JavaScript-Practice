@@ -597,3 +597,30 @@ while(true){
 }
 
 
+
+
+
+
+
+
+/*
+=======================================================
+Q29. Multiplication Table Checker 
+Table of 7 print karo. 
+Saath me check karo: 
+• Result even hai ya odd  
+Example: 
+7 x 2 = 14 Even 
+7 x 3 = 21 Odd 
+Medium-Hard Level 
+=======================================================
+*/
+console.log("Table of 7");
+console.log("----------");
+for(let i = 1; i <= 10; i++){
+    if(i%2===0){
+        console.log(`7 * ${i} = ${7 * i} Even`);
+    }else{
+        console.log(`7 * ${i} = ${7 * i} Odd`);
+    }
+}
