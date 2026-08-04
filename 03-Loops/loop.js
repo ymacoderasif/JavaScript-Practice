@@ -497,3 +497,25 @@ for (let i = 1; i <= 5; i++) {
 }
 
 
+
+
+
+
+
+
+/*
+===================================================================
+Q25. Reverse Counting with Rules 
+100 se 1 tak print karo. 
+Lekin: 
+• Agar number 10 se divisible hai → "Boom" print karo  
+• Warna number print karo  
+===================================================================
+*/
+for(let i = 100; i >= 1; i--){
+    if(i%10===0){
+        console.log("Boom");
+    }else{
+        console.log(i);
+    }
+}
