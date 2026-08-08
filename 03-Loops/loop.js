@@ -777,3 +777,29 @@ for(let i = 1; i <= 20;i++){
     
 }
 console.log("Highest Value",largestNumber);
+
+
+
+
+
+
+
+
+/*
+=====================================================
+Q35. Prime Number Finder 
+1 se 100 tak saare prime numbers print karo.
+=====================================================
+*/
+for(let i = 2; i <= 100;i++){
+    let isPrime = true;
+    for(let j = 2; j < i; j++){
+        if(i%j === 0){
+            isPrime = false;
+            break;
+        }
+    }
+    if(isPrime){
+        console.log(i);
+    }
+}
