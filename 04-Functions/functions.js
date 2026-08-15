@@ -368,3 +368,37 @@ function reverseNumber(reverseValue){
     console.log(reverseResult);
 }
 reverseNumber(1234);
+
+
+
+
+
+
+
+
+/*
+===========================================================================
+Q15.  
+Ek function banao jo check kare number palindrome hai ya nahi.  
+Example:  
+isPalindrome(121); Output:  
+Palindrome 
+===========================================================================
+*/
+function isPalindrome(palindromeNumber){
+    let palindromeReverse = 0;
+    let originalPalindrome = palindromeNumber;
+    while(palindromeNumber > 0){
+        let palindromeDigit = palindromeNumber % 10;
+        palindromeReverse = palindromeReverse * 10 + palindromeDigit;
+        palindromeNumber = Math.floor(palindromeNumber / 10);
+    }
+    if(palindromeReverse === originalPalindrome){
+        console.log("Palindrome");
+    }else{
+        console.log("Not a Palindrome");
+    }
+  
+    
+}
+isPalindrome(121);
