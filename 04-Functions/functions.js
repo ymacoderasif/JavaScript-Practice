@@ -141,3 +141,28 @@ function largest(largestFirst,largestSecond,largestThird){
     }
 }
 largest(10,25,20);
+
+
+
+
+
+
+
+
+/*
+======================================================================================
+Q7.  
+Ek function banao jo kisi number ka multiplication table print kare.  
+Example: table(7); 
+Output:  
+7 x 1 = 7  
+...  
+7 x 10 = 70 
+======================================================================================
+*/
+function table(tableNumber){
+    for(let i = 1;i <= 10;i++){
+        console.log(`${tableNumber} * ${i} = ${tableNumber * i}`);
+    }
+}
+table(10)
