@@ -166,3 +166,30 @@ function table(tableNumber){
     }
 }
 table(10)
+
+
+
+
+
+
+
+
+/*
+================================================================
+Q8.  
+Ek function banao jo 1 se n tak ka sum nikale.  
+Example: sumTillN(5); 
+Output:  
+15  
+Kyuki:  
+1 + 2 + 3 + 4 + 5 = 15 
+================================================================
+*/
+function sumTillN(sumLimit){
+    let total = 0;
+    for(let i = 1;i <= sumLimit;i++){
+        total = total + i;
+    }
+    console.log(total);
+}
+sumTillN(5)
