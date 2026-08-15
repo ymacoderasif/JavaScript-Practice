@@ -252,3 +252,35 @@ function factorial(factorialNumber){
     
 }
 factorial(5);
+
+
+
+
+
+
+
+
+/*
+=================================================================
+Q11.  
+Ek function banao jo check kare leap year hai ya nahi.  
+Example:  
+checkLeapYear(2000); 
+
+Output:  
+Leap Year 
+=================================================================
+*/
+function checkLeapYear(leapYear){
+    if(leapYear % 400 === 0){
+        console.log("Leap year");
+    }else if(leapYear % 100 === 0){
+        console.log("Not Leap Year");
+    }else if(leapYear % 4 === 0){
+        console.log("Leap year");
+    }else{
+        console.log("Not Leap Year");
+
+    }
+}
+checkLeapYear(2000)
