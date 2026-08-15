@@ -43,3 +43,25 @@ function namePrint(){
     console.log("Hello",personName);
 }
 namePrint();
+
+
+
+
+
+
+
+
+
+/*
+===================================================================
+Q3.  
+Ek function banao jo 2 numbers ka sum print kare.  
+Example: add(10, 
+20); Output:  
+30 
+===================================================================
+*/
+function sumNumber(firstNumber,secondNumber){
+    console.log("Two Number Of Sum :-",firstNumber + secondNumber);
+}
+sumNumber(10,20);
