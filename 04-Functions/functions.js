@@ -224,3 +224,31 @@ function countEven(evenLimit){
     
 }
 countEven(50);
+
+
+
+
+
+
+
+
+/*
+==========================================================
+Q10.  
+Ek function banao jo factorial nikale.  
+Example:  
+factorial(5); 
+
+Output:  
+120 
+==========================================================
+*/
+function factorial(factorialNumber){
+    let factorialResult = 1;
+    for(let i = 1; i <= factorialNumber;i++){
+        factorialResult = factorialResult * i;
+    }
+    console.log(factorialResult);
+    
+}
+factorial(5);
