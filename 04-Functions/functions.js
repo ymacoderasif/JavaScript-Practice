@@ -193,3 +193,34 @@ function sumTillN(sumLimit){
     console.log(total);
 }
 sumTillN(5)
+
+
+
+
+
+
+
+
+/*
+============================================================================
+Q9.  
+Ek function banao jo count kare ki 1 se n tak kitne even numbers 
+hain.  
+Example:  
+countEven(10); 
+
+Output:  
+5 
+============================================================================
+*/
+function countEven(evenLimit){
+    let evenCount = 0;
+    for(let i = 1;i <= evenLimit;i++){
+        if(i % 2 === 0){
+            evenCount = evenCount + 1;
+        }
+    }
+    console.log(evenCount);
+    
+}
+countEven(50);
