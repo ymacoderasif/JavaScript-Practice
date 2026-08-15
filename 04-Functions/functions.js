@@ -92,3 +92,23 @@ function checkEvenOdd(checkNumber){
     }
 }
 checkEvenOdd(9);
+
+
+
+
+
+
+
+
+/*
+=================================================================
+Q5.  
+Ek function banao jo kisi number ka square print kare.  
+Example: square(5); 
+Output: 25
+=================================================================
+*/
+function square(squareNumber){
+    console.log(squareNumber * squareNumber);
+}
+square(5);
