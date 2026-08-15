@@ -112,3 +112,32 @@ function square(squareNumber){
     console.log(squareNumber * squareNumber);
 }
 square(5);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q6.  
+Ek function banao jo 3 numbers me se largest number print kare.  
+Example:  
+largest(10, 25, 18); 
+Output:  
+25 
+==========================================================================
+*/
+function largest(largestFirst,largestSecond,largestThird){
+    if(largestFirst > largestSecond && largestFirst > largestThird){
+        console.log(largestFirst);
+    }else if(largestSecond > largestFirst && largestSecond > largestThird){
+        console.log(largestSecond);
+    }else{
+        console.log(largestThird);
+        
+    }
+}
+largest(10,25,20);
