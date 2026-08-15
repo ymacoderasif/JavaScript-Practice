@@ -864,3 +864,50 @@ for(let i = 1; i <= 100; i++){
         break;
     }
 }
+
+
+
+
+
+
+
+
+/*
+===================================================
+Q38. Boss Battle System            
+bossHealth = 250 
+damage = 30 
+Rules: 
+• Har attack me health kam karo  
+• Jab health 100 se niche aaye: 
+"Boss Rage Mode Activated"  
+• Jab health 50 se niche aaye: 
+"Boss Critical"  
+• Health 0 ho: 
+"Boss Defeated"  
+Dhyan rahe messages baar-baar print na hon.
+==================================================
+*/
+let bossHealth = 250;
+let damage = 30;
+let rageActivated = false;
+let criticalActivated = false;
+
+while (bossHealth > 0) {
+    bossHealth = bossHealth - damage;
+
+    if (bossHealth < 100 && !rageActivated) {
+        console.log("Boss Rage Mode Activated");
+        rageActivated = true;
+    }
+
+    if (bossHealth < 50 && !criticalActivated) {
+        console.log("Boss Critical");
+        criticalActivated = true;
+    }
+
+    if (bossHealth <= 0) {
+        console.log("Boss Defeated");
+        break;
+    }
+}
