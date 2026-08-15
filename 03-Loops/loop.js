@@ -803,3 +803,34 @@ for(let i = 2; i <= 100;i++){
         console.log(i);
     }
 }
+
+
+
+
+
+
+
+
+/*
+============================================
+Q36. Armstrong Number Check 
+Ek number diya hai: 
+153 
+Check karo Armstrong hai ya nahi.
+============================================
+*/
+let number = 153;
+let originalNumber = number;
+let sum = 0;
+
+while (number > 0) {
+    let digit = number % 10;
+    sum = sum + digit ** 3;
+    number = Math.floor(number / 10);
+}
+
+if (sum === originalNumber) {
+    console.log("Armstrong Number");
+} else {
+    console.log("Not Armstrong Number");
+}
