@@ -936,3 +936,71 @@ for(let i = 1;i <= 5; i++){
     balance = balance + interestAmount;
 }
 console.log("Final Balance",balance);
+
+
+
+
+
+
+
+
+
+/*
+==============================================================================
+Q40.            
+Dungeon Adventure Game 
+Player ke paas: 
+health = 100 
+coins = 0 
+Loop 1 se 20 rooms tak chalega. 
+Rules: 
+Room Number 
+Har room ke liye check karo: 
+1. Agar room number 3 se divisible hai 
+Player ko monster milta hai. 
+• Health se 15 minus karo.  
+Print: 
+Monster Attack! 
+2. Agar room number 5 se divisible hai 
+Player ko treasure milta hai. 
+• Coins me 20 add karo.  
+Print: 
+Treasure Found! 
+3. Agar room number dono (3 aur 5) se divisible hai 
+Monster bhi milega aur treasure bhi. 
+Dono actions apply honge. 
+4. Agar health 0 ya usse kam ho jaye 
+Print: 
+Game Over 
+Aur loop turant stop kar do. 
+End me print karo: 
+Final Health: ? 
+Final Coins: ? 
+Rooms Cleared: ?
+============================================================================
+*/
+let playerHealth = 100;
+let coins = 0;
+let roomsCleared = 0;
+for(let room = 1; room <= 20; room++){
+
+    if(room % 3 === 0){
+        playerHealth = playerHealth - 15;
+        console.log("Monster Attack!");
+    }
+
+    if(room % 5 === 0){
+        coins = coins + 20;
+        console.log("Treasure Found!");
+    }
+
+    if(playerHealth <= 0){
+        console.log("Game Over");
+        break;
+    }
+
+    roomsCleared++;
+}
+console.log("Final Health:", playerHealth);
+console.log("Final Coins:", coins);
+console.log("Rooms Cleared:", roomsCleared);
