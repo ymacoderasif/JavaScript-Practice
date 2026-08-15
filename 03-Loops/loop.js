@@ -911,3 +911,28 @@ while (bossHealth > 0) {
         break;
     }
 }
+
+
+
+
+
+
+
+
+
+/*
+===============================================
+Q39. Mini Bank Interest Calculator       
+balance = 1000 
+Har year: 
+• 10% interest add karo  
+5 years ke baad final balance print karo.
+===============================================
+*/
+let balance = 1000;
+let interest = 10;
+for(let i = 1;i <= 5; i++){
+    let interestAmount = (balance * interest) / 100;
+    balance = balance + interestAmount;
+}
+console.log("Final Balance",balance);
