@@ -65,3 +65,30 @@ function sumNumber(firstNumber,secondNumber){
     console.log("Two Number Of Sum :-",firstNumber + secondNumber);
 }
 sumNumber(10,20);
+
+
+
+
+
+
+
+
+/*
+===================================================================
+Q4.  
+Ek function banao jo check kare number even hai ya odd.  
+Example:  
+checkEvenOdd(7);  
+Output:  
+Odd 
+===================================================================
+*/
+function checkEvenOdd(checkNumber){
+    if(checkNumber % 2 === 0){
+        console.log("Even");
+    }else{
+        console.log("Odd");
+        
+    }
+}
+checkEvenOdd(9);
