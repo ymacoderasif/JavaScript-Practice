@@ -402,3 +402,31 @@ function isPalindrome(palindromeNumber){
     
 }
 isPalindrome(121);
+
+
+
+
+
+
+
+
+/*
+======================================================================
+Q16.  
+Function banao jo kisi number ke digits ka sum nikale.  
+Example:  
+digitSum(1234) Output:  
+10 
+======================================================================
+*/
+function digitSum(digitNumber){
+    let sumDigits = 0;
+    while(digitNumber > 0){
+        let digit = digitNumber % 10;
+        sumDigits = sumDigits + digit;
+        digitNumber = Math.floor(digitNumber / 10);
+    }
+    console.log(sumDigits);
+    
+}
+digitSum(1234);
