@@ -316,3 +316,28 @@ function fizzBuzz(fizzBuzzLimit){
     }
 }
 fizzBuzz(20)
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q13.  
+Ek function banao jo kisi number ke saare factors print kare.  
+Example: factors(12); 
+Output:  
+1 2 3 4 6 12 
+====================================================================
+*/
+function factors(factorNumber){
+    for(let i = 1; i <= factorNumber;i++){
+        if(factorNumber % i === 0){
+            console.log(i);   
+        }
+    }
+}
+factors(12);
