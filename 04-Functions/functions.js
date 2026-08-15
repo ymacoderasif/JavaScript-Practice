@@ -341,3 +341,30 @@ function factors(factorNumber){
     }
 }
 factors(12);
+
+
+
+
+
+
+
+
+/*
+==========================================================
+Q14.  
+Ek function banao jo number reverse kare.  
+Example:  
+reverseNumber(1234); Output:  
+4321  
+==========================================================
+*/
+function reverseNumber(reverseValue){
+    let reverseResult = 0;
+    while(reverseValue > 0){
+        let lastDigit = reverseValue % 10;
+        reverseResult = reverseResult * 10 + lastDigit;
+        reverseValue = Math.floor(reverseValue / 10);
+    }
+    console.log(reverseResult);
+}
+reverseNumber(1234);
