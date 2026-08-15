@@ -834,3 +834,33 @@ if (sum === originalNumber) {
 } else {
     console.log("Not Armstrong Number");
 }
+
+
+
+
+
+
+
+
+/*
+==============================================
+Q37. Guessing Game Simulation 
+Secret number = 68 
+Loop 1 se 100 tak. 
+Har number ke liye: 
+• agar chhota hai → "Too Low"  
+• agar bada hai → "Too High"  
+• agar equal hai → "Correct" aur stop 
+==============================================
+*/
+let secretNumber = 68;
+for(let i = 1; i <= 100; i++){
+    if(secretNumber > i){
+        console.log("Too low");
+    }else if(secretNumber < i){
+        console.log("Too High");
+    }else{
+        console.log("Correct");
+        break;
+    }
+}
