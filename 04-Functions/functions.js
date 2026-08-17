@@ -484,3 +484,25 @@ function sumRange(rangeStart,rangeEnd){
     return rangeSum;
 }
 sumRange(5,10);
+
+
+
+
+
+
+
+
+/*
+===========================================================================
+Q19.  
+Function banao jo kisi number ke saare multiples print kare jo 100 
+se chhote hon.  
+Example: multiples(7)  
+===========================================================================
+*/
+function multiples(multipleNumber){
+    for(let i = 1;multipleNumber * i < 100;i++){
+        console.log(`${multipleNumber * i}`);   
+    }
+}
+multiples(6);
