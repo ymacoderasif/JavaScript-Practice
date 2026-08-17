@@ -430,3 +430,31 @@ function digitSum(digitNumber){
     
 }
 digitSum(1234);
+
+
+
+
+
+
+
+
+/*
+======================================================================
+Q17.  
+Function banao jo kisi number me total digits count kare.  
+Example:  
+countDigits(98765) 
+Output:  
+5 
+======================================================================
+*/
+function countDigits(digitCountNumber){
+    let totalDigits = 0;
+    while(digitCountNumber > 0){
+        totalDigits = totalDigits + 1;
+        digitCountNumber = Math.floor(digitCountNumber / 10);
+    }
+    console.log(totalDigits);
+    
+}
+countDigits(123456);
