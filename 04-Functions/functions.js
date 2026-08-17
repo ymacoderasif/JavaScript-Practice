@@ -458,3 +458,29 @@ function countDigits(digitCountNumber){
     
 }
 countDigits(123456);
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q18.  
+Function banao jo 2 numbers ke beech ka sum return kare.  
+Example:  
+sumRange(5, 10) 
+Output:  
+45  
+====================================================================
+*/
+function sumRange(rangeStart,rangeEnd){
+    let rangeSum = 0;
+    for(let i = rangeStart;i <= rangeEnd; i++){
+        rangeSum = rangeSum + i;
+    }
+    return rangeSum;
+}
+sumRange(5,10);
