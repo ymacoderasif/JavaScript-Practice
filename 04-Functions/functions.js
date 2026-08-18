@@ -532,3 +532,28 @@ function checkSpecialNumber(specialNumber){
     }
 }
 checkSpecialNumber(10);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q21.  
+Function banao jo kisi number ke saare odd factors print kare.  
+Example:  
+oddFactors(45) 
+==========================================================================
+*/
+function oddFactors(oddFactorNumber){
+    for(let i = 1;i <= oddFactorNumber;i++){
+        if(oddFactorNumber % i === 0 && i % 2 === 1){
+            console.log(i);
+            
+        }
+    }
+}
+oddFactors(45);
