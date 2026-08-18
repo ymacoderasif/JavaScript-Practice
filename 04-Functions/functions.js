@@ -557,3 +557,28 @@ function oddFactors(oddFactorNumber){
     }
 }
 oddFactors(45);
+
+
+
+
+
+
+
+
+
+/*
+==============================================================================
+Q22.  
+Function banao jo 1 se n tak sabhi odd numbers ka sum return kare.  
+==============================================================================
+*/
+function sumOddNumbers(oddNumberLimit){
+    let oddNumber = 0;
+    for(let i = 1; i <= oddNumberLimit;i++){
+        if(i % 2 === 1){
+            oddNumber = oddNumber + i;
+        }
+    }
+    console.log(oddNumber);   
+}
+sumOddNumbers(10);
