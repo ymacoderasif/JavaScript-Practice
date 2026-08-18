@@ -506,3 +506,29 @@ function multiples(multipleNumber){
     }
 }
 multiples(6);
+
+
+
+
+
+
+
+
+/*
+============================================================
+Q20.  
+Function banao jo check kare:  
+• even hai   
+• aur 5 se divisible hai  To print:  
+Special Number Otherwise:  
+Normal Number 
+============================================================
+*/
+function checkSpecialNumber(specialNumber){
+    if(specialNumber % 2 === 0 && specialNumber % 5 === 0){
+        console.log("Special Number");
+    }else{
+        console.log("Normal Number");
+    }
+}
+checkSpecialNumber(10);
