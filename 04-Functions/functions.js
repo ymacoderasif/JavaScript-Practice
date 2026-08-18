@@ -582,3 +582,29 @@ function sumOddNumbers(oddNumberLimit){
     console.log(oddNumber);   
 }
 sumOddNumbers(10);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q23.  
+Function banao jo count kare ki 1 se n tak kitne numbers:  
+• 3 se divisible hain   
+• aur 2 se divisible nahi hain  
+==========================================================================
+*/
+function countNumbers(numberLimit){
+    let divisibleCount = 0;
+    for(let i = 1;i <= numberLimit;i++){
+        if(i % 3 === 0 && !(i % 2 === 0)){
+            divisibleCount = divisibleCount + 1;            
+        }
+    }
+    console.log(divisibleCount);
+}
+countNumbers(20);
