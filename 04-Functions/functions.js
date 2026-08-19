@@ -608,3 +608,27 @@ function countNumbers(numberLimit){
     console.log(divisibleCount);
 }
 countNumbers(20);
+
+
+
+
+
+
+
+
+/*
+=================================================================================
+Q24. Power Calculate
+Question
+Function banao jo kisi number ki power calculate karke print kare.
+=================================================================================
+*/
+function powerNumber(powerBase,powerExponent){
+    let totalPower = 1;
+    for(let i = 1;i <= powerExponent;i++){
+        totalPower = totalPower * powerBase;
+    }
+    console.log(totalPower);
+    
+}
+powerNumber(2,5);
