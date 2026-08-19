@@ -632,3 +632,29 @@ function powerNumber(powerBase,powerExponent){
     
 }
 powerNumber(2,5);
+
+
+
+
+
+
+
+
+/*
+=========================================================================================================
+Q25. Even Number Counter Function
+Question:
+Function banao jo 1 se n tak ke numbers me se kitne Even Numbers hain, unka count print kare.
+=========================================================================================================
+*/
+function evenCounter(evenNumberList){
+    let evenNumber = 0;
+    for(let i = 1;i <= evenNumberList;i++){
+        if(i % 2 === 0){
+            evenNumber = evenNumber + 1;
+        }
+    }
+    console.log(evenNumber);
+    
+}
+evenCounter(10);
