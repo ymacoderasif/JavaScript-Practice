@@ -658,3 +658,32 @@ function evenCounter(evenNumberList){
     
 }
 evenCounter(10);
+
+
+
+
+
+
+
+
+/*
+=================================================================================
+Q26.  
+Function banao jo kisi number ka largest factor (khud number ko 
+chhodkar) return kare.  
+Example:  
+largestFactor(20) Output:  
+10 
+=================================================================================
+*/
+function largestFactor(numberToFactor){
+    let candidateFactor = 0;
+    for(let i = 1;i <= numberToFactor;i++){
+        if(numberToFactor % i === 0){
+            candidateFactor = i; 
+        }
+    }
+    console.log(candidateFactor);
+    
+}
+largestFactor(20);
