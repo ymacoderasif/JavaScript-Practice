@@ -712,3 +712,31 @@ function largestOddNumber(numberToCheck){
     
 }
 largestOddNumber(20);
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q28.  
+Function banao jo kisi number ke digits ka product nikale.  
+Example:  
+234  
+Output:  
+24 
+====================================================================
+*/
+function digitProduct(numberToMultiply){
+    let productResult = 1;
+    while(numberToMultiply > 0){
+        let currentDigit = numberToMultiply % 10;
+        productResult = productResult * currentDigit;
+        numberToMultiply = Math.floor(numberToMultiply / 10);
+    }
+    return productResult;
+}
+console.log(digitProduct(234));
