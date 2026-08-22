@@ -740,3 +740,35 @@ function digitProduct(numberToMultiply){
     return productResult;
 }
 console.log(digitProduct(234));
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q29.  
+Function banao jo check kare number Armstrong hai ya nahi.  
+Example:  
+153  
+========================================================================
+*/
+function isArmstrongNumber(numberValue){
+    let originalNumber = numberValue;
+    let armstrongSum = 0;
+    let digitLength = String(numberValue).length;
+    while(numberValue > 0){
+        let digitValue = numberValue % 10;
+        armstrongSum = armstrongSum + digitValue ** digitLength;
+        numberValue = Math.floor(numberValue / 10);
+    }
+    if(armstrongSum === originalNumber){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(isArmstrongNumber(153));
