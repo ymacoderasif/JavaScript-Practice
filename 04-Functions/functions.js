@@ -772,3 +772,29 @@ function isArmstrongNumber(numberValue){
     }
 }
 console.log(isArmstrongNumber(153));
+
+
+
+
+
+
+
+
+/*
+=================================================================================
+Q30.
+Function banao jo kisi number ka multiplication table print kare aur 
+har result ke saath Even/Odd bhi print kare.
+=================================================================================
+*/
+function printTable(multiplicationNumber){
+    for(let i = 1;i <= 10;i++){
+        if(i % 2 === 0){
+            console.log(`${multiplicationNumber} * ${i} = ${multiplicationNumber * i} --> Even`);
+        }else{
+            console.log(`${multiplicationNumber} * ${i} = ${multiplicationNumber * i} --> Odd`);
+
+        }     
+    }
+}
+printTable(3);
