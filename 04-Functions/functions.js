@@ -687,3 +687,28 @@ function largestFactor(numberToFactor){
     
 }
 largestFactor(20);
+
+
+
+
+
+
+
+
+/*
+======================================================================
+Q27.  
+Function banao jo 1 se n tak sabse bada odd number return kare.  
+======================================================================
+*/
+function largestOddNumber(numberToCheck){
+    let currentOddNumber = 0;
+    for(let i = 1;i <= numberToCheck;i++){
+        if(i % 2 === 1){
+            currentOddNumber = i;
+        }
+    }
+    console.log(currentOddNumber);
+    
+}
+largestOddNumber(20);
