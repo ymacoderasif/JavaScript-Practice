@@ -793,8 +793,39 @@ function printTable(multiplicationNumber){
             console.log(`${multiplicationNumber} * ${i} = ${multiplicationNumber * i} --> Even`);
         }else{
             console.log(`${multiplicationNumber} * ${i} = ${multiplicationNumber * i} --> Odd`);
-
         }     
     }
 }
 printTable(3);
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q31.  
+Function banao jo count kare ki 1 se n tak kitne prime numbers 
+hain.  
+====================================================================
+*/
+function printPrimeNumbers(n) {
+    for (let currentNumber = 2; currentNumber <= n; currentNumber++) {
+        let isPrime = true;
+
+        for (let divisor = 2; divisor < currentNumber; divisor++) {
+            if (currentNumber % divisor === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            console.log(currentNumber);
+        }
+    }
+}
+printPrimeNumbers(20);
