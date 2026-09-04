@@ -854,3 +854,34 @@ function specialSum(rangeFrom,rangeTo){
     return eligibleTotal;
 }
 console.log(specialSum(10,30));
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q33.  
+Function banao jo 3 numbers me se second largest number return 
+kare.  
+Example: 10, 
+50, 30 
+Output: 30 
+=============================================================================
+*/
+function locateRunnerUp(candidateOne, candidateTwo, candidateThree) {
+    let middleValue;
+    if ((candidateOne > candidateTwo && candidateOne < candidateThree) || (candidateOne < candidateTwo && candidateOne > candidateThree)) {
+        middleValue = candidateOne;
+    } else if ((candidateTwo > candidateOne && candidateTwo < candidateThree) || (candidateTwo < candidateOne && candidateTwo > candidateThree)) {
+        middleValue = candidateTwo;
+    } else {
+        middleValue = candidateThree;
+    }
+    return middleValue;
+
+}
+console.log(locateRunnerUp(10, 50, 30));
