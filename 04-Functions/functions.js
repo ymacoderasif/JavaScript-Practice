@@ -988,3 +988,34 @@ function calculateFactorialWithoutMultiply(factorialLimit){
     
 }
 calculateFactorialWithoutMultiply(5);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q37.  
+Function banao jo 1 se n tak sabhi prime numbers print kare.  
+Example:  
+printPrimes(50)  
+========================================================================
+*/
+function listPrimeValues(endingPoint) {
+    let matchedFactors = 0;
+    for(let testedValue = 1;testedValue <= endingPoint;testedValue++){
+        matchedFactors = 0;
+        for(let checkDivisor = 1; checkDivisor <= testedValue;checkDivisor++){
+            if(testedValue % checkDivisor === 0){
+                matchedFactors = matchedFactors + 1;
+            }
+        }
+        if(matchedFactors === 2){
+            console.log(testedValue);
+        }
+    }
+}
+listPrimeValues(10);
