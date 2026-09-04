@@ -829,3 +829,28 @@ function printPrimeNumbers(n) {
     }
 }
 printPrimeNumbers(20);
+
+
+
+
+
+
+
+
+/*
+==================================================================================
+Q32 Function banao jo do numbers ke beech un numbers ka sum return kare
+jo 4 se divisible hon, lekin 6 se divisible na hon.
+==================================================================================
+*/
+function specialSum(rangeFrom,rangeTo){
+    let eligibleTotal = 0;
+    for(let currentValue = rangeFrom;currentValue <= rangeTo;currentValue++){
+        if(currentValue % 4 === 0 && currentValue % 6 !== 0){
+            eligibleTotal = eligibleTotal + currentValue;
+        }
+        
+    }
+    return eligibleTotal;
+}
+console.log(specialSum(10,30));
