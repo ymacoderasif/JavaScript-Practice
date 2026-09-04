@@ -960,3 +960,31 @@ function judgeFactorType(targetNumber){
     }
 }
 judgeFactorType(2);
+
+
+
+
+
+
+
+/*
+=========================================================================
+Questions Q36.  
+Function banao jo kisi number ka factorial nikale without using 
+multiplication operator (*). 
+=========================================================================
+*/
+function calculateFactorialWithoutMultiply(factorialLimit){
+    let factorialAnswer = 1;
+    let additionTotal = 0;
+    for(let factorIndex = 2;factorIndex <= factorialLimit;factorIndex++){
+        additionTotal = 0;
+        for(let repeatCounter = 1;repeatCounter <= factorIndex;repeatCounter++){
+            additionTotal = additionTotal + factorialAnswer;
+        }
+        factorialAnswer = additionTotal;
+    }
+    console.log(factorialAnswer);
+    
+}
+calculateFactorialWithoutMultiply(5);
