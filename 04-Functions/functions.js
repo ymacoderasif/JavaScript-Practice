@@ -928,3 +928,35 @@ function showFizzBuzzPop(upperLimit){
     }
 }
 showFizzBuzzPop(20);
+
+
+
+
+
+
+
+
+/*
+===========================================================================
+Q35.  
+Function banao jo kisi number ke factors count kare aur bataye:  
+Prime  
+Ya  
+Not Prime 
+===========================================================================
+*/
+function judgeFactorType(targetNumber){
+    let divisorCount = 0;
+    for(let divisorStep = 1; divisorStep <= targetNumber ;divisorStep++){
+        if(targetNumber % divisorStep === 0){
+            divisorCount = divisorCount + 1;
+        }
+    }
+    if(divisorCount === 2){
+        console.log("Prime");
+    }else{
+        console.log("Not Prime");
+        
+    }
+}
+judgeFactorType(2);
