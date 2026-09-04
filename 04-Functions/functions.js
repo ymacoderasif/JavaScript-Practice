@@ -885,3 +885,46 @@ function locateRunnerUp(candidateOne, candidateTwo, candidateThree) {
 
 }
 console.log(locateRunnerUp(10, 50, 30));
+
+
+
+
+
+
+
+
+
+/*
+===================================================
+Q34.  
+Function banao jo 1 se n tak:  
+• 3 → Fizz   
+• 5 → Buzz   
+• 7 → Pop   
+Multiple conditions bhi handle kare. 
+===================================================
+*/
+function showFizzBuzzPop(upperLimit){
+    for(let sequenceNumber = 1;sequenceNumber <= upperLimit;sequenceNumber++){
+        if((sequenceNumber % 3 === 0 && sequenceNumber % 5 === 0 )&&(sequenceNumber % 7 === 0)){
+            console.log("FizzBuzzPop");
+        }else if(sequenceNumber % 3 === 0 && sequenceNumber % 5 === 0){
+            console.log("FizzBuzz");  
+        }else if(sequenceNumber % 3 === 0 && sequenceNumber % 7 === 0){
+            console.log("FizzPop");
+        }else if(sequenceNumber % 5 === 0 && sequenceNumber % 7 === 0){
+            console.log("BuzzPop");
+        }else if(sequenceNumber % 3 === 0){
+            console.log("Fizz");
+        }else  if(sequenceNumber % 5 === 0){
+            console.log("Buzz");
+        }else if(sequenceNumber % 7 === 0){
+            console.log("Pop");
+        }else{
+            console.log(sequenceNumber);
+            
+        }
+        
+    }
+}
+showFizzBuzzPop(20);
