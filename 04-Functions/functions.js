@@ -1019,3 +1019,41 @@ function listPrimeValues(endingPoint) {
     }
 }
 listPrimeValues(10);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q38.  
+Function banao jo kisi number ka reverse nikale aur bataye kitne 
+digits even hain.  
+Example:  
+24831  
+Output:  
+Reverse: 13842  
+Even Digits: 3 
+=============================================================================
+*/
+function reverseAndCountEvens(sourceValue){
+    let workingValue = sourceValue;
+    let digitPiece = 0;
+    let reversedValue = 0;
+    let evenDigitCount = 0;
+    while(workingValue > 0){
+        digitPiece = workingValue % 10;
+        reversedValue = reversedValue * 10 + digitPiece;
+        if(digitPiece % 2 === 0){
+            evenDigitCount = evenDigitCount + 1;
+        }
+        workingValue = Math.floor(workingValue / 10);
+    }
+    console.log(`Reverse: ${reversedValue}`);
+    console.log(`Even Digits: ${evenDigitCount}`);
+    
+}
+reverseAndCountEvens(24831);
