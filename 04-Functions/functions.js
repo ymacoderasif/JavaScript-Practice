@@ -1151,3 +1151,35 @@ function identifyPerfectValue(perfectCandidate){
     }
 }
 identifyPerfectValue(28);
+
+
+
+
+
+
+
+
+/*
+====================================================================
+Q42.  
+Function banao jo 1 se n tak sabhi Perfect Numbers print kare.  
+====================================================================
+*/
+function displayPerfectSeries(maximumRange){
+    let divisorSumValue = 0;
+    for(let scanValue = 1;scanValue <= maximumRange;scanValue++){
+        divisorSumValue = 0;
+       for(let divisorTrial = 1;divisorTrial < scanValue;divisorTrial++){
+        if(scanValue % divisorTrial === 0){
+            divisorSumValue = divisorSumValue + divisorTrial;
+        }
+       }
+       if(divisorSumValue === scanValue){
+        console.log(scanValue);
+        
+       }
+       
+    }
+   
+}
+displayPerfectSeries(50);
