@@ -1090,3 +1090,30 @@ function showFactorialSeries(seriesLimit){
     }
 }
 showFactorialSeries(5);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q40.  
+Function banao jo kisi number ke factors ka sum return kare.  
+Example:  
+factorSum(12) Output:  
+28  
+========================================================================
+*/
+function computeDivisorSum(subjectValue){
+    let divisorTotal = 0;
+    for(let divisorCandidate = 1;divisorCandidate <= subjectValue;divisorCandidate++){
+        if(subjectValue % divisorCandidate === 0){
+            divisorTotal = divisorTotal + divisorCandidate;
+        }
+    }
+    return divisorTotal;
+}
+console.log(computeDivisorSum(4));
