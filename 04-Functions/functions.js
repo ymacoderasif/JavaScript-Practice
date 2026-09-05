@@ -1117,3 +1117,37 @@ function computeDivisorSum(subjectValue){
     return divisorTotal;
 }
 console.log(computeDivisorSum(4));
+
+
+
+
+
+
+
+
+/*
+================================================================================
+Q41.  
+Function banao jo check kare ki number Perfect Number hai ya 
+nahi.  
+Example:  
+6  
+Kyuki:  
+1 + 2 + 3 = 6 
+================================================================================
+*/
+function identifyPerfectValue(perfectCandidate){
+    let properDivisorSum = 0;
+    for(let properDivisor = 1;properDivisor < perfectCandidate;properDivisor++){
+        if(perfectCandidate % properDivisor === 0){
+            properDivisorSum = properDivisorSum + properDivisor;
+        }
+    }
+    if(properDivisorSum === perfectCandidate){
+        console.log("Perfect Number");
+    }else{
+        console.log("Not a Perfect Number");
+        
+    }
+}
+identifyPerfectValue(28);
