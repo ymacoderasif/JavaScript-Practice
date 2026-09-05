@@ -1057,3 +1057,36 @@ function reverseAndCountEvens(sourceValue){
     
 }
 reverseAndCountEvens(24831);
+
+
+
+
+
+
+
+
+/*
+=================================================================================
+Q39.  
+Function banao jo 1 se n tak sabhi numbers ka factorial print kare.  
+Example: factorialSeries(5) 
+Output:  
+1! = 1  
+2! = 2  
+3! = 6  
+4! = 24  
+5! = 120 
+=================================================================================
+*/
+function showFactorialSeries(seriesLimit){
+    let seriesResult = 1;
+    for(let seriesNumber = 1; seriesNumber <= seriesLimit;seriesNumber++){
+        seriesResult = 1;
+        for(let multiplierValue = 1;multiplierValue <= seriesNumber;multiplierValue++){
+            seriesResult = seriesResult * multiplierValue;
+        }
+        console.log(`${seriesNumber} = ${seriesResult}`);
+        
+    }
+}
+showFactorialSeries(5);
