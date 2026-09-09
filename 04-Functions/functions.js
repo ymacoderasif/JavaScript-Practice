@@ -1519,3 +1519,35 @@ function convertNumberToBinary(decimalInput){
     
 }
 convertNumberToBinary(10);
+
+
+
+
+
+
+
+
+/*
+===========================================================================
+Q52.  
+Function banao jo decimal number ko binary me convert kare aur 
+binary ke 1s count kare. 
+===========================================================================
+*/
+function convertDecimalAndCountOnes(decimalValue){
+    let conversionNumber = decimalValue;
+    let binarySequence = "";
+    let onesCounter = 0;
+    while(conversionNumber > 0){
+        let remainderDigit = conversionNumber % 2;
+        binarySequence = remainderDigit + binarySequence;
+
+        if(remainderDigit === 1){
+            onesCounter = onesCounter + 1;
+        }
+        conversionNumber = Math.floor(conversionNumber / 2);
+    }
+    console.log(`Binary:- ${binarySequence}`);
+    console.log(`Count of 1s:- ${onesCounter}`);   
+}
+convertDecimalAndCountOnes(10);
