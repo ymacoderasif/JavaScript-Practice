@@ -1377,3 +1377,49 @@ function findLargestPrimeDivisor(factorSource) {
   return largestPrimeValue;
 }
 console.log(findLargestPrimeDivisor(84));
+
+
+
+
+
+
+
+
+/*
+===============================================================================
+Q48.  
+Function banao jo kisi range me sabse bada prime number return 
+kare.  
+Example:  
+largestPrime(50, 100)  
+===============================================================================
+*/
+function returnHighestPrimeInRange(lowerBound, upperBound) {
+  let highestPrimeFound = 0;
+
+  for (
+    let rangeCandidate = lowerBound;
+    rangeCandidate <= upperBound;
+    rangeCandidate++
+  ) {
+    let divisorAmount = 0;
+
+    for (
+      let divisorInspector = 1;
+      divisorInspector <= rangeCandidate;
+      divisorInspector++
+    ) {
+      if (rangeCandidate % divisorInspector === 0) {
+        divisorAmount = divisorAmount + 1;
+      }
+    }
+
+    if (divisorAmount === 2) {
+      highestPrimeFound = rangeCandidate;
+    }
+  }
+
+  return highestPrimeFound;
+}
+
+console.log(returnHighestPrimeInRange(50, 100));
