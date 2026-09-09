@@ -1423,3 +1423,39 @@ function returnHighestPrimeInRange(lowerBound, upperBound) {
 }
 
 console.log(returnHighestPrimeInRange(50, 100));
+
+
+
+
+
+
+
+
+
+/*
+==============================================================================
+Q49.  
+Function banao jo kisi number ke digits ka product aur sum dono 
+return kare.  
+Example:  
+234  
+Output:  
+Sum = 9  
+Product = 24 
+==============================================================================
+*/
+function calculateDigitSumAndProduct(numberInput){
+    let unprocessedNumber = numberInput.toString();
+    let digitsArray = unprocessedNumber.split("");
+    let digitsSum = 0;
+    let digitsProduct = 1;
+    for(let i = 0; i < digitsArray.length; i++){
+        let digit = digitsArray[i];
+        digit = Number(digit);
+        digitsSum = digitsSum + digit;
+        digitsProduct = digitsProduct * digit;
+    }
+    console.log("Sum =", digitsSum);
+    console.log("Product =", digitsProduct);
+}
+calculateDigitSumAndProduct(234);
