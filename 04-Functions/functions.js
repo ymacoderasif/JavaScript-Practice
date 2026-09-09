@@ -1210,3 +1210,30 @@ function printAscendingDigits(digitSource){
     return ascendingResult;
 }
 console.log(printAscendingDigits(654321));
+
+
+
+
+
+
+
+
+/*
+===========================================================================
+Q44.  
+Function banao jo kisi number ke digits ko descending order me 
+print kare.  
+Example:  
+53142  
+Output:  
+54321  
+===========================================================================
+*/
+function printDescendingDigits(sourceDigits){
+    let pendingDigits = sourceDigits.toString();
+    let currentDigit = pendingDigits.split("");
+    let rankDigit = currentDigit.sort((a,b)=> b - a);
+    let descendingValue = rankDigit.join();
+    return descendingValue;
+}
+console.log(printDescendingDigits(84465645));
