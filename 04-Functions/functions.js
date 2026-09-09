@@ -1459,3 +1459,32 @@ function calculateDigitSumAndProduct(numberInput){
     console.log("Product =", digitsProduct);
 }
 calculateDigitSumAndProduct(234);
+
+
+
+
+
+
+
+
+/*
+=====================================================================
+Q50.  
+Function banao jo 1 se n tak aise numbers count kare:  
+• 3 se divisible   
+• 5 se divisible nahi   
+• odd hone chahiye  
+=====================================================================
+*/
+function findSpecialNumbers(countlimit){
+    let total = 0;
+    for(let i = 1;i <= countlimit;i++){
+        if(i % 3 === 0 && i % 5 !== 0){
+            if(i % 2 === 1){
+                total++;
+            }
+        }
+    }
+    console.log(total);
+}
+findSpecialNumbers(20);
