@@ -1488,3 +1488,34 @@ function findSpecialNumbers(countlimit){
     console.log(total);
 }
 findSpecialNumbers(20);
+
+
+
+
+
+
+
+
+/*
+===================================================================================
+Q51.  
+Function banao jo kisi number ka binary representation manually 
+print kare.  
+Example:  
+10  
+Output:  
+1010 
+===================================================================================
+*/
+function convertNumberToBinary(decimalInput){
+    let remainingValue = decimalInput;
+    let binaryResult = "";
+    while(remainingValue > 0){
+        let binaryDigit = remainingValue % 2;
+        binaryResult = binaryDigit + binaryResult;
+        remainingValue = Math.floor(remainingValue / 2);
+    }
+    console.log(binaryResult);
+    
+}
+convertNumberToBinary(10);
