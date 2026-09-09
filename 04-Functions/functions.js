@@ -1270,3 +1270,62 @@ function verifyArmstrongCubeTotal(armstrongInput){
     }
 }
 verifyArmstrongCubeTotal(135);
+
+
+
+
+
+
+
+
+/*
+================================================================================
+Q46.  
+Function banao jo 1 se n tak:  
+• Fizz   
+• Buzz   
+• Pop  print kare aur saath me count bhi rakhe ki Fizz kitni 
+baar aaya, Buzz kitni baar aaya, Pop kitni baar aaya. 
+================================================================================
+*/
+function countFizzBuzzPopOutputs(loopEnd){
+    let fizzOccurrences = 0;
+    let buzzOccurrences = 0;
+    let popOccurrences = 0;
+    for(let activeNumber = 1; activeNumber <= loopEnd;activeNumber++){
+        if((activeNumber % 3 === 0 && activeNumber % 5 === 0) && activeNumber % 7 === 0){
+            console.log("FizzBuzzPop");
+            fizzOccurrences = fizzOccurrences + 1;
+            buzzOccurrences = buzzOccurrences + 1;
+            popOccurrences = popOccurrences + 1;
+        }else if(activeNumber % 3 === 0 && activeNumber % 5 === 0){
+            console.log("FizzBuzz");
+            fizzOccurrences = fizzOccurrences + 1;
+            buzzOccurrences = buzzOccurrences + 1;
+        }else if(activeNumber % 3 === 0 && activeNumber % 7 === 0){
+            console.log("FizzPop");
+            fizzOccurrences = fizzOccurrences + 1;
+            popOccurrences = popOccurrences + 1;
+        }else if(activeNumber % 5 === 0 && activeNumber % 7 === 0){
+            console.log("BuzzPop");
+            buzzOccurrences = buzzOccurrences + 1;
+            popOccurrences = popOccurrences + 1;
+        }else if(activeNumber % 3 === 0){
+            console.log("Fizz");
+            fizzOccurrences = fizzOccurrences + 1;
+        }else if(activeNumber % 5 === 0){
+            console.log("Buzz");
+            buzzOccurrences = buzzOccurrences + 1;
+        }else if(activeNumber % 7 === 0){
+            console.log("Pop");
+            popOccurrences = popOccurrences + 1;
+        }else{
+            console.log(activeNumber);   
+        }
+    }
+    console.log(`fizzOccurrences :- ${fizzOccurrences}`);
+    console.log(`buzzOccurrences :- ${buzzOccurrences}`);
+    console.log(`popOccurrences :- ${popOccurrences}`);
+    
+}
+countFizzBuzzPopOutputs(15);
