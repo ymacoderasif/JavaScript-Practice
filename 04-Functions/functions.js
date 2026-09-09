@@ -1183,3 +1183,30 @@ function displayPerfectSeries(maximumRange){
    
 }
 displayPerfectSeries(50);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q43.  
+Function banao jo kisi number ke digits ko ascending order me print 
+kare.  
+Example:  
+53142  
+Output:  
+12345  
+==============================================================================
+*/
+function printAscendingDigits(digitSource){
+    let workingDigits = digitSource.toString();
+    let extractedDigit = workingDigits.split("");
+    let orderDigit = extractedDigit.sort();
+    let ascendingResult = orderDigit.join();
+    return ascendingResult;
+}
+console.log(printAscendingDigits(654321));
