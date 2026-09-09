@@ -1329,3 +1329,51 @@ function countFizzBuzzPopOutputs(loopEnd){
     
 }
 countFizzBuzzPopOutputs(15);
+
+
+
+
+
+
+
+
+/*
+============================================================================
+Q47.  
+Function banao jo kisi number ka largest prime factor return 
+kare. Example:  
+84  
+Output:  
+7 
+=============================================================================
+*/
+function findLargestPrimeDivisor(factorSource) {
+  let largestPrimeValue = 0;
+
+  for (
+    let possibleFactor = 2;
+    possibleFactor <= factorSource;
+    possibleFactor++
+  ) {
+    if (factorSource % possibleFactor === 0) {
+      let totalMatches = 0;
+
+      for (
+        let testDivider = 1;
+        testDivider <= possibleFactor;
+        testDivider++
+      ) {
+        if (possibleFactor % testDivider === 0) {
+          totalMatches = totalMatches + 1;
+        }
+      }
+
+      if (totalMatches === 2) {
+        largestPrimeValue = possibleFactor;
+      }
+    }
+  }
+
+  return largestPrimeValue;
+}
+console.log(findLargestPrimeDivisor(84));
