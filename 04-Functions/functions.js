@@ -1237,3 +1237,36 @@ function printDescendingDigits(sourceDigits){
     return descendingValue;
 }
 console.log(printDescendingDigits(84465645));
+
+
+
+
+
+
+
+
+/*
+=====================================================================
+Q45.  
+Function banao jo check kare number Armstrong hai ya nahi aur 
+saath me digits ka cube-sum bhi print kare. 
+=====================================================================
+*/
+function verifyArmstrongCubeTotal(armstrongInput){
+    let numString = armstrongInput.toString();
+    let digitsArray = numString.split("");
+    let cubeSum = 0;
+    for(let i = 0; i < digitsArray.length;i++){
+        let digit = digitsArray[i];
+        digit = Number(digit);
+        let cube = digit * digit * digit;
+        cubeSum = cubeSum + cube;
+    }
+    if(armstrongInput === cubeSum){
+        console.log("Armstrong",cubeSum);
+    }else{
+        console.log("Not Armstrong",cubeSum);
+        
+    }
+}
+verifyArmstrongCubeTotal(135);
