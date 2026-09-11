@@ -1551,3 +1551,40 @@ function convertDecimalAndCountOnes(decimalValue){
     console.log(`Count of 1s:- ${onesCounter}`);   
 }
 convertDecimalAndCountOnes(10);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q53.  
+Function banao jo kisi number ke factors count kare aur bataye:  
+• Prime   
+• Composite   
+• Neither   
+==============================================================================
+*/
+function identifyNumberCategory(inputValue) {
+    let totalFactors = 0;
+    let checkValue = 1;
+    let factorFound = 0;
+
+    while (checkValue <= inputValue) {
+        if (inputValue % checkValue === 0) {
+            totalFactors++;
+        }
+        checkValue++;
+    }
+    if (inputValue === 1) {
+        console.log("Neither");
+    } else if (totalFactors === 2) {
+        console.log("Prime");
+    } else {
+        console.log("Composite");
+    }
+}
+identifyNumberCategory(7);
