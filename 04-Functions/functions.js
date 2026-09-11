@@ -1622,3 +1622,37 @@ function printArmstrongNumbersInRange(rangeStart, rangeEnd) {
     }
 }
 printArmstrongNumbersInRange(1, 500);
+
+
+
+
+
+
+
+
+/*
+=============================================================================
+Q55.  
+Function banao jo kisi number ke har digit ka factorial nikale aur 
+unka sum print kare.  
+Example:  
+145  
+=============================================================================
+*/
+function calculateDigitFactorialSum(factorialInput){
+    let remainingDigits = factorialInput.toString().split("");
+    let factorialSum = 0;
+    for(let i = 0;i <= remainingDigits.length - 1;i++){
+        let selectedDigit = remainingDigits[i];
+        selectedDigit = Number(selectedDigit);
+        let digitFactorial = 1;
+        for(let j = 1; j <= selectedDigit;j++){
+            digitFactorial = digitFactorial * j;
+        }
+        factorialSum = digitFactorial + factorialSum;
+
+    }
+    console.log(factorialSum);
+    
+}
+calculateDigitFactorialSum(145);
