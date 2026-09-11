@@ -1588,3 +1588,37 @@ function identifyNumberCategory(inputValue) {
     }
 }
 identifyNumberCategory(7);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+Q54.  
+Function banao jo kisi range me sabhi Armstrong numbers print 
+kare. 
+==========================================================================
+*/
+function printArmstrongNumbersInRange(rangeStart, rangeEnd) {
+    for (let currentNumber = rangeStart; currentNumber <= rangeEnd; currentNumber++) {
+        
+        let digitHolder = currentNumber.toString().split("");
+        let digitPowerSum = 0;
+
+        for (let i = 0; i < digitHolder.length; i++) {
+            let extractedDigit = digitHolder[i];
+            extractedDigit = Number(extractedDigit);
+            let cube = extractedDigit * extractedDigit * extractedDigit;
+            digitPowerSum = digitPowerSum + cube;
+        }
+
+        if (digitPowerSum === currentNumber) {
+            console.log(currentNumber);
+        }
+    }
+}
+printArmstrongNumbersInRange(1, 500);
