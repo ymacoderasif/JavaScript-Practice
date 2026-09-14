@@ -1656,3 +1656,34 @@ function calculateDigitFactorialSum(factorialInput){
     
 }
 calculateDigitFactorialSum(145);
+
+
+
+
+
+
+
+
+/*
+========================================================================
+Q56
+Function banao jo kisi number ke sabhi prime factors print kare.  
+Example:  
+primeFactors(84) Output:  
+2 2 3 7  
+========================================================================
+*/
+function displayPrimeFactors(factorNumber){
+    let remainingFactor = factorNumber;
+    let factorCandidate = 2;
+    while(remainingFactor > 1){
+        if(remainingFactor % factorCandidate === 0){
+            let primeFactor = factorCandidate;
+            console.log(primeFactor);
+            remainingFactor = remainingFactor / factorCandidate;
+        }else{
+            factorCandidate++;
+        }
+    }
+}
+displayPrimeFactors(84);
