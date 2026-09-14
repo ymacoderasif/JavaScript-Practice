@@ -1721,3 +1721,23 @@ function analyzePrimeCountAndSum(upperLimit) {
     console.log(`Prime Sum: ${primeSum}`);
 }
 analyzePrimeCountAndSum(10);
+
+
+
+
+
+
+
+
+/*
+=======================================================================================
+Q58.  
+Function banao jo kisi number ke digits ko reverse kare bina naya 
+number variable banaye.
+=======================================================================================
+*/
+function reverseDigitsWithoutExtraNumber(originalValue){
+    originalValue = Number(originalValue.toString().split("").reverse().join(""));
+    console.log(originalValue);
+}
+reverseDigitsWithoutExtraNumber(4321);
