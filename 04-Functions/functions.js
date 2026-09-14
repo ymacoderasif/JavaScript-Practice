@@ -1687,3 +1687,37 @@ function displayPrimeFactors(factorNumber){
     }
 }
 displayPrimeFactors(84);
+
+
+
+
+
+
+
+
+/*
+===============================================================================
+Q57.  
+Function banao jo 1 se n tak sabhi numbers me total kitne prime 
+numbers hain aur unka sum bhi print kare. 
+===============================================================================
+*/
+function analyzePrimeCountAndSum(upperLimit) {
+    let primeCount = 0;
+    let primeSum = 0;
+    for (let numberCheck = 2; numberCheck <= upperLimit; numberCheck++) {
+        let factorCounter = 0;
+        for (let i = 2; i < numberCheck; i++) {
+            if (numberCheck % i === 0) {
+                factorCounter++;
+            }
+        }
+        if(factorCounter === 0){
+            primeCount++;
+            primeSum = primeSum + numberCheck;
+        }
+    }
+    console.log(`Prime Count: ${primeCount}`);
+    console.log(`Prime Sum: ${primeSum}`);
+}
+analyzePrimeCountAndSum(10);
