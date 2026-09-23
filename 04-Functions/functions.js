@@ -1741,3 +1741,48 @@ function reverseDigitsWithoutExtraNumber(originalValue){
     console.log(originalValue);
 }
 reverseDigitsWithoutExtraNumber(4321);
+
+
+
+
+
+
+
+
+/*
+=====================================================================================
+Q59.  
+Function banao jo check kare ki number Strong Number hai ya 
+nahi. Example:  
+145  
+Kyuki:  
+1! + 4! + 5! = 145  
+=====================================================================================
+*/
+function checkStrongNumber(strongInput) {
+    let digitValue;
+    let digitFactorial;
+    let factorialTotal = 0;
+    let remainingNumber = strongInput;
+
+    while (remainingNumber > 0) {
+        digitValue = remainingNumber % 10;
+
+        digitFactorial = 1;
+
+        for (let i = 1; i <= digitValue; i++) {
+            digitFactorial = digitFactorial * i;
+        }
+
+        factorialTotal = factorialTotal + digitFactorial;
+        remainingNumber = Math.floor(remainingNumber / 10);
+    }
+
+    if (factorialTotal === strongInput) {
+        console.log("Strong Number");
+    } else {
+        console.log("Not a Strong Number");
+    }
+}
+
+checkStrongNumber(145);
