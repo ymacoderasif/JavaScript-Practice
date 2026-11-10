@@ -1848,3 +1848,30 @@ function greet(name){
     return `Hello, ${name}!` ;
 }
 console.log(greet("Mohd Asif"));
+
+
+
+
+
+
+
+
+/*
+======================================================================================================================
+62. Write an add(a, b) function as a function declaration and again as a function expression. Call 
+both. 
+======================================================================================================================
+*/
+
+//Function Declaration
+function add(a,b){
+    return a + b;
+}
+
+//Function Expression
+let sum = function(a,b){
+    return a + b;
+}
+
+console.log(add(10,20));
+console.log(sum(10,20));
