@@ -1786,3 +1786,48 @@ function checkStrongNumber(strongInput) {
 }
 
 checkStrongNumber(145);
+
+
+
+
+
+
+
+
+
+/*
+===============================================================================
+Q60.  
+Function banao jo 1 se n tak sabhi Strong Numbers print kare. 
+===============================================================================
+*/
+function factorial(n) {
+  let fact = 1;
+  for (let i = 2; i <= n; i++) {
+    fact *= i;
+  }
+  return fact;
+}
+
+function isStrong(num) {
+  let sum = 0;
+  let temp = num;
+
+  while (temp > 0) {
+    let digit = temp % 10;
+    sum += factorial(digit);
+    temp = Math.floor(temp / 10);
+  }
+
+  return sum === num;
+}
+
+function printStrongNumbers(n) {
+  for (let i = 1; i <= n; i++) {
+    if (isStrong(i)) {
+      console.log(i);
+    }
+  }
+}
+
+printStrongNumbers(1000);
