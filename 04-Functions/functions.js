@@ -1831,3 +1831,20 @@ function printStrongNumbers(n) {
 }
 
 printStrongNumbers(1000);
+
+
+
+
+
+
+
+
+/*
+==========================================================================
+61. Write a function greet(name) that returns "Hello, <name>!".
+==========================================================================
+*/
+function greet(name){
+    return `Hello, ${name}!` ;
+}
+console.log(greet("Mohd Asif"));
