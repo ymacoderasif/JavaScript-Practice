@@ -1938,3 +1938,23 @@ function power(base, exp = 2){
 }
 console.log(power(5));
 console.log(power(5, 3));
+
+
+
+
+
+
+
+
+/*
+======================================================================================================
+66. Write a function that returns both the minimum and maximum of an array (return an object). 
+======================================================================================================
+*/
+function getMinMax(arr) {
+      return {
+          min: Math.min(...arr),
+          max: Math.max(...arr)
+      };
+    }
+console.log(getMinMax([10,2,6,9,8]));
