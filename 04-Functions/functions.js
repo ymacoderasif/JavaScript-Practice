@@ -1875,3 +1875,24 @@ let sum = function(a,b){
 
 console.log(add(10,20));
 console.log(sum(10,20));
+
+
+
+
+
+
+
+
+/*
+======================================================================================
+63. Write a function that takes two numbers and returns the larger one.
+======================================================================================
+*/
+function largest(a,b){
+    if(a >= b){
+        return a;
+    }else{
+        return b;
+    }
+}
+console.log(largest(5,5));
