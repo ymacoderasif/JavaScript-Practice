@@ -1917,3 +1917,24 @@ function checkEvenodd(n){
     }
 }
 console.log(checkEvenodd(7));
+
+
+
+
+
+
+
+
+
+
+/*
+===================================================================================================
+65. Write power(base, exp = 2) using a default parameter. Call it with one and with two 
+arguments.
+===================================================================================================
+*/
+function power(base, exp = 2){
+    return base ** exp;
+}
+console.log(power(5));
+console.log(power(5, 3));
