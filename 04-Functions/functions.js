@@ -1958,3 +1958,30 @@ function getMinMax(arr) {
       };
     }
 console.log(getMinMax([10,2,6,9,8]));
+
+
+
+
+
+
+
+
+
+/*
+================================================================
+67. Write a function that counts the vowels in a string. 
+================================================================
+*/
+function vowelCount(str) {
+    let count = 0;
+    let lowerCase = str.toLowerCase();
+    console.log(lowerCase);
+    for (let i = 0; i < lowerCase.length; i++) {
+        let char = lowerCase[i];
+        if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
+            count = count + 1;
+        }
+    }
+    return count;
+}
+console.log(vowelCount("Hello"));
