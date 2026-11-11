@@ -1896,3 +1896,24 @@ function largest(a,b){
     }
 }
 console.log(largest(5,5));
+
+
+
+
+
+
+
+
+/*
+===============================================================================
+64. Write a function checkEvenOdd(n) that returns "even" or "odd". 
+===============================================================================
+*/
+function checkEvenodd(n){
+    if(n % 2 === 0){
+        return "Even";
+    }else{
+        return "Odd";
+    }
+}
+console.log(checkEvenodd(7));
